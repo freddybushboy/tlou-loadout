@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body ng-cloak>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div ng-controller="LoadoutCalc" class="loadout-calc">
+      <h1>The Last of Us Loadout Calculator</h1>
+      <div class="loadout-calc__cols">
+        <div class="loadout-calc__slots-col">
+          <div class="loadout-calc__slot-wrapper loadout-calc__slot-wrapper--weapon">
+            <div class="loadout-calc__slot" ng-repeat="i in getRepeat(2) track by $index"></div>
+          </div>
+          <div class="loadout-calc__slot-wrapper loadout-calc__slot-wrapper--skill">
+            <div class="loadout-calc__slot" ng-repeat="i in getRepeat(4) track by $index"></div>
+          </div>
+          <div class="loadout-calc__slot-wrapper loadout-calc__slot-wrapper--purchase">
+            <div class="loadout-calc__slot"></div>
+          </div>
+        </div>
+        <div class="loadout-calc__skills-col">
+          <div class="loadout-calc__info-col">
+            <h2 class="slot-name">{{slotName}}</h2>
+            <span class="loadout-points">{{remainingPoints}}/13 Loadout Points</h2>
+          </div>
+          <div class="loadout-calc__skill-list-col">
+            <div class="loadout-calc__slot loadout-calc__slot--small" ng-repeat="i in getRepeat(10) track by $index"></div>
+          </div>
+          <div class="loadout-calc__details-col"></div>
+          <div class="loadout-calc__footer-col"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: Google Analytics. -->
+  </body>
+</html>

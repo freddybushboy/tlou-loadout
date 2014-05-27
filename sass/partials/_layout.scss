@@ -1,0 +1,73 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+}
+.loadout-calc {
+  @include clearfix;
+  padding: 60px 20px;
+  width: 1200px; // 1120 content area.
+  margin: 0 auto;
+  text-align: left;
+}
+
+// Cols.
+.loadout-calc__cols {
+  @include clearfix;
+}
+.loadout-calc__slots-col {
+  float: left;
+  width: 300px;
+  border-right: 2px solid white;
+  padding-right: 7px;
+}
+.loadout-calc__skills-col {
+  @include clearfix;
+  float: left;
+  width: 820px;
+  padding-left: 20px;
+}
+.loadout-calc__info-col {
+  @include clearfix;
+  float: left;
+  width: 100%;
+  border-bottom: 2px solid white;
+  margin-bottom: 7px;
+}
+.loadout-calc__skill-list-col {
+  float: left;
+  width: 300px;
+  border-right: 2px solid white;
+}
+.loadout-calc__details-col {
+  float: left;
+  width: 500px;
+}
+.loadout-calc__footer-col {
+  float: left;
+  height: 40px;
+  width: 100%;
+  border-top: 2px solid white;
+  margin-top: 7px;
+}
+
+// Slots.
+.loadout-calc__slot {
+  display: block;
+  height: 67px;
+  padding: 2px;
+  cursor: pointer;
+  &:hover {
+    padding: 0;
+    border: 2px solid white;
+  }
+}
+.loadout-calc__slot--small {
+  height: 44px;
+}
+.loadout-calc__slot-wrapper--weapon {
+  border-bottom: 2px solid white;
+}
+.loadout-calc__slot-wrapper--purchase {
+  border-top: 2px solid white;
+}
