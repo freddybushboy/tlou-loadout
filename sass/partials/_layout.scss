@@ -1,5 +1,6 @@
 body {
-  background: black;
+  background: black image-url('background.jpg') no-repeat;
+  @include background-size(cover);
   color: white;
   text-align: center;
 }
@@ -37,6 +38,8 @@ body {
 .loadout-calc__skill-list-col {
   float: left;
   width: 300px;
+  height: 440px;
+  overflow: scroll;
   border-right: 2px solid white;
 }
 .loadout-calc__details-col {
@@ -45,29 +48,8 @@ body {
 }
 .loadout-calc__footer-col {
   float: left;
-  height: 40px;
   width: 100%;
   border-top: 2px solid white;
   margin-top: 7px;
 }
 
-// Slots.
-.loadout-calc__slot {
-  display: block;
-  height: 67px;
-  padding: 2px;
-  cursor: pointer;
-  &:hover {
-    padding: 0;
-    border: 2px solid white;
-  }
-}
-.loadout-calc__slot--small {
-  height: 44px;
-}
-.loadout-calc__slot-wrapper--weapon {
-  border-bottom: 2px solid white;
-}
-.loadout-calc__slot-wrapper--purchase {
-  border-top: 2px solid white;
-}
