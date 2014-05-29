@@ -3,7 +3,22 @@
 angular.module('loadoutApp')
   .service('SkillService', function () {
     this.skills = {
-      'weapon': {
+      'small': {
+        'revolver': {
+          'name': 'Revolver',
+          'levels': [
+            {
+              'description': '',
+              'cost': 0
+            }
+          ],
+          'rate': 5,
+          'reload': 4,
+          'damage': 5,
+          'accuracy': 7
+        }
+      },
+      'large': {
         'semi': {
           'name': 'Semi-Auto Rifle',
           'levels': [
@@ -41,7 +56,7 @@ angular.module('loadoutApp')
           ],
         }
       },
-      'purchasable': {
+      'purchase': {
         'flamethrower': {
           'name': 'Flamethrower',
           'levels': [

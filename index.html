@@ -27,13 +27,30 @@
       <div class="loadout-calc__cols">
         <div class="loadout-calc__slots-col">
           <div class="loadout-slot-wrapper loadout-slot-wrapper--weapon">
-            <slot ng-repeat="i in getRepeat(2) track by $index"></slot>
+            <div class="loadout-slot" ng-click="setSkillSet('small')">
+              <span class="loadout-slot__icon icon-default"></span>
+              <span class="loadout-slot__cost">0</span>
+              <span class="loadout-slot__name">Revolver</span>
+            </div>
+            <div class="loadout-slot" ng-click="setSkillSet('large')">
+              <span class="loadout-slot__icon icon-nothing"></span>
+              <span class="loadout-slot__cost">0</span>
+              <span class="loadout-slot__name">No Large Firearm</span>
+            </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--skill">
-            <slot ng-repeat="i in getRepeat(4) track by $index"></slot>
+            <div class="loadout-slot" ng-click="setSkillSet('skill')" ng-repeat="i in getRepeat(4) track by $index">
+              <span class="loadout-slot__icon icon-nothing"></span>
+              <span class="loadout-slot__cost">0</span>
+              <span class="loadout-slot__name">Nothing</span>
+            </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--purchase">
-            <slot></slot>
+            <div class="loadout-slot" ng-click="setSkillSet('purchase')">
+              <span class="loadout-slot__icon icon-nothing"></span>
+              <span class="loadout-slot__cost">0</span>
+              <span class="loadout-slot__name">No Purchaseables</span>
+            </div>
           </div>
         </div>
         <div class="loadout-calc__skills-col">
@@ -42,9 +59,49 @@
             <span class="loadout-points">{{remainingPoints}}/13 Loadout Points</h2>
           </div>
           <div class="loadout-calc__skill-list-col">
-            <slot class="loadout-slot--small" ng-repeat="i in getRepeat(15) track by $index"></slot>
+            <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('small')">
+              <li class="loadout-skills__slot" ng-repeat="(key, skill) in skills.small" ng-click="setSkillDetail(key)">
+                <span class="loadout-slot__icon icon-default"></span>
+                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__name">{{skill.name}}</span>
+              </li>
+            </ul>
+            <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('large')">
+              <li class="loadout-skills__slot" ng-repeat="(key, skill) in skills.large" ng-click="setSkillDetail(key)">
+                <span class="loadout-slot__icon icon-default"></span>
+                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__name">{{skill.name}}</span>
+              </li>
+            </ul>
+            <ul class="loadout-skills loadout-skills--skill" ng-show="getSkillSet('skill')">
+              <li class="loadout-skills__slot" ng-repeat="(key, skill) in skills.skill" ng-click="setSkillDetail(key)">
+                <span class="loadout-slot__icon icon-default"></span>
+                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__name">{{skill.name}}</span>
+              </li>
+            </ul>
+            <ul class="loadout-skills loadout-skills--purchase" ng-show="getSkillSet('purchase')">
+              <li class="loadout-skills__slot" ng-repeat="(key, skill) in skills.purchase" ng-click="setSkillDetail(key)">
+                <span class="loadout-slot__icon icon-default"></span>
+                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__name">{{skill.name}}</span>
+              </li>
+            </ul>
           </div>
-          <div class="loadout-calc__details-col"></div>
+          <div class="loadout-calc__details-col">
+            <div class="skill-detail-wrapper" ng-repeat="(key, category) in skills">
+              <div class="skill-detail" ng-repeat="(key, skill) in category" ng-show="getSkillDetail(key)">
+                <div class="skill-detail__header">
+                  <span class="skill-detail__icon icon-default"></span>
+                  <div class="skill-detail__header-text">
+                    <span class="skill-detail__name">{{skill.name}}</span>
+                    <span class="skill-detail__cost">{{skill.levels.0.cost}} Points</span>
+                  </div>
+                </div>
+                <span class="skill-detail__description">{{skill.levels.0.description}}</span>
+              </div>
+            </div>
+          </div>
           <div class="loadout-calc__footer-col"></div>
         </div>
       </div>

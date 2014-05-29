@@ -20,9 +20,6 @@
     padding: 6px 8px;
     border: 2px solid white;
   }
-  .loadout-slot-wrapper--weapon & {
-    text-transform: uppercase;
-  }
 }
 .loadout-slot__icon {
   float: left;
@@ -36,7 +33,14 @@
   float: right;
   padding-left: 10px;
 }
-.loadout-slot--small {
+
+// Skills.
+.loadout-skills {
+  margin: 0;
+  padding: 0;
+}
+.loadout-skills__slot {
+  display: block;
   height: 44px;
   line-height: 32px;
   padding: 6px 8px;
@@ -49,3 +53,31 @@
     font-size: 32px;
   }
 }
+
+// Details.
+.skill-detail {
+  padding-left: 25px;
+  padding-top: 10px;
+}
+.skill-detail__header {
+  @include clearfix;
+  padding-left: 20px;
+  margin-bottom: 7px;
+}
+.skill-detail__icon {
+  font-size: 50px;
+  float: left;
+}
+.skill-detail__header-text {
+  float: left;
+  padding-left: 25px;
+}
+.skill-detail__name {
+  display: block;
+  font-size: 20px;
+}
+.skill-detail__cost {
+  display: block;
+  font-size: 22px;
+}
+
