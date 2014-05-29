@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('loadoutApp')
-  .controller('LoadoutCalcCtrl', function ($scope, $controller) {
+  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService) {
+    console.log(SkillService.skills)
+
     $scope.slotName = 'Survival Skill 4';
     $scope.remainingPoints = '4';
 
