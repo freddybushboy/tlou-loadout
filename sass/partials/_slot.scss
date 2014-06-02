@@ -27,12 +27,16 @@
   font-size: 50px;
 }
 .loadout-slot__name {
-  float: right;
+  float: left;
   padding-left: 10px;
 }
 .loadout-slot__cost {
   float: right;
   padding-left: 10px;
+  color: lightskyblue;
+  &.over {
+    color: crimson;
+  }
 }
 
 // Skills.
@@ -106,6 +110,10 @@
 .skill-detail__cost {
   display: block;
   font-size: 22px;
+  color: lightskyblue;
+  &.over {
+    color: crimson;
+  }
 }
 .skill-detail__weapon {
   @include clearfix;

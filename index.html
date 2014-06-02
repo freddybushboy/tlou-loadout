@@ -6,10 +6,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>The Last of Us Loadout Calculator</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" href="/favicon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/styles.css">
@@ -17,7 +17,7 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
   <body ng-cloak>
-    <!--[if lt IE 7]>
+    <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
@@ -29,26 +29,26 @@
           <div class="loadout-slot-wrapper loadout-slot-wrapper--weapon">
             <div class="loadout-slot" ng-class="{active: skillSlot == 1}" ng-click="setSkillSet('small', 1)">
               <span class="loadout-slot__icon icon-level-{{slots.0.level}} icon-skill-{{slots.0.id}}"></span>
-              <span class="loadout-slot__cost">{{slots.0.cost}}</span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots.0.cost}}</span>
               <span class="loadout-slot__name">{{slots.0.name}}</span>
             </div>
             <div class="loadout-slot" ng-class="{active: skillSlot == 2}" ng-click="setSkillSet('large', 2)">
               <span class="loadout-slot__icon icon-level-{{slots.1.level}} icon-skill-{{slots.1.id}}"></span>
-              <span class="loadout-slot__cost">{{slots.1.cost}}</span>
-              <span class="loadout-slot__name">{{slots.1.name}}</span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots.1.cost}}</span>
+              <span class="loadout-slot__name">{{weaponName(slots.1.name, slots.1.level)}}</span>
             </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--skill">
             <div class="loadout-slot" ng-class="{active: skillSlot == $index + 3}" ng-click="setSkillSet('skill', $index + 3)" ng-repeat="i in getRepeat(4) track by $index">
               <span class="loadout-slot__icon icon-level-{{slots[$index + 2].level}} icon-skill-{{slots[$index + 2].id}}"></span>
-              <span class="loadout-slot__cost">{{slots[$index + 2].cost}}</span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots[$index + 2].cost}}</span>
               <span class="loadout-slot__name">{{slots[$index + 2].name}}</span>
             </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--purchase">
             <div class="loadout-slot" ng-class="{active: skillSlot == 7}" ng-click="setSkillSet('purchase', 7)">
               <span class="loadout-slot__icon icon-level-{{slots.6.level}} icon-skill-{{slots.6.id}}"></span>
-              <span class="loadout-slot__cost">{{slots.6.cost}}</span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots.6.cost}}</span>
               <span class="loadout-slot__name">{{slots.6.name}}</span>
             </div>
           </div>
@@ -62,28 +62,28 @@
             <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('small')">
               <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.small" ng-click="setSkillDetail(skill.id)">
                 <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
-                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__cost" ng-class="{over: skill.levels.0.cost > remainingPoints}">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
             </ul>
             <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('large')">
               <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.large" ng-click="setSkillDetail(skill.id)">
                 <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
-                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__cost" ng-class="{over: skill.levels.0.cost > remainingPoints}">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
             </ul>
             <ul class="loadout-skills loadout-skills--skill" ng-show="getSkillSet('skill')">
               <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.skill" ng-click="setSkillDetail(skill.id)">
                 <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
-                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__cost" ng-class="{over: skill.levels.0.cost > remainingPoints}">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
             </ul>
             <ul class="loadout-skills loadout-skills--purchase" ng-show="getSkillSet('purchase')">
               <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.purchase" ng-click="setSkillDetail(skill.id)">
                 <span class="loadout-slot__icon icon-level-1  icon-skill-{{skill.id}}"></span>
-                <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
+                <span class="loadout-slot__cost" ng-class="{over: skill.levels.0.cost > remainingPoints}">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
             </ul>
@@ -99,10 +99,11 @@
                   <div class="skill-detail__header">
                     <span class="skill-detail__icon icon-level-{{key + 1}} icon-skill-{{skill.id}}"></span>
                     <div class="skill-detail__header-text">
-                      <span class="skill-detail__name">{{skill.name}} {{key + 1}}</span>
-                      <span class="skill-detail__cost">{{level.cost}} Points</span>
+                      <span class="skill-detail__name">{{skillName(skill.name, key + 1, cat)}}</span>
+                      <span class="skill-detail__cost" ng-class="{over: level.cost > remainingPoints}">{{level.cost}} Points</span>
                     </div>
                   </div>
+                  <span class="skill-detail__description">{{level.description}}</span>
                   <div class="skill-detail__weapon" ng-if="skill.rate">
                     <label>Fire rate</label>
                     <div class="weapon-bars weapon-bars--{{skill.rate}}"></div>
@@ -113,7 +114,6 @@
                     <label>Accuracy</label>
                     <div class="weapon-bars weapon-bars--{{skill.accuracy}}"></div>
                   </div>
-                  <span class="skill-detail__description">{{level.description}}</span>
                 </div>
               </div>
             </div>
@@ -121,12 +121,22 @@
           <div class="loadout-calc__footer-col"></div>
         </div>
       </div>
+      <span class="loadout-reset" ng-click="resetLoadout()"><span class="icon-nothing"></span> Reset Loadout</span>
+      <p class="disclaimer">Built by <a href="www.fredparke.com">Fred Parke</a>. Please feel free to email any feedback or mistakes to <a href="mailto:mail@fredparke.com:">mail@fredparke.com</a>.</p>
     </div>
 
 
     <script src="js/app.js"></script>
     <script src="js/controllers/loadoutCalcCtrl.js"></script>
     <script src="js/services/skillService.js"></script>
-    <!-- TODO: Google Analytics. -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-51603002-1');ga('send','pageview');
+        </script>
   </body>
 </html>

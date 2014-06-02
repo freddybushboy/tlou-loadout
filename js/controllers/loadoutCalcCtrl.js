@@ -17,7 +17,7 @@ angular.module('loadoutApp')
         'cost': 0,
       },
       {
-        'name': 'Nothing',
+        'name': 'No Large Firearm',
         'id': 'nothing',
         'level': 1,
         'cost': 0,
@@ -47,14 +47,13 @@ angular.module('loadoutApp')
         'cost': 0,
       },
       {
-        'name': 'Nothing',
+        'name': 'No Purchasable',
         'id': 'nothing',
         'level': 1,
         'cost': 0,
       }];
     $scope.skills = SkillService.skills;
 
-    $scope.slotName = 'Survival Skill 4';
     $scope.remainingPoints = '13';
 
     $scope.getRepeat = function(num) {
@@ -74,7 +73,7 @@ angular.module('loadoutApp')
       $scope.skillLevel = 0;
       if (value == 'nothing') {
         $scope.skillDetail = '';
-        $scope.setSkill($scope.skills.skill[0]);
+        $scope.setSkill($scope.skills[$scope.skillSet][0]);
       }
     }
     $scope.getSkillDetail = function(value) {
@@ -118,6 +117,74 @@ angular.module('loadoutApp')
         });
       });
       $scope.activeSlots = active;
+    }
+
+    $scope.skillName = function(name, level, cat) {
+      if (cat == 'small' || cat == 'large') {
+        return $scope.weaponName(name, level);
+      }
+      return name + ' ' + level;
+    }
+
+    $scope.weaponName = function(name, level) {
+      if (level > 1) {
+        name = 'Silenced ' + name;
+      }
+      return name;
+    }
+
+    $scope.resetLoadout = function() {
+      $scope.skillSlot = '';
+      $scope.skillSet = '';
+      $scope.skillDetail = '';
+      $scope.skillLevel = 0;
+      $scope.activeSlots = [];
+
+      $scope.slots = [
+        {
+          'name': 'Revolver',
+          'id': 'revolver',
+          'level': 1,
+          'cost': 0,
+        },
+        {
+          'name': 'No Large Firearm',
+          'id': 'nothing',
+          'level': 1,
+          'cost': 0,
+        },
+        {
+          'name': 'Nothing',
+          'id': 'nothing',
+          'level': 1,
+          'cost': 0,
+        },
+        {
+          'name': 'Nothing',
+          'id': 'nothing',
+          'level': 1,
+          'cost': 0,
+        },
+        {
+          'name': 'Nothing',
+          'id': 'nothing',
+          'level': 1,
+          'cost': 0,
+        },
+        {
+          'name': 'Nothing',
+          'id': 'nothing',
+          'level': 1,
+          'cost': 0,
+        },
+        {
+          'name': 'No Purchasable',
+          'id': 'nothing',
+          'level': 1,
+          'cost': 0,
+        }];
+
+      $scope.remainingPoints = '13';
     }
 
     $scope.updateActive();
