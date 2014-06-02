@@ -93,11 +93,4 @@ angular.module('loadoutApp')
       });
       $scope.remainingPoints = remaining;
     }
-  })
-  .directive('slot', [function () {
-   return {
-     restrict: 'E',
-     replace: true,
-     templateUrl: 'templates/slot.html'
-   };
- }]);
+  });

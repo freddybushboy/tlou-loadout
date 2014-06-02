@@ -107,4 +107,22 @@
   display: block;
   font-size: 22px;
 }
+.skill-detail__weapon {
+  @include clearfix;
+  clear: both;
+  margin-top: 10px;
+}
+.weapon-bars {
+  height: 8px;
+  width: 338px;
+  margin-bottom: 5px;
+  background-size: 100% auto;
+}
+$i: 1;
+@while $i < 11 {
+  .weapon-bars--#{$i} {
+    background-image: image-url('bars/' + $i + '.png');
+  }
+  $i: $i + 1;
+}
 

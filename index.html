@@ -89,7 +89,7 @@
             </ul>
           </div>
           <div class="loadout-calc__details-col">
-            <div class="skill-detail-wrapper" ng-repeat="(key, category) in skills">
+            <div class="skill-detail-wrapper" ng-repeat="(cat, category) in skills">
               <div class="skill-detail" ng-repeat="(key, skill) in category" ng-show="getSkillDetail(key)">
                 <div class="skill-detail__level_select">
                   <h2>Select level</h2>
@@ -102,6 +102,16 @@
                       <span class="skill-detail__name">{{skill.name}} {{key + 1}}</span>
                       <span class="skill-detail__cost">{{level.cost}} Points</span>
                     </div>
+                  </div>
+                  <div class="skill-detail__weapon" ng-if="cat != 'skill'">
+                    <label>Fire rate</label>
+                    <div class="weapon-bars weapon-bars--{{skill.rate}}"></div>
+                    <label>Reload Speed</label>
+                    <div class="weapon-bars weapon-bars--{{skill.reload}}"></div>
+                    <label>Damage</label>
+                    <div class="weapon-bars weapon-bars--{{skill.damage}}"></div>
+                    <label>Accuracy</label>
+                    <div class="weapon-bars weapon-bars--{{skill.accuracy}}"></div>
                   </div>
                   <span class="skill-detail__description">{{level.description}}</span>
                 </div>
