@@ -398,7 +398,7 @@ a {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_typography\.scss}line{font-family:\000031}}
 body {
-  font-family: "Myriad Pro"; }
+  font-family: "Myriad Pro", Arial, "Helvetica Neue", Helvetica, sans-serif; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_typography\.scss}line{font-family:\000034}}
 h1 {
