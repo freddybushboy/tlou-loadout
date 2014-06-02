@@ -28,10 +28,7 @@ $icon-level-1: "\e601";
 $icon-level-2: "\e602";
 $icon-level-3: "\e603";
 
-.icon-level-0:before,
-.icon-nothing:before {
-  content: $icon-nothing;
-}
+
 .icon-level-1:before {
   content: $icon-level-1;
 }
@@ -40,6 +37,11 @@ $icon-level-3: "\e603";
 }
 .icon-level-3:before {
   content: $icon-level-3;
+}
+.icon-skill-nothing:before,
+.icon-level-0:before,
+.icon-nothing:before {
+  content: $icon-nothing;
 }
 
 $main-font: "Myriad Pro";

@@ -28,26 +28,26 @@
         <div class="loadout-calc__slots-col">
           <div class="loadout-slot-wrapper loadout-slot-wrapper--weapon">
             <div class="loadout-slot" ng-class="{active: skillSlot == 1}" ng-click="setSkillSet('small', 1)">
-              <span class="loadout-slot__icon icon-level-{{slots.0.level}}"></span>
+              <span class="loadout-slot__icon icon-level-{{slots.0.level}} icon-skill-{{slots.0.id}}"></span>
               <span class="loadout-slot__cost">{{slots.0.cost}}</span>
               <span class="loadout-slot__name">{{slots.0.name}}</span>
             </div>
             <div class="loadout-slot" ng-class="{active: skillSlot == 2}" ng-click="setSkillSet('large', 2)">
-              <span class="loadout-slot__icon icon-level-{{slots.1.level}}"></span>
+              <span class="loadout-slot__icon icon-level-{{slots.1.level}} icon-skill-{{slots.1.id}}"></span>
               <span class="loadout-slot__cost">{{slots.1.cost}}</span>
               <span class="loadout-slot__name">{{slots.1.name}}</span>
             </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--skill">
             <div class="loadout-slot" ng-class="{active: skillSlot == $index + 3}" ng-click="setSkillSet('skill', $index + 3)" ng-repeat="i in getRepeat(4) track by $index">
-              <span class="loadout-slot__icon icon-level-{{slots[$index + 2].level}}"></span>
+              <span class="loadout-slot__icon icon-level-{{slots[$index + 2].level}} icon-skill-{{slots[$index + 2].id}}"></span>
               <span class="loadout-slot__cost">{{slots[$index + 2].cost}}</span>
               <span class="loadout-slot__name">{{slots[$index + 2].name}}</span>
             </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--purchase">
             <div class="loadout-slot" ng-class="{active: skillSlot == 7}" ng-click="setSkillSet('purchase', 7)">
-              <span class="loadout-slot__icon icon-level-{{slots.6.level}}"></span>
+              <span class="loadout-slot__icon icon-level-{{slots.6.level}} icon-skill-{{slots.6.id}}"></span>
               <span class="loadout-slot__cost">{{slots.6.cost}}</span>
               <span class="loadout-slot__name">{{slots.6.name}}</span>
             </div>
@@ -60,29 +60,29 @@
           </div>
           <div class="loadout-calc__skill-list-col">
             <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('small')">
-              <li class="loadout-skills__slot" ng-class="{active: skillDetail == key}" ng-repeat="(key, skill) in skills.small" ng-click="setSkillDetail(key)">
-                <span class="loadout-slot__icon icon-level-1"></span>
+              <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.small" ng-click="setSkillDetail(skill.id)">
+                <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
                 <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
             </ul>
             <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('large')">
-              <li class="loadout-skills__slot" ng-class="{active: skillDetail == key}" ng-repeat="(key, skill) in skills.large" ng-click="setSkillDetail(key)">
-                <span class="loadout-slot__icon icon-level-1"></span>
+              <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.large" ng-click="setSkillDetail(skill.id)">
+                <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
                 <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
             </ul>
             <ul class="loadout-skills loadout-skills--skill" ng-show="getSkillSet('skill')">
-              <li class="loadout-skills__slot" ng-class="{active: skillDetail == key}" ng-repeat="(key, skill) in skills.skill" ng-click="setSkillDetail(key)">
-                <span class="loadout-slot__icon icon-level-1"></span>
+              <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.skill" ng-click="setSkillDetail(skill.id)">
+                <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
                 <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
             </ul>
             <ul class="loadout-skills loadout-skills--purchase" ng-show="getSkillSet('purchase')">
-              <li class="loadout-skills__slot" ng-class="{active: skillDetail == key}" ng-repeat="(key, skill) in skills.purchase" ng-click="setSkillDetail(key)">
-                <span class="loadout-slot__icon icon-level-1"></span>
+              <li class="loadout-skills__slot" ng-class="{active: skillDetail == skill.id}" ng-repeat="skill in skills.purchase" ng-click="setSkillDetail(skill.id)">
+                <span class="loadout-slot__icon icon-level-1  icon-skill-{{skill.id}}"></span>
                 <span class="loadout-slot__cost">{{skill.levels.0.cost}}</span>
                 <span class="loadout-slot__name">{{skill.name}}</span>
               </li>
@@ -90,20 +90,20 @@
           </div>
           <div class="loadout-calc__details-col">
             <div class="skill-detail-wrapper" ng-repeat="(cat, category) in skills">
-              <div class="skill-detail" ng-repeat="(key, skill) in category" ng-show="getSkillDetail(key)">
+              <div class="skill-detail" ng-repeat="skill in category" ng-show="getSkillDetail(skill.id)">
                 <div class="skill-detail__level_select">
                   <h2>Select level</h2>
-                  <span class="loadout-slot__icon icon-level-{{key + 1}}"  ng-class="{active: skillLevel == key}" ng-repeat="(key, level) in skill.levels" ng-mouseover="setSkillLevel(key)" ng-click="setSkill(skill, key)"></span>
+                  <span class="loadout-slot__icon icon-level-{{key + 1}}  icon-skill-{{skill.id}}"  ng-class="{active: skillLevel == key}" ng-repeat="(key, level) in skill.levels" ng-mouseover="setSkillLevel(key)" ng-click="setSkill(skill)"></span>
                 </div>
                 <div class="skill-detail__content" ng-repeat="(key, level) in skill.levels" ng-show="getSkillLevel(key)">
                   <div class="skill-detail__header">
-                    <span class="skill-detail__icon icon-level-{{key + 1}}"></span>
+                    <span class="skill-detail__icon icon-level-{{key + 1}} icon-skill-{{skill.id}}"></span>
                     <div class="skill-detail__header-text">
                       <span class="skill-detail__name">{{skill.name}} {{key + 1}}</span>
                       <span class="skill-detail__cost">{{level.cost}} Points</span>
                     </div>
                   </div>
-                  <div class="skill-detail__weapon" ng-if="cat != 'skill'">
+                  <div class="skill-detail__weapon" ng-if="skill.rate">
                     <label>Fire rate</label>
                     <div class="weapon-bars weapon-bars--{{skill.rate}}"></div>
                     <label>Reload Speed</label>

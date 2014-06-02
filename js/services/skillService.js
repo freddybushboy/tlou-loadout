@@ -3,8 +3,19 @@
 angular.module('loadoutApp')
   .service('SkillService', function () {
     this.skills = {
-      'small': {
-        'revolver': {
+      'small': [
+        {
+          'id': 'nothing',
+          'name': 'Nothing',
+          'levels': [
+            {
+              'description': '',
+              'cost': 0
+            }
+          ]
+        },
+        {
+          'id': 'revolver',
           'name': 'Revolver',
           'levels': [
             {
@@ -17,9 +28,20 @@ angular.module('loadoutApp')
           'damage': 5,
           'accuracy': 7
         }
-      },
-      'large': {
-        'semi': {
+      ],
+      'large': [
+        {
+          'id': 'nothing',
+          'name': 'Nothing',
+          'levels': [
+            {
+              'description': '',
+              'cost': 0
+            }
+          ]
+        },
+        {
+          'id': 'semi',
           'name': 'Semi-Auto Rifle',
           'levels': [
             {
@@ -36,9 +58,20 @@ angular.module('loadoutApp')
           'damage': 5,
           'accuracy': 7
         }
-      },
-      'skill' : {
-        'covert': {
+      ],
+      'skill' : [
+        {
+          'id': 'nothing',
+          'name': 'Nothing',
+          'levels': [
+            {
+              'description': '',
+              'cost': 0
+            }
+          ]
+        },
+        {
+          'id': 'covert',
           'name': 'Covert Training',
           'levels': [
             {
@@ -55,9 +88,20 @@ angular.module('loadoutApp')
             }
           ],
         }
-      },
-      'purchase': {
-        'flamethrower': {
+      ],
+      'purchase': [
+        {
+          'id': 'nothing',
+          'name': 'Nothing',
+          'levels': [
+            {
+              'description': '',
+              'cost': 0
+            }
+          ]
+        },
+        {
+          'id': 'flamethrower',
           'name': 'Flamethrower',
           'levels': [
             {
@@ -70,6 +114,6 @@ angular.module('loadoutApp')
           'damage': 2,
           'accuracy': 4
         }
-      }
+      ]
     }
   });

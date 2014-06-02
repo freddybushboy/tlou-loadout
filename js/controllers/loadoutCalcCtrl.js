@@ -7,41 +7,49 @@ angular.module('loadoutApp')
     $scope.skillSet = '';
     $scope.skillDetail = '';
     $scope.skillLevel = 0;
+    $scope.activeSlots = [];
 
     $scope.slots = [
       {
         'name': 'Revolver',
+        'id': 'revolver',
         'level': 1,
         'cost': 0,
       },
       {
         'name': 'Nothing',
-        'level': 0,
+        'id': 'nothing',
+        'level': 1,
         'cost': 0,
       },
       {
         'name': 'Nothing',
-        'level': 0,
+        'id': 'nothing',
+        'level': 1,
         'cost': 0,
       },
       {
         'name': 'Nothing',
-        'level': 0,
+        'id': 'nothing',
+        'level': 1,
         'cost': 0,
       },
       {
         'name': 'Nothing',
-        'level': 0,
+        'id': 'nothing',
+        'level': 1,
         'cost': 0,
       },
       {
         'name': 'Nothing',
-        'level': 0,
+        'id': 'nothing',
+        'level': 1,
         'cost': 0,
       },
       {
         'name': 'Nothing',
-        'level': 0,
+        'id': 'nothing',
+        'level': 1,
         'cost': 0,
       }];
     $scope.skills = SkillService.skills;
@@ -64,6 +72,10 @@ angular.module('loadoutApp')
     $scope.setSkillDetail = function(value) {
       $scope.skillDetail = value;
       $scope.skillLevel = 0;
+      if (value == 'nothing') {
+        $scope.skillDetail = '';
+        $scope.setSkill($scope.skills.skill[0]);
+      }
     }
     $scope.getSkillDetail = function(value) {
       return $scope.skillDetail == value;
@@ -74,12 +86,15 @@ angular.module('loadoutApp')
     $scope.getSkillLevel = function(value) {
       return $scope.skillLevel == value;
     }
-    $scope.setSkill = function(skill, key) {
-      $scope.slots[$scope.skillSlot - 1].cost = skill.levels[$scope.skillLevel].cost;
+    $scope.setSkill = function(skill) {
       $scope.slots[$scope.skillSlot - 1].name = skill.name;
+      $scope.slots[$scope.skillSlot - 1].id = skill.id;
       $scope.slots[$scope.skillSlot - 1].level = $scope.skillLevel + 1;
+      $scope.slots[$scope.skillSlot - 1].cost = skill.levels[$scope.skillLevel].cost;
 
       $scope.updatePoints();
+      $scope.updateActive();
+
       $scope.skillSlot = '';
       $scope.skillSet = '';
       $scope.skillDetail = '';
@@ -93,4 +108,17 @@ angular.module('loadoutApp')
       });
       $scope.remainingPoints = remaining;
     }
+
+    $scope.updateActive = function() {
+      var active = [];
+      $scope.slots.forEach(function(slot) {
+        active.push({
+          id: slot.id,
+          level: slot.level
+        });
+      });
+      $scope.activeSlots = active;
+    }
+
+    $scope.updateActive();
   });

@@ -37,22 +37,23 @@ img, video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000331}}
-.icon-level-0:before,
-.icon-nothing:before {
-  content: "\e600"; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000332}}
 .icon-level-1:before {
   content: "\e601"; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000335}}
 .icon-level-2:before {
   content: "\e602"; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000338}}
 .icon-level-3:before {
   content: "\e603"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000341}}
+.icon-skill-nothing:before,
+.icon-level-0:before,
+.icon-nothing:before {
+  content: "\e600"; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gabrielemanna\/sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\000031}}
 body {
