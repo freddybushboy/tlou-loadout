@@ -16,6 +16,7 @@
   line-height: 50px;
   padding: 8px 10px;
   cursor: pointer;
+  &.active,
   &:hover {
     padding: 6px 8px;
     border: 2px solid white;
@@ -45,6 +46,7 @@
   line-height: 32px;
   padding: 6px 8px;
   cursor: pointer;
+  &.active,
   &:hover {
     padding: 4px 6px;
     border: 2px solid white;
@@ -59,10 +61,35 @@
   padding-left: 25px;
   padding-top: 10px;
 }
+.skill-detail__level_select {
+  @include clearfix;
+  text-align: center;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .loadout-slot__icon {
+    @include inline-block;
+    float: none;
+    padding: 7px;
+    font-size: 40px;
+    margin: 5px;
+    cursor: pointer;
+    &.active,
+    &:hover {
+      border: 2px solid white;
+      padding: 5px;
+    }
+  }
+}
 .skill-detail__header {
   @include clearfix;
   padding-left: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 .skill-detail__icon {
   font-size: 50px;
