@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-route.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
   <body ng-cloak>
@@ -29,28 +30,28 @@
         <div class="loadout-calc__slots-col">
           <div class="loadout-slot-wrapper loadout-slot-wrapper--weapon">
             <div class="loadout-slot" ng-class="{active: skillSlot == 1}" ng-click="setSkillSet('small', 1)">
-              <span class="loadout-slot__icon icon-level-{{slots.0.level}} icon-skill-{{slots.0.id}}"></span>
-              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots.0.cost}}</span>
-              <span class="loadout-slot__name">{{skillName(slots.0.name, slots.0.level, 'small')}}</span>
+              <span class="loadout-slot__icon icon-level-{{slots.0.level}} icon-skill-{slots.0.id}}"></span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{getSlotCost(0, 'small')}}</span>
+              <span class="loadout-slot__name">{{getSlotName(0, 'small')}}</span>
             </div>
             <div class="loadout-slot"  ng-class="{empty: slots.1.name == 'No Large Firearm'}" ng-class="{active: skillSlot == 2}" ng-click="setSkillSet('large', 2)">
               <span class="loadout-slot__icon icon-level-{{slots.1.level}} icon-skill-{{slots.1.id}}"></span>
-              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots.1.cost}}</span>
-              <span class="loadout-slot__name">{{skillName(slots.1.name, slots.1.level, 'large')}}</span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{getSlotCost(1, 'large')}}</span>
+              <span class="loadout-slot__name">{{getSlotName(0, 'large')}}</span>
             </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--skill">
             <div class="loadout-slot" ng-class="{active: skillSlot == $index + 3}" ng-click="setSkillSet('skill', $index + 3)" ng-repeat="i in getRepeat(4) track by $index">
-              <span class="loadout-slot__icon icon-level-{{slots[$index + 2].level}} icon-skill-{{slots[$index + 2].id}}"></span>
-              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots[$index + 2].cost}}</span>
-              <span class="loadout-slot__name">{{skillName(slots[$index + 2].name, slots[$index + 2].level, 'skill')}}</span>
+              <span class="loadout-slot__icon icon-level-{{slots[$index + 2].level}} icon-skill-{{slots[$index + 2].idl}}"></span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{getSlotCost($index + 2, 'skill')}}</span>
+              <span class="loadout-slot__name">{{getSlotName($index + 2, 'skill')}}</span>
             </div>
           </div>
           <div class="loadout-slot-wrapper loadout-slot-wrapper--purchase">
             <div class="loadout-slot"  ng-class="{empty: slots.6.name == 'No Purchasable'}" ng-class="{active: skillSlot == 7}" ng-click="setSkillSet('purchase', 7)">
-              <span class="loadout-slot__icon icon-level-{{slots.6.level}} icon-skill-{{slots.6.id}}"></span>
-              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{slots.6.cost}}</span>
-              <span class="loadout-slot__name">{{skillName(slots.6.name, slots.6.level, 'purchase')}}</span>
+              <span class="loadout-slot__icon icon-level-{{slots.6.level}} icon-skill-{{slots.6.level}}"></span>
+              <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{getSlotCost(6, 'purchase')}}</span>
+              <span class="loadout-slot__name">{{getSlotName(6, 'purchase')}}</span>
             </div>
           </div>
         </div>

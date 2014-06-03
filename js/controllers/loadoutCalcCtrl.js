@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('loadoutApp')
-  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService) {
+  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location) {
 
     $scope.skillSlot = '';
     $scope.skillSet = '';
@@ -9,49 +9,46 @@ angular.module('loadoutApp')
     $scope.skillLevel = 0;
     $scope.activeSlots = [];
 
+    $scope.preset = [
+      $location.search()['s1'],
+      $location.search()['s2'],
+      $location.search()['s3'],
+      $location.search()['s4'],
+      $location.search()['s5'],
+      $location.search()['s6'],
+      $location.search()['s7']
+    ];
+
     $scope.slots = [
       {
-        'name': 'Revolver',
         'id': 'revolver',
         'level': 1,
-        'cost': 0,
       },
       {
-        'name': 'No Large Firearm',
         'id': 'nothing',
         'level': 1,
-        'cost': 0,
       },
       {
-        'name': 'Nothing',
         'id': 'nothing',
         'level': 1,
-        'cost': 0,
       },
       {
-        'name': 'Nothing',
         'id': 'nothing',
         'level': 1,
-        'cost': 0,
       },
       {
-        'name': 'Nothing',
         'id': 'nothing',
         'level': 1,
-        'cost': 0,
       },
       {
-        'name': 'Nothing',
         'id': 'nothing',
         'level': 1,
-        'cost': 0,
       },
       {
-        'name': 'No Purchasable',
         'id': 'nothing',
         'level': 1,
-        'cost': 0,
       }];
+
     $scope.skills = SkillService.skills;
 
     $scope.remainingPoints = '13';
@@ -59,6 +56,15 @@ angular.module('loadoutApp')
     $scope.getRepeat = function(num) {
       return new Array(num);
     }
+    function getSkillFromId(id, type) {
+      var arr = $scope.skills[type];
+      arr.forEach(function(skill) {
+        if (skill.id == id) {
+          return skill;
+        }
+      });
+    }
+
     $scope.setSkillSet = function(value, slot) {
       $scope.skillSlot = slot;
       $scope.skillSet = value;
@@ -85,11 +91,21 @@ angular.module('loadoutApp')
     $scope.getSkillLevel = function(value) {
       return $scope.skillLevel == value;
     }
+
+    $scope.getSlotName = function(slot, type) {
+      var skill = getSkillFromId($scope.slots[slot].id, type);
+      if (slot == 0 || slot == 1) {
+        return $scope.weaponName(skill.name, $scope.slots[slot].level);
+      }
+    }
+    $scope.getSlotCost = function(slot, type) {
+      var skill = getSkillFromId($scope.slots[slot].id, type);
+    }
+
+
     $scope.setSkill = function(skill) {
-      $scope.slots[$scope.skillSlot - 1].name = skill.name;
       $scope.slots[$scope.skillSlot - 1].id = skill.id;
       $scope.slots[$scope.skillSlot - 1].level = $scope.skillLevel + 1;
-      $scope.slots[$scope.skillSlot - 1].cost = skill.levels[$scope.skillLevel].cost;
 
       $scope.updatePoints();
       $scope.updateActive();
@@ -145,46 +161,32 @@ angular.module('loadoutApp')
 
       $scope.slots = [
         {
-          'name': 'Revolver',
           'id': 'revolver',
           'level': 1,
-          'cost': 0,
         },
         {
-          'name': 'No Large Firearm',
           'id': 'nothing',
           'level': 1,
-          'cost': 0,
         },
         {
-          'name': 'Nothing',
           'id': 'nothing',
           'level': 1,
-          'cost': 0,
         },
         {
-          'name': 'Nothing',
           'id': 'nothing',
           'level': 1,
-          'cost': 0,
         },
         {
-          'name': 'Nothing',
           'id': 'nothing',
           'level': 1,
-          'cost': 0,
         },
         {
-          'name': 'Nothing',
           'id': 'nothing',
           'level': 1,
-          'cost': 0,
         },
         {
-          'name': 'No Purchasable',
           'id': 'nothing',
           'level': 1,
-          'cost': 0,
         }];
 
       $scope.remainingPoints = '13';
