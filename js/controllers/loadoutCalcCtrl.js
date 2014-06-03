@@ -120,7 +120,10 @@ angular.module('loadoutApp')
     }
 
     $scope.skillName = function(name, level, cat) {
-      if (cat == 'small' || cat == 'large') {
+      if (name == 'Nothing') {
+        return name;
+      }
+      if (cat != 'skill') {
         return $scope.weaponName(name, level);
       }
       return name + ' ' + level;

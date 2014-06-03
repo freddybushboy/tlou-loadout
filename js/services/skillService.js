@@ -59,7 +59,7 @@ angular.module('loadoutApp')
           'name': 'Enforcer',
           'levels': [
             {
-              'description': 'A versatile pistol woth great range and accuracy.',
+              'description': 'A versatile pistol with great range and accuracy.',
               'cost': 1
             },
             {

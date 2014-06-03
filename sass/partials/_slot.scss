@@ -8,6 +8,15 @@
 .loadout-slot-wrapper--purchase {
   padding-top: 2px;
 }
+.loadout-slot-wrapper--purchase,
+.loadout-slot-wrapper--weapon {
+  .loadout-slot {
+    text-transform: uppercase;
+    &.empty {
+      text-transform: none;
+    }
+  }
+}
 
 // Slots.
 .loadout-slot {
@@ -27,8 +36,8 @@
   font-size: 50px;
 }
 .loadout-slot__name {
-  float: left;
-  padding-left: 10px;
+  float: right;
+  padding-right: 7px;
 }
 .loadout-slot__cost {
   float: right;
@@ -57,6 +66,11 @@
   }
   .loadout-slot__icon {
     font-size: 32px;
+  }
+  .loadout-slot__name {
+    float: left;
+    padding-right: 0;
+    padding-left: 7px;
   }
 }
 

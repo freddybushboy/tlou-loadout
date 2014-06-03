@@ -192,62 +192,76 @@ a {
   padding-top: 2px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000313}}
+.loadout-slot-wrapper--purchase .loadout-slot,
+.loadout-slot-wrapper--weapon .loadout-slot {
+  text-transform: uppercase; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000315}}
+  .loadout-slot-wrapper--purchase .loadout-slot.empty,
+  .loadout-slot-wrapper--weapon .loadout-slot.empty {
+    text-transform: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000322}}
 .loadout-slot {
   display: block;
   height: 67px;
   line-height: 50px;
   padding: 8px 10px;
   cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000329}}
   .loadout-slot.active, .loadout-slot:hover {
     padding: 6px 8px;
     border: 2px solid white; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000334}}
 .loadout-slot__icon {
   float: left;
   font-size: 50px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000338}}
 .loadout-slot__name {
-  float: left;
-  padding-left: 10px; }
+  float: right;
+  padding-right: 7px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000342}}
 .loadout-slot__cost {
   float: right;
   padding-left: 10px;
   color: lightskyblue; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000346}}
   .loadout-slot__cost.over {
     color: crimson; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000352}}
 .loadout-skills {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000356}}
 .loadout-skills__slot {
   display: block;
   height: 44px;
   line-height: 32px;
   padding: 6px 8px;
   cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000363}}
   .loadout-skills__slot.active, .loadout-skills__slot:hover {
     padding: 4px 6px;
     border: 2px solid white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000367}}
   .loadout-skills__slot .loadout-slot__icon {
     font-size: 32px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000370}}
+  .loadout-skills__slot .loadout-slot__name {
+    float: left;
+    padding-right: 0;
+    padding-left: 7px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000378}}
 .skill-detail {
   padding-left: 25px;
   padding-top: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000382}}
 .skill-detail__level_select {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -266,12 +280,12 @@ a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
   .skill-detail__level_select:after {
     clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000388}}
   .skill-detail__level_select h2 {
     font-size: 18px;
     text-transform: uppercase;
     margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000393}}
   .skill-detail__level_select .loadout-slot__icon {
     display: -moz-inline-stack;
     display: inline-block;
@@ -284,12 +298,12 @@ a {
     font-size: 40px;
     margin: 5px;
     cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003101}}
     .skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
       border: 2px solid white;
       padding: 5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003107}}
 .skill-detail__header {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -307,31 +321,31 @@ a {
   .skill-detail__header:after {
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003112}}
 .skill-detail__icon {
   font-size: 50px;
   float: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003116}}
 .skill-detail__header-text {
   float: left;
   padding-left: 25px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003120}}
 .skill-detail__name {
   display: block;
   font-size: 20px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003124}}
 .skill-detail__cost {
   display: block;
   font-size: 22px;
   color: lightskyblue; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003128}}
   .skill-detail__cost.over {
     color: crimson; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003132}}
 .skill-detail__weapon {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -349,50 +363,50 @@ a {
   .skill-detail__weapon:after {
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003137}}
 .weapon-bars {
   height: 8px;
   width: 338px;
   margin-bottom: 5px;
   background-size: 100% auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--1 {
   background-image: url('../images/bars/1.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--2 {
   background-image: url('../images/bars/2.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--3 {
   background-image: url('../images/bars/3.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--4 {
   background-image: url('../images/bars/4.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--5 {
   background-image: url('../images/bars/5.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--6 {
   background-image: url('../images/bars/6.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--7 {
   background-image: url('../images/bars/7.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--8 {
   background-image: url('../images/bars/8.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--9 {
   background-image: url('../images/bars/9.png?1401734897'); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--10 {
   background-image: url('../images/bars/10.png?1401734897'); }
 
