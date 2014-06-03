@@ -1,30 +1,34 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/singularitygs-1\.1\.2\/stylesheets\/singularitygs\/helpers\/_box-sizing\.scss}line{font-family:\0000334}}
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
+  *behavior: url('../behaviors/box-sizing/boxsizing.php');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_box-sizing\.scss}line{font-family:\0000336}}
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php'); }
+  *behavior: url('../behaviors/box-sizing/boxsizing.php');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_fluid-media\.scss}line{font-family:\000034}}
 img, video {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?pxnszm");
-  src: url("../fonts/icomoon.eot?#iefixpxnszm") format("embedded-opentype"), url("../fonts/icomoon.woff?pxnszm") format("woff"), url("../fonts/icomoon.ttf?pxnszm") format("truetype"), url("../fonts/icomoon.svg?pxnszm#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "icomoon";
+  src: url('../fonts/icomoon.eot');
+  src: url('../fonts/icomoon.eot?#iefix') format('eot'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg') format('svg');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000311}}
+@font-face {
+  font-family: "tlou";
+  src: url('../fonts/tlou.eot');
+  src: url('../fonts/tlou.eot?#iefix') format('eot'), url('../fonts/tlou.woff') format('woff'), url('../fonts/tlou.ttf') format('truetype'), url('../fonts/tlou.svg') format('svg');
+}
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -35,33 +39,33 @@ img, video {
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000332}}
 .icon-level-1:before {
-  content: "\e601"; }
+  content: "\e601";
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000335}}
 .icon-level-2:before {
-  content: "\e602"; }
+  content: "\e602";
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000338}}
 .icon-level-3:before {
-  content: "\e603"; }
+  content: "\e603";
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/variables\/_typography\.scss}line{font-family:\0000343}}
 .icon-skill-nothing:before,
 .icon-level-0:before,
 .icon-nothing:before {
-  content: "\e600"; }
+  content: "\e600";
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\000031}}
 body {
-  background: black url('../images/background.jpg?1401221390') no-repeat top center;
-  color: white;
-  text-align: center; }
+  background: black url('../images/background.jpg?1401264808') no-repeat top center;
+  color: #aca99b;
+  text-align: center;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\000036}}
 .loadout-calc {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -70,45 +74,45 @@ body {
   padding: 60px 20px 20px;
   width: 1200px;
   margin: 0 auto;
-  text-align: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000348}}
-  .loadout-calc:before, .loadout-calc:after {
-    content: ".";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
-  .loadout-calc:after {
-    clear: both; }
+  text-align: left;
+}
+.loadout-calc:before, .loadout-calc:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc:after {
+  clear: both;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000313}}
 a {
-  color: lightskyblue; }
+  color: lightskyblue;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000318}}
 .loadout-calc__cols {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
   /* non-JS fallback */
-  *zoom: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000348}}
-  .loadout-calc__cols:before, .loadout-calc__cols:after {
-    content: ".";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
-  .loadout-calc__cols:after {
-    clear: both; }
+  *zoom: 1;
+}
+.loadout-calc__cols:before, .loadout-calc__cols:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc__cols:after {
+  clear: both;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000321}}
 .loadout-calc__slots-col {
   float: left;
   width: 300px;
-  border-right: 2px solid white;
-  padding-right: 7px; }
+  border-right: 2px solid #aca99b;
+  padding-right: 7px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000327}}
 .loadout-calc__skills-col {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -116,18 +120,18 @@ a {
   *zoom: 1;
   float: left;
   width: 820px;
-  padding-left: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000348}}
-  .loadout-calc__skills-col:before, .loadout-calc__skills-col:after {
-    content: ".";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
-  .loadout-calc__skills-col:after {
-    clear: both; }
+  padding-left: 20px;
+}
+.loadout-calc__skills-col:before, .loadout-calc__skills-col:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc__skills-col:after {
+  clear: both;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000333}}
 .loadout-calc__info-col {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -135,306 +139,309 @@ a {
   *zoom: 1;
   float: left;
   width: 100%;
-  border-bottom: 2px solid white;
-  margin-bottom: 7px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000348}}
-  .loadout-calc__info-col:before, .loadout-calc__info-col:after {
-    content: ".";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
-  .loadout-calc__info-col:after {
-    clear: both; }
+  border-bottom: 2px solid #aca99b;
+  margin-bottom: 7px;
+}
+.loadout-calc__info-col:before, .loadout-calc__info-col:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc__info-col:after {
+  clear: both;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000340}}
 .loadout-calc__skill-list-col {
   float: left;
   width: 300px;
   height: 440px;
   overflow: scroll;
-  border-right: 2px solid white;
-  padding-right: 7px; }
+  border-right: 2px solid #aca99b;
+  padding-right: 7px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000348}}
 .loadout-calc__details-col {
   float: left;
-  width: 500px; }
+  width: 500px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000352}}
 .loadout-calc__footer-col {
   float: left;
   width: 100%;
-  border-top: 2px solid white;
-  margin-top: 7px; }
+  border-top: 2px solid #aca99b;
+  margin-top: 7px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000358}}
 .loadout-reset {
   display: block;
   cursor: pointer;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_layout\.scss}line{font-family:\0000363}}
 .disclaimer {
   text-align: center;
   margin-top: 30px;
-  font-size: 12px; }
+  font-size: 12px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\000033}}
 .loadout-slot-wrapper--skill,
 .loadout-slot-wrapper--weapon {
-  border-bottom: 2px solid white;
-  padding-bottom: 2px; }
+  border-bottom: 2px solid #aca99b;
+  padding-bottom: 2px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\000038}}
 .loadout-slot-wrapper--skill,
 .loadout-slot-wrapper--purchase {
-  padding-top: 2px; }
+  padding-top: 2px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000313}}
 .loadout-slot-wrapper--purchase .loadout-slot,
 .loadout-slot-wrapper--weapon .loadout-slot {
-  text-transform: uppercase; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000315}}
-  .loadout-slot-wrapper--purchase .loadout-slot.empty,
-  .loadout-slot-wrapper--weapon .loadout-slot.empty {
-    text-transform: none; }
+  text-transform: uppercase;
+}
+.loadout-slot-wrapper--purchase .loadout-slot.empty,
+.loadout-slot-wrapper--weapon .loadout-slot.empty {
+  text-transform: none;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000322}}
 .loadout-slot {
   display: block;
   height: 67px;
   line-height: 50px;
   padding: 8px 10px;
-  cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000329}}
-  .loadout-slot.active, .loadout-slot:hover {
-    padding: 6px 8px;
-    border: 2px solid white; }
+  cursor: pointer;
+}
+.loadout-slot.active, .loadout-slot:hover {
+  padding: 6px 8px;
+  border: 2px solid #aca99b;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000334}}
 .loadout-slot__icon {
   float: left;
-  font-size: 50px; }
+  font-size: 50px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000338}}
 .loadout-slot__name {
   float: right;
-  padding-right: 7px; }
+  padding-right: 7px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000342}}
 .loadout-slot__cost {
   float: right;
   padding-left: 10px;
-  color: lightskyblue; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000346}}
-  .loadout-slot__cost.over {
-    color: crimson; }
+  color: lightskyblue;
+}
+.loadout-slot__cost.over {
+  color: crimson;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000352}}
 .loadout-skills {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000356}}
 .loadout-skills__slot {
   display: block;
   height: 44px;
   line-height: 32px;
   padding: 6px 8px;
-  cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000363}}
-  .loadout-skills__slot.active, .loadout-skills__slot:hover {
-    padding: 4px 6px;
-    border: 2px solid white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000367}}
-  .loadout-skills__slot .loadout-slot__icon {
-    font-size: 32px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000370}}
-  .loadout-skills__slot .loadout-slot__name {
-    float: left;
-    padding-right: 0;
-    padding-left: 7px; }
+  cursor: pointer;
+}
+.loadout-skills__slot.active, .loadout-skills__slot:hover {
+  padding: 4px 6px;
+  border: 2px solid #aca99b;
+}
+.loadout-skills__slot .loadout-slot__icon {
+  font-size: 32px;
+}
+.loadout-skills__slot .loadout-slot__name {
+  float: left;
+  padding-right: 0;
+  padding-left: 7px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000378}}
 .skill-detail {
   padding-left: 25px;
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000382}}
 .skill-detail__level_select {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
   /* non-JS fallback */
   *zoom: 1;
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #aca99b;
   margin-bottom: 10px;
-  padding-bottom: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000348}}
-  .skill-detail__level_select:before, .skill-detail__level_select:after {
-    content: ".";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
-  .skill-detail__level_select:after {
-    clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000388}}
-  .skill-detail__level_select h2 {
-    font-size: 18px;
-    text-transform: uppercase;
-    margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\0000393}}
-  .skill-detail__level_select .loadout-slot__icon {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
-    float: none;
-    padding: 7px;
-    font-size: 40px;
-    margin: 5px;
-    cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003101}}
-    .skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
-      border: 2px solid white;
-      padding: 5px; }
+  padding-bottom: 10px;
+}
+.skill-detail__level_select:before, .skill-detail__level_select:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.skill-detail__level_select:after {
+  clear: both;
+}
+.skill-detail__level_select h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.skill-detail__level_select .loadout-slot__icon {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  float: none;
+  padding: 7px;
+  font-size: 40px;
+  margin: 5px;
+  cursor: pointer;
+}
+.skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
+  border: 2px solid #aca99b;
+  padding: 5px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003107}}
 .skill-detail__header {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
   /* non-JS fallback */
   *zoom: 1;
   padding-left: 20px;
-  margin-bottom: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000348}}
-  .skill-detail__header:before, .skill-detail__header:after {
-    content: ".";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
-  .skill-detail__header:after {
-    clear: both; }
+  margin-bottom: 10px;
+}
+.skill-detail__header:before, .skill-detail__header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.skill-detail__header:after {
+  clear: both;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003112}}
 .skill-detail__icon {
   font-size: 50px;
-  float: left; }
+  float: left;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003116}}
 .skill-detail__header-text {
   float: left;
-  padding-left: 25px; }
+  padding-left: 25px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003120}}
 .skill-detail__name {
   display: block;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003124}}
 .skill-detail__cost {
   display: block;
   font-size: 22px;
-  color: lightskyblue; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003128}}
-  .skill-detail__cost.over {
-    color: crimson; }
+  color: lightskyblue;
+}
+.skill-detail__cost.over {
+  color: crimson;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003132}}
 .skill-detail__weapon {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
   /* non-JS fallback */
   *zoom: 1;
   clear: both;
-  margin-top: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000348}}
-  .skill-detail__weapon:before, .skill-detail__weapon:after {
-    content: ".";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Library\/Ruby\/Gems\/2\.0\.0\/gems\/toolkit-1\.3\.8\/stylesheets\/toolkit\/_clearfix\.scss}line{font-family:\0000355}}
-  .skill-detail__weapon:after {
-    clear: both; }
+  margin-top: 10px;
+}
+.skill-detail__weapon:before, .skill-detail__weapon:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.skill-detail__weapon:after {
+  clear: both;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003137}}
 .weapon-bars {
   height: 8px;
   width: 338px;
   margin-bottom: 5px;
-  background-size: 100% auto; }
+  background-size: 100% auto;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--1 {
-  background-image: url('../images/bars/1.png?1401734897'); }
+  background-image: url('../images/bars/1.png?1401712945');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--2 {
-  background-image: url('../images/bars/2.png?1401734897'); }
+  background-image: url('../images/bars/2.png?1401712958');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--3 {
-  background-image: url('../images/bars/3.png?1401734897'); }
+  background-image: url('../images/bars/3.png?1401712967');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--4 {
-  background-image: url('../images/bars/4.png?1401734897'); }
+  background-image: url('../images/bars/4.png?1401712974');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--5 {
-  background-image: url('../images/bars/5.png?1401734897'); }
+  background-image: url('../images/bars/5.png?1401712982');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--6 {
-  background-image: url('../images/bars/6.png?1401734897'); }
+  background-image: url('../images/bars/6.png?1401712989');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--7 {
-  background-image: url('../images/bars/7.png?1401734897'); }
+  background-image: url('../images/bars/7.png?1401713005');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--8 {
-  background-image: url('../images/bars/8.png?1401734897'); }
+  background-image: url('../images/bars/8.png?1401713016');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--9 {
-  background-image: url('../images/bars/9.png?1401734897'); }
+  background-image: url('../images/bars/9.png?1401713025');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_slot\.scss}line{font-family:\00003145}}
 .weapon-bars--10 {
-  background-image: url('../images/bars/10.png?1401734897'); }
+  background-image: url('../images/bars/10.png?1401713034');
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_typography\.scss}line{font-family:\000031}}
 body {
-  font-family: "Myriad Pro", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "tlou", "Myriad Pro", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_typography\.scss}line{font-family:\000034}}
 h1 {
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: normal;
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_typography\.scss}line{font-family:\0000310}}
 h2 {
   text-transform: uppercase;
   font-size: 25px;
   font-weight: normal;
-  margin: 5px 0; }
+  margin: 5px 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_typography\.scss}line{font-family:\0000316}}
 .loadout-points {
   font-size: 25px;
   font-weight: normal;
   margin: 5px 0;
-  float: right; }
+  float: right;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/freddybushboy\/Sites\/tlou-loadout\/sass\/partials\/_typography\.scss}line{font-family:\0000322}}
 .slot-name {
-  float: left; }
+  float: left;
+}

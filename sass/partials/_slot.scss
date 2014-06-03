@@ -1,7 +1,7 @@
 // Wrappers.
 .loadout-slot-wrapper--skill,
 .loadout-slot-wrapper--weapon {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid $white;
   padding-bottom: 2px;
 }
 .loadout-slot-wrapper--skill,
@@ -28,7 +28,7 @@
   &.active,
   &:hover {
     padding: 6px 8px;
-    border: 2px solid white;
+    border: 2px solid $white;
   }
 }
 .loadout-slot__icon {
@@ -62,7 +62,7 @@
   &.active,
   &:hover {
     padding: 4px 6px;
-    border: 2px solid white;
+    border: 2px solid $white;
   }
   .loadout-slot__icon {
     font-size: 32px;
@@ -82,7 +82,7 @@
 .skill-detail__level_select {
   @include clearfix;
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid $white;
   margin-bottom: 10px;
   padding-bottom: 10px;
   h2 {
@@ -99,7 +99,7 @@
     cursor: pointer;
     &.active,
     &:hover {
-      border: 2px solid white;
+      border: 2px solid $white;
       padding: 5px;
     }
   }

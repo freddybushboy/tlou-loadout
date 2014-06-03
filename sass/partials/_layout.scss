@@ -1,6 +1,6 @@
 body {
   background: black image-url('background.jpg') no-repeat top center;
-  color: white;
+  color: $white;
   text-align: center;
 }
 .loadout-calc {
@@ -21,7 +21,7 @@ a {
 .loadout-calc__slots-col {
   float: left;
   width: 300px;
-  border-right: 2px solid white;
+  border-right: 2px solid $white;
   padding-right: 7px;
 }
 .loadout-calc__skills-col {
@@ -34,7 +34,7 @@ a {
   @include clearfix;
   float: left;
   width: 100%;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid $white;
   margin-bottom: 7px;
 }
 .loadout-calc__skill-list-col {
@@ -42,7 +42,7 @@ a {
   width: 300px;
   height: 440px;
   overflow: scroll;
-  border-right: 2px solid white;
+  border-right: 2px solid $white;
   padding-right: 7px;
 }
 .loadout-calc__details-col {
@@ -52,7 +52,7 @@ a {
 .loadout-calc__footer-col {
   float: left;
   width: 100%;
-  border-top: 2px solid white;
+  border-top: 2px solid $white;
   margin-top: 7px;
 }
 .loadout-reset {

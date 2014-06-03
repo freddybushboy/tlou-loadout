@@ -9,7 +9,7 @@
 # Default to development if environment is not set.
 saved = environment
 if (environment.nil?)
-  environment = :development
+  environment = :production
 else
   environment = saved
 end
@@ -18,6 +18,7 @@ end
 css_dir = "css"
 sass_dir = "sass"
 images_dir = "images"
+fonts_dir = "fonts"
 generated_images_dir = images_dir + "/generated"
 javascripts_dir = "js"
 
