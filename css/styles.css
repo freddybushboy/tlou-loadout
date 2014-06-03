@@ -185,6 +185,10 @@ a {
   font-size: 12px;
 }
 
+.fb_iframe_widget {
+  vertical-align: top;
+}
+
 .loadout-slot-wrapper--skill,
 .loadout-slot-wrapper--weapon {
   border-bottom: 2px solid #aca99b;

@@ -124,9 +124,19 @@
       </div>
       <span class="loadout-reset" ng-click="resetLoadout()"><span class="icon-nothing"></span> Reset Loadout</span>
       <p class="disclaimer">Built by <a href="http://www.fredparke.com" target="_blank">Fred Parke</a>. Please feel free to email any feedback or mistakes to <a href="mailto:mail@fredparke.com">mail@fredparke.com</a>.</p>
+      <div class="fb-share-button" data-type="button_count"></div>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="FreddyBushBoy">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
 
-
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <script src="js/app.js"></script>
     <script src="js/controllers/loadoutCalcCtrl.js"></script>
     <script src="js/services/skillService.js"></script>
