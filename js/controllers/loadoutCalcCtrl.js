@@ -58,11 +58,13 @@ angular.module('loadoutApp')
     }
     function getSkillFromId(id, type) {
       var arr = $scope.skills[type];
+      var ret = {};
       arr.forEach(function(skill) {
         if (skill.id == id) {
-          return skill;
+          ret = skill;
         }
       });
+      return ret;
     }
 
     $scope.setSkillSet = function(value, slot) {
