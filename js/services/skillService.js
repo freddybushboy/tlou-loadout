@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 angular.module('loadoutApp')
   .service('SkillService', function () {
@@ -306,7 +306,7 @@ angular.module('loadoutApp')
             },
             {
               'description': 'Marks last 3 seconds longer, marked enemies glow and enemies within a short distance of your target are also marked. Aim at an enemy and click R3 to mark.',
-              'cost': 3
+              'cost': 4
             }
           ],
         },

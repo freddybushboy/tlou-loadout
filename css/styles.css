@@ -216,7 +216,7 @@ a {
   padding: 8px 10px;
   cursor: pointer;
 }
-.loadout-slot.active, .loadout-slot:hover {
+.loadout-slot:focus, .loadout-slot.active, .loadout-slot:hover {
   padding: 6px 8px;
   border: 2px solid #aca99b;
 }
@@ -252,7 +252,7 @@ a {
   padding: 6px 8px;
   cursor: pointer;
 }
-.loadout-skills__slot.active, .loadout-skills__slot:hover {
+.loadout-skills__slot:focus, .loadout-skills__slot.active, .loadout-skills__slot:hover {
   padding: 4px 6px;
   border: 2px solid #aca99b;
 }
@@ -307,7 +307,7 @@ a {
   margin: 5px;
   cursor: pointer;
 }
-.skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
+.skill-detail__level_select .loadout-slot__icon:focus, .skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
   border: 2px solid #aca99b;
   padding: 5px;
 }

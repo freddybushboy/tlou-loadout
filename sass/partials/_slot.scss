@@ -25,6 +25,7 @@
   line-height: 50px;
   padding: 8px 10px;
   cursor: pointer;
+  &:focus,
   &.active,
   &:hover {
     padding: 6px 8px;
@@ -59,6 +60,7 @@
   line-height: 32px;
   padding: 6px 8px;
   cursor: pointer;
+  &:focus,
   &.active,
   &:hover {
     padding: 4px 6px;
@@ -97,6 +99,7 @@
     font-size: 40px;
     margin: 5px;
     cursor: pointer;
+    &:focus,
     &.active,
     &:hover {
       border: 2px solid $white;
