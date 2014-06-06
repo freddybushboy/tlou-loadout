@@ -180,8 +180,10 @@ angular.module('loadoutApp')
       var clash = false;
       if (skill.id != 'nothing') {
         $scope.slots.forEach(function(slot, key) {
-          if (slot.id == skill.id && (key + 1) != $scope.skillSlot) {
-            clash = true;
+          if (slot.id == skill.id) {
+            if ((key + 1) != $scope.skillSlot) {
+              clash = true;
+            }
           }
         });
         if (clash) {
