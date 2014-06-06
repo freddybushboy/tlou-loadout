@@ -41,9 +41,18 @@ a {
   float: left;
   width: 300px;
   height: 440px;
-  overflow: scroll;
+  overflow-y: auto;
   border-right: 2px solid $white;
-  padding-right: 7px;
+  position: relative;
+}
+.loadout-skills {
+  margin: 0;
+  padding: 0 7px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .loadout-calc__details-col {
   float: left;
