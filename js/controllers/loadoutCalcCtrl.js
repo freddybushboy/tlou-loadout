@@ -7,7 +7,8 @@ angular.module('loadoutApp')
     $scope.skillSet = '';
     $scope.skillDetail = '';
     $scope.skillLevel = 0;
-
+    $scope.q = $location.search()['q'];
+    $scope.slots = [];
     $scope.presets = [
       $location.search()['s1'],
       $location.search()['s2'],
@@ -18,51 +19,81 @@ angular.module('loadoutApp')
       $location.search()['s7']
     ];
 
-    if ($scope.presets[0] !== undefined) {
-      $scope.slots = [];
-      $scope.presets.forEach(function(preset) {
-        $scope.slots.push({
-          'id': preset.substr(0, preset.length - 1),
-          'level': preset.substr(preset.length - 1),
+    $scope.setupSlots = function() {
+      if ($scope.presets[0] !== undefined) {
+        $scope.presets.forEach(function(preset) {
+          $scope.slots.push({
+            'id': preset.substr(0, preset.length - 1),
+            'level': preset.substr(preset.length - 1),
+          });
         });
-      });
+      }
+      else if ($scope.q !== undefined && $scope.q.length == 14) {
+        $scope.qs = $scope.q.match(/.{1,2}/g);
+
+        $scope.qs.forEach(function(code, key) {
+          var slotDetails = $scope.getSlotDetailsFromCode(code, key);
+          $scope.slots.push({
+            'id': slotDetails.id,
+            'level': slotDetails.level,
+          });
+        });
+      }
+      else {
+        $scope.slots = [
+          {
+            'id': 'revolver',
+            'level': 1,
+          },
+          {
+            'id': 'nothing',
+            'level': 1,
+          },
+          {
+            'id': 'nothing',
+            'level': 1,
+          },
+          {
+            'id': 'nothing',
+            'level': 1,
+          },
+          {
+            'id': 'nothing',
+            'level': 1,
+          },
+          {
+            'id': 'nothing',
+            'level': 1,
+          },
+          {
+            'id': 'nothing',
+            'level': 1,
+          }];
+      }
     }
-    else {
-      $scope.slots = [
-        {
-          'id': 'revolver',
-          'level': 1,
-        },
-        {
-          'id': 'nothing',
-          'level': 1,
-        },
-        {
-          'id': 'nothing',
-          'level': 1,
-        },
-        {
-          'id': 'nothing',
-          'level': 1,
-        },
-        {
-          'id': 'nothing',
-          'level': 1,
-        },
-        {
-          'id': 'nothing',
-          'level': 1,
-        },
-        {
-          'id': 'nothing',
-          'level': 1,
-        }];
-    }
+
 
     $scope.skills = SkillService.skills;
 
     $scope.getRepeat = function(num) {
       return new Array(num);
+    }
+    $scope.getSlotDetailsFromCode = function(code, slot) {
+      var type = $scope.getSlotType(slot);
+      var arr = $scope.skills[type];
+      var ret = {};
+      arr.forEach(function(skill) {
+        skill.levels.forEach(function(data, level) {
+          if (data.code == code) {
+            ret = {
+              id: skill.id,
+              level: level + 1,
+            };
+          }
+        });
+      });
+
+      return ret;
     }
     $scope.getSkillFromId = function(id, type) {
       var arr = $scope.skills[type];
@@ -75,24 +106,16 @@ angular.module('loadoutApp')
       return ret;
     }
 
-
     $scope.share = function() {
-      var url = 'http://tlou-loadout.com/';
-      var first = false;
-      var num = 1;
-      $scope.slots.forEach(function(slot) {
-        if (!first) {
-          url += '?s' + num + '=' + slot.id + slot.level;
-          first = true;
-          num = num + 1;
-        }
-        else {
-          url += '&s' + num + '=' + slot.id + slot.level;
-          num = num + 1;
-        }
+      var url = 'http://tlou-loadout.com/?q=';
+      $scope.slots.forEach(function(slot, key) {
+        var type = $scope.getSlotType(key);
+        var skill = $scope.getSkillFromId(slot.id, type);
+        url += skill.levels[slot.level - 1].code;
       });
       return url;
     }
+
     $scope.setSkillSet = function(value, slot) {
       $scope.skillSlot = slot;
       $scope.skillSet = value;
@@ -266,5 +289,5 @@ angular.module('loadoutApp')
     }
 
     $scope.updatePoints();
-
+    $scope.setupSlots();
   });

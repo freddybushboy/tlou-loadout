@@ -1,5 +1,3 @@
- 'use strict';
-
 angular.module('loadoutApp')
   .service('SkillService', function () {
     this.skills = {
@@ -10,7 +8,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Deals a solid punch with good accuracy when still.',
-              'cost': 0
+              'cost': 0,
+              'code': '01'
             }
           ],
           'rate': 4,
@@ -24,11 +23,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A light handgun with a high rate of fire and ample ammunition.',
-              'cost': 0
+              'cost': 0,
+              'code': '02'
             },
             {
               'description': 'Don\'t show up on the enemy minimap when firing..',
-              'cost': 2
+              'cost': 2,
+              'code': '03'
             }
           ],
           'rate': 7,
@@ -42,11 +43,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A wide spread and downs enemies is teo shots up close.',
-              'cost': 1
+              'cost': 1,
+              'code': '04'
             },
             {
               'description': 'Don\'t show up on the enemy minimap when firing..',
-              'cost': 3
+              'cost': 3,
+              'code': '05'
             }
           ],
           'rate': 4,
@@ -60,11 +63,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A versatile pistol with great range and accuracy.',
-              'cost': 1
+              'cost': 1,
+              'code': '06'
             },
             {
               'description': 'Don\'t show up on the enemy minimap when firing..',
-              'cost': 3
+              'cost': 3,
+              'code': '07'
             }
           ],
           'rate': 6,
@@ -80,7 +85,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': '',
-              'cost': 0
+              'cost': 0,
+              'code': '08'
             }
           ]
         },
@@ -90,11 +96,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A reliable mid-range killer.',
-              'cost': 2
+              'cost': 2,
+              'code': '09'
             },
             {
               'description': 'Don\'t show up on the enemy minimap when firing..',
-              'cost': 4
+              'cost': 4,
+              'code': '10'
             }
           ],
           'rate': 5,
@@ -108,7 +116,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A fully automatic all purpose rifle.',
-              'cost': 2
+              'cost': 2,
+              'code': '11'
             }
           ],
           'rate': 4,
@@ -122,11 +131,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A short range monster with three shots per burst.',
-              'cost': 2
+              'cost': 2,
+              'code': '12'
             },
             {
               'description': 'Don\'t show up on the enemy minimap when firing..',
-              'cost': 4
+              'cost': 4,
+              'code': '13'
             }
           ],
           'rate': 6,
@@ -140,11 +151,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Two shots to down and pinpoint accurate at range.',
-              'cost': 2
+              'cost': 2,
+              'code': '14'
             },
             {
               'description': 'Don\'t show up on the enemy minimap when firing..',
-              'cost': 4
+              'cost': 4,
+              'code': '15'
             }
           ],
           'rate': 2,
@@ -158,7 +171,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A silent killer. You won\'t show up on the enemy minimap when firing.',
-              'cost': 3
+              'cost': 3,
+              'code': '16'
             },
           ],
           'rate': 3,
@@ -174,7 +188,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': '',
-              'cost': 0
+              'cost': 0,
+              'code': '17'
             }
           ]
         },
@@ -184,11 +199,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Zoom in while aiming a 9mm, Revolver or Enforcer.',
-              'cost': 1
+              'cost': 1,
+              'code': '18'
             },
             {
               'description': 'Zoom in further while aiming a 9mm, Revolver or Enforcer.',
-              'cost': 2
+              'cost': 2,
+              'code': '19'
             }
           ],
         },
@@ -198,11 +215,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Grenade Launcher and bomb radius is increased by 20%. Molotov radius is increased by 10%.',
-              'cost': 1
+              'cost': 1,
+              'code': '20'
             },
             {
               'description': 'Grenade Launcher and bomb radius is increased by 40%. Molotov radius is increased by 20%.',
-              'cost': 3
+              'cost': 3,
+              'code': '21'
             }
           ],
         },
@@ -212,15 +231,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Revive fallen teammates 30% faster and with 20 more health.',
-              'cost': 1
+              'cost': 1,
+              'code': '22'
             },
             {
               'description': 'Revive fallen teammates 45% faster and with 25 more health and get 25% more parts from revives.',
-              'cost': 3
+              'cost': 3,
+              'code': '23'
             },
             {
               'description': 'Revive fallen teammates 55% faster and with 30 more health and get 50% more parts from revives.',
-              'cost': 4
+              'cost': 4,
+              'code': '24'
             }
           ],
         },
@@ -230,11 +252,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Craft modded weapons in half the time and gain 10 health back with each melee hit.',
-              'cost': 2
+              'cost': 2,
+              'code': '25'
             },
             {
               'description': 'Craft modded weapons in half the time, they have an additional hit and gain 10 health back with each melee hit.',
-              'cost': 3
+              'cost': 3,
+              'code': '26'
             }
           ],
         },
@@ -244,15 +268,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Start with a shiv on each spawn.',
-              'cost': 2
+              'cost': 2,
+              'code': '27'
             },
             {
               'description': 'You won\'t show up on the enemy\'s minimap when crouch walking and start with a shiv on each spawn.',
-              'cost': 4
+              'cost': 4,
+              'code': '28'
             },
             {
               'description': 'You can\'t be marked, won\'t show up on the enemy\'s minimap when crouch walking and start with a shiv on each spawn.',
-              'cost': 5
+              'cost': 5,
+              'code': '29'
             }
           ],
         },
@@ -262,15 +289,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'The listen mode meter regenerates 15% faster and you can stay in listen mode 20% longer.',
-              'cost': 1
+              'cost': 1,
+              'code': '30'
             },
             {
               'description': 'The listen mode meter regenerates 30% faster and you can stay in listen mode 20% longer.',
-              'cost': 2
+              'cost': 2,
+              'code': '31'
             },
             {
               'description': 'Move quickly while in listen mode, enter listen mode more quickly, the meter regenerates 35% faster and you can stay in listen mode 30% longer.',
-              'cost': 3
+              'cost': 3,
+              'code': '32'
             }
           ],
         },
@@ -280,15 +310,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Know when you\'ve been marked.',
-              'cost': 1
+              'cost': 1,
+              'code': '33'
             },
             {
               'description': 'Know when you\'ve been marked and see nearby enemies on the radar.',
-              'cost': 4
+              'cost': 4,
+              'code': '34'
             },
             {
               'description': 'Know when you\'ve been marked, see nearby enemies on the radar and can choose an ally to respawn on. You will be able to respawn several seconds early.',
-              'cost': 5
+              'cost': 5,
+              'code': '35'
             }
           ],
         },
@@ -298,15 +331,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Marks last 3 seconds longer. Aim at an enemy and click R3 to mark.',
-              'cost': 2
+              'cost': 2,
+              'code': '36'
             },
             {
               'description': 'Marks last 3 seconds longer and marked enemies glow. Aim at an enemy and click R3 to mark.',
-              'cost': 3
+              'cost': 3,
+              'code': '37'
             },
             {
               'description': 'Marks last 3 seconds longer, marked enemies glow and enemies within a short distance of your target are also marked. Aim at an enemy and click R3 to mark.',
-              'cost': 4
+              'cost': 4,
+              'code': '38'
             }
           ],
         },
@@ -316,15 +352,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Craft 75% faster.',
-              'cost': 2
+              'cost': 2,
+              'code': '39'
             },
             {
               'description': 'Craft 75% faster and for every 3 items you craft you will reveive a giftbox. Equip this giftbox using UP and you can give it to an ally. They will reveive a random item.',
-              'cost': 4
+              'cost': 4,
+              'code': '40'
             },
             {
               'description': 'Craft 75% faster and for every 2 items you craft you will reveive a giftbox. Equip this giftbox using UP and you can give it to an ally. They will reveive a random item.',
-              'cost': 6
+              'cost': 6,
+              'code': '41'
             }
           ],
         },
@@ -334,15 +373,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Use health kits 75% faster.',
-              'cost': 2
+              'cost': 2,
+              'code': '42'
             },
             {
               'description': 'Use health kits 75% faster and can heal injured teammates. WHen looking at an injured teammate you can hold X to slowly heal them, 10 health every 2 seconds.',
-              'cost': 4
+              'cost': 4,
+              'code': '43'
             },
             {
               'description': 'Use health kits 75% faster and can heal injured teammates. WHen looking at an injured teammate you can hold X to slowly heal them, 20 health every 2 seconds.',
-              'cost': 6
+              'cost': 6,
+              'code': '44'
             }
           ],
         },
@@ -352,15 +394,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Scope sway reduced by 25% and damage wobble reduced by 20%.',
-              'cost': 2
+              'cost': 2,
+              'code': '45'
             },
             {
               'description': 'Scope sway reduced by 37% and damage wobble reduced by 35%. Get 15 health back for each headshot.',
-              'cost': 4
+              'cost': 4,
+              'code': '46'
             },
             {
               'description': 'Scope sway reduced by 50% and damage wobble reduced by 65%. Get 25 health back for each headshot.',
-              'cost': 5
+              'cost': 5,
+              'code': '47'
             }
           ],
         },
@@ -370,11 +415,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Sprint for 15% longer and sprint regenerates 15% faster.',
-              'cost': 1
+              'cost': 1,
+              'code': '48'
             },
             {
               'description': 'Sprint for 30% longer and sprint regenerates 30% faster.',
-              'cost': 3
+              'cost': 3,
+              'code': '49'
             }
           ],
         },
@@ -384,11 +431,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Increases the number of parts you earn by 10%. Note: does not apply to gifting or healing teammates.',
-              'cost': 3
+              'cost': 3,
+              'code': '50'
             },
             {
               'description': 'Increases the number of parts you earn by 20%. Note: does not apply to gifting or healing teammates.',
-              'cost': 5
+              'cost': 5,
+              'code': '52'
             },
           ],
         },
@@ -398,15 +447,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Earn double the parts for shiv kills.',
-              'cost': 1
+              'cost': 1,
+              'code': '53'
             },
             {
               'description': 'Earn 50% more parts for special executions, get an extra shiv use every time you craft a shiv and earn double the parts for shiv kills.',
-              'cost': 3
+              'cost': 3,
+              'code': '54'
             },
             {
               'description': 'Get 2 extra shiv uses every time you craft a shiv and earn double the parts for shiv kills, special executions and interrogations.',
-              'cost': 4
+              'cost': 4,
+              'code': '55'
             }
           ],
         },
@@ -416,15 +468,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Enemies drop 50% more ammo',
-              'cost': 3
+              'cost': 3,
+              'code': '56'
             },
             {
               'description': 'Automatically pick up ammo from kills and enemies drop double the ammo.',
-              'cost': 4
+              'cost': 4,
+              'code': '57'
             },
             {
               'description': 'Enemies sometime drop a random crafting item and always drop double ammo. Automatically pick up ammo and supplies from kills.',
-              'cost': 5
+              'cost': 5,
+              'code': '58'
             }
           ],
         },
@@ -434,11 +489,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Any damage dealt marks the target who receives the damage.',
-              'cost': 3
+              'cost': 3,
+              'code': '59'
             },
             {
               'description': 'Earn double the parts for marking enemies and any damage dealt marks the target who receives the damage.',
-              'cost': 4
+              'cost': 4,
+              'code': '60'
             }
           ],
         },
@@ -448,11 +505,13 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Enemy nametags remain on screen for 5 seconds when you take damage.',
-              'cost': 1
+              'cost': 1,
+              'code': '61'
             },
             {
               'description': 'Enemy nametags appear at twice the normal distance and remain on screen when you take damage for 10 seconds.',
-              'cost': 3
+              'cost': 3,
+              'code': '62'
             }
           ],
         },
@@ -462,15 +521,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Bleed out time is increased by 25% and slightly increase downed crawling speed.',
-              'cost': 1
+              'cost': 1,
+              'code': '63'
             },
             {
               'description': 'Earn 25 parts after healing more than half health and carry an extra health pack. Downed health is increased and bleed out time is increased by 35% along with even faster downed crawling speed.',
-              'cost': 2
+              'cost': 2,
+              'code': '64'
             },
             {
               'description': 'Start with an extra health pack, earn 50 parts for healing more than half health and carry an extra health pack. Bleed out time is increased by 50% and downed health is increased along with much faster downed crawling speed.',
-              'cost': 3
+              'cost': 3,
+              'code': '65'
             }
           ],
         },
@@ -480,15 +542,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Pistol ammo is increased by 30% at spawn (this does not stack with weapon upgrades).',
-              'cost': 2
+              'cost': 2,
+              'code': '66'
             },
             {
               'description': 'Pistol ammo is increased by 70% at spawn (this does not stack with weapon upgrades).',
-              'cost': 3
+              'cost': 3,
+              'code': '67'
             },
             {
               'description': 'Pistol ammo is doubled at spawn (this does not stack with weapon upgrades).',
-              'cost': 4
+              'cost': 4,
+              'code': '68'
             }
           ],
         },
@@ -498,15 +563,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Smoke bombs and bombs have a slightly shorter fuse when thrown.',
-              'cost': 2
+              'cost': 2,
+              'code': '69'
             },
             {
               'description': 'Placed bombs, thrown smoke bombs and thrown bombs have an even shorter fuse.',
-              'cost': 3
+              'cost': 3,
+              'code': '70'
             },
             {
               'description': 'You are immune to the stun of your own smoke bomb. Placed bombs, thrown smoke bombs and thrown bombs have a very short fuse.',
-              'cost': 5
+              'cost': 5,
+              'code': '71'
             },
           ],
         },
@@ -516,15 +584,18 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Crouch walk and climb slighty faster.',
-              'cost': 2
+              'cost': 2,
+              'code': '72'
             },
             {
               'description': 'Walk, climb and crouch walk even faster.',
-              'cost': 3
+              'cost': 3,
+              'code': '73'
             },
             {
               'description': 'You are nearly impossible to hear when moving. Walk, climb and crouch walk very quickly.',
-              'cost': 4
+              'cost': 4,
+              'code': '74'
             }
           ],
         }
@@ -536,7 +607,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': '',
-              'cost': 0
+              'cost': 0,
+              'code': '75'
             }
           ]
         },
@@ -546,7 +618,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A bargain priced shotgun that downs enemies with two shots at close range.',
-              'cost': 1
+              'cost': 1,
+              'code': '76'
             }
           ],
           'rate': 4,
@@ -560,7 +633,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Come with a scope. Press X while aiming to zoom in.',
-              'cost': 3
+              'cost': 3,
+              'code': '77'
             }
           ],
           'rate': 4,
@@ -574,7 +648,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A military grade rifle with a high rate of fire.',
-              'cost': 3
+              'cost': 3,
+              'code': '78'
             }
           ],
           'rate': 8,
@@ -588,7 +663,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A close range bruiser.',
-              'cost': 3
+              'cost': 3,
+              'code': '79'
             }
           ],
           'rate': 5,
@@ -602,7 +678,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A semi-automatic sniper rifle. Press X when aiming to enter the second level of zoom.',
-              'cost': 3
+              'cost': 3,
+              'code': '80'
             }
           ],
           'rate': 6,
@@ -616,7 +693,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Burn down your enemies at close range.',
-              'cost': 2
+              'cost': 2,
+              'code': '81'
             }
           ],
           'rate': 9,
@@ -630,7 +708,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A fast and dangerous melee weapon.',
-              'cost': 3
+              'cost': 3,
+              'code': '82'
             }
           ]
         },
@@ -640,7 +719,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A silenced fully automatic weapon that kills from the shadows.',
-              'cost': 3
+              'cost': 3,
+              'code': '83'
             }
           ],
           'rate': 10,
@@ -654,7 +734,8 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Area of effect weapon that downs an enemy in 2 shots.',
-              'cost': 4
+              'cost': 4,
+              'code': '84'
             }
           ],
           'rate': 1,
