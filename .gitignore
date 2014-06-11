@@ -1,2 +1,67 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+*~
+
+# Vim generated files #
+######################
+*.un~
+*.swp
+
+# SASS #
+##########
+.sass-cache
+
+# Ignore Eclipse IDE stuff
+.buildpath
+.project
+.settings/*
+.settings
+.htpasswd
+.DS_Store
+
+# Ignore Netbeans IDE stuff
+nbproject/*
+build.xml
+build/*
+nbbuild/*
+dist/*
+nbdist/*
+nbactions.xml
+nb-configuration.xml
+
+# Ignore PHPStore IDE stuff
+.idea
+
+# Ignore Sublime SFTP config file
+sftp-config.json
+
+# Gem lock file
+Gemfile.lock
+
+# Vagrant private files
+.vagrant
+
+# Sublime Temp Files
+.subl*
