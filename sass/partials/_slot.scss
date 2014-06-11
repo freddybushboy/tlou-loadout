@@ -144,6 +144,6 @@ $i: 1;
   .weapon-bars--#{$i} {
     background-image: image-url('bars/' + $i + '.png');
   }
-  $i: $i + 1;
+  $i: $i + 1 !global;
 }
 

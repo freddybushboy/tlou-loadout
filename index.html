@@ -120,11 +120,14 @@
               </div>
             </div>
           </div>
-          <div class="loadout-calc__footer-col"></div>
+          <div class="loadout-calc__footer-col">
+            <span class="loadout-share" ng-click="shareLoadout()"><span class="icon-level-3"></span> Share/Bookmark Loadout: <input type="text" size="48" onClick="this.select();" value="{{share()}}"></span>
+          </div>
         </div>
       </div>
+
       <span class="loadout-reset" ng-click="resetLoadout()"><span class="icon-nothing"></span> Reset Loadout</span>
-      <span class="loadout-share" ng-click="shareLoadout()"><span class="icon-level-3"></span> Share/Bookmark Loadout: <input type="text" onClick="this.select();" value="{{share()}}"></span>
+      <span class="loadout-random" ng-click="randomLoadout()"><span class="icon-level-2"></span> Random Loadout <sup class="new">NEW</sup></span>
       <p class="disclaimer">Built by <a href="http://www.fredparke.com" target="_blank">Fred Parke</a>. Please feel free to email any feedback or mistakes to <a href="mailto:mail@fredparke.com">mail@fredparke.com</a>.</p>
       <div class="fb-share-button" data-type="button_count"></div>
       <a href="https://twitter.com/share" class="twitter-share-button" data-via="FreddyBushBoy">Tweet</a>

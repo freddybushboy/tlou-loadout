@@ -288,6 +288,36 @@ angular.module('loadoutApp')
       $scope.remainingPoints = '13';
     }
 
+    $scope.fillSlots = function() {
+      $scope.slots.forEach(function(slot, key) {
+        var type = $scope.getSlotType(key);
+        var skills = $scope.skills[type];
+        var skill = skills[Math.floor(Math.random() * skills.length)];
+        var levels = [];
+
+        skill.levels.forEach(function(data, key) {
+          if (data.cost < $scope.remainingPoints) {
+            levels.push(key);
+          }
+        });
+
+        if (levels.length > 0) {
+          var level = levels[Math.floor(Math.random() * levels.length)] + 1;
+          $scope.slots[key] = {
+            'id': skill.id,
+            'level': level,
+          };
+        }
+
+        $scope.updatePoints();
+      });
+      $scope.updatePoints();
+    }
+    $scope.randomLoadout = function() {
+      $scope.resetLoadout();
+      $scope.fillSlots();
+    }
+
     $scope.updatePoints();
     $scope.setupSlots();
   });
