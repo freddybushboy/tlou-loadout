@@ -34,7 +34,8 @@
 }
 .loadout-slot__icon {
   float: left;
-  font-size: 50px;
+  width: 50px;
+  height: 50px;
 }
 .loadout-slot__name {
   float: right;
@@ -63,7 +64,8 @@
     border: 2px solid $white;
   }
   .loadout-slot__icon {
-    font-size: 32px;
+    width: 32px;
+    height: 32px;
   }
   .loadout-slot__name {
     float: left;
@@ -92,7 +94,8 @@
     @include inline-block;
     float: none;
     padding: 7px;
-    font-size: 40px;
+    width: 40px;
+    height: 40px;
     margin: 5px;
     cursor: pointer;
     &:focus,
@@ -109,7 +112,8 @@
   margin-bottom: 10px;
 }
 .skill-detail__icon {
-  font-size: 50px;
+  width: 50px;
+  height: 50px;
   float: left;
 }
 .skill-detail__header-text {
@@ -146,4 +150,78 @@ $i: 1;
   }
   $i: $i + 1 !global;
 }
+
+$skills:
+  'nothing',
+  'revolver',
+  '9mm',
+  'shorty',
+  'enforcer',
+  'semi',
+  'full',
+  'burst',
+  'hunting',
+  'bow',
+  'paz',
+  'ee',
+  'reviver',
+  'brawler',
+  'covert',
+  'sharp',
+  'strategist',
+  'hawk',
+  'crafter',
+  'fat',
+  'ss',
+  'marathon',
+  'collector',
+  'executioner',
+  'scavenger',
+  'damage',
+  'awareness',
+  'fortitude',
+  'gunslinger',
+  'bomb',
+  'agility',
+  'double',
+  'diablo',
+  'assult',
+  'shotgun',
+  'sniper',
+  'flamethrower',
+  'machete',
+  'spectre',
+  'launcher';
+
+[class^="icon-"], [class*=" icon-"] {
+  position: relative;
+  &:before {
+    background-image: image-url('icons/icon-default.png');
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100px;
+    margin-left: -50px;
+  }
+}
+
+@each $skill in $skills {
+  .icon-skill-#{$skill} {
+    &:before {
+      background-image: image-url('icons/icon-' + $skill + '.png');
+    }
+    &.icon-level-2:before {
+      //background-image: image-url('icons/icon-' + $skill + '-2.png');
+    }
+    &.icon-level-3:before {
+      //background-image: image-url('icons/icon-' + $skill + '-3.png');
+    }
+  }
+}
+
 

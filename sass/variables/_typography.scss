@@ -18,43 +18,8 @@
   ),
   "tlou.eot"
 );
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 $white: #aca99b;
-
-// Icons.
-$icon-nothing: "\e600";
-$icon-level-1: "\e601";
-$icon-level-2: "\e602";
-$icon-level-3: "\e603";
-
-
-.icon-level-1:before {
-  content: $icon-level-1;
-}
-.icon-level-2:before {
-  content: $icon-level-2;
-}
-.icon-level-3:before {
-  content: $icon-level-3;
-}
-.icon-skill-nothing:before,
-.icon-level-0:before,
-.icon-nothing:before {
-  content: $icon-nothing;
-}
 
 $main-font: "tlou", "Myriad Pro", Arial, "Helvetica Neue", Helvetica, sans-serif;
 $icon-font: 'icomoon';

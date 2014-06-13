@@ -11,47 +11,16 @@ img, video {
 
 @font-face {
   font-family: "icomoon";
-  src: url('../fonts/icomoon.eot?1402482261');
-  src: url('../fonts/icomoon.eot?&1402482261#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff?1402482261') format('woff'), url('../fonts/icomoon.ttf?1402482261') format('truetype'), url('../fonts/icomoon.svg?1402482261') format('svg');
+  src: url('../fonts/icomoon.eot?1402674152');
+  src: url('../fonts/icomoon.eot?&1402674152#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff?1402674152') format('woff'), url('../fonts/icomoon.ttf?1402674152') format('truetype'), url('../fonts/icomoon.svg?1402674152') format('svg');
 }
 @font-face {
   font-family: "tlou";
-  src: url('../fonts/tlou.eot?1402482261');
-  src: url('../fonts/tlou.eot?&1402482261#iefix') format('embedded-opentype'), url('../fonts/tlou.woff?1402482261') format('woff'), url('../fonts/tlou.ttf?1402482261') format('truetype'), url('../fonts/tlou.svg?1402482261') format('svg');
+  src: url('../fonts/tlou.eot?1402674152');
+  src: url('../fonts/tlou.eot?&1402674152#iefix') format('embedded-opentype'), url('../fonts/tlou.woff?1402674152') format('woff'), url('../fonts/tlou.ttf?1402674152') format('truetype'), url('../fonts/tlou.svg?1402674152') format('svg');
 }
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-level-1:before {
-  content: "\e601";
-}
-
-.icon-level-2:before {
-  content: "\e602";
-}
-
-.icon-level-3:before {
-  content: "\e603";
-}
-
-.icon-skill-nothing:before,
-.icon-level-0:before,
-.icon-nothing:before {
-  content: "\e600";
-}
-
 body {
-  background: black url('../images/background.jpg?1402482261') no-repeat top center;
+  background: black url('../images/background.jpg?1402674152') no-repeat top center;
   color: #aca99b;
   text-align: center;
 }
@@ -198,7 +167,8 @@ a {
 
 .loadout-slot__icon {
   float: left;
-  font-size: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .loadout-slot__name {
@@ -227,7 +197,8 @@ a {
   border: 2px solid #aca99b;
 }
 .loadout-skills__slot .loadout-slot__icon {
-  font-size: 32px;
+  width: 32px;
+  height: 32px;
 }
 .loadout-skills__slot .loadout-slot__name {
   float: left;
@@ -261,7 +232,8 @@ a {
   *display: inline;
   float: none;
   padding: 7px;
-  font-size: 40px;
+  width: 40px;
+  height: 40px;
   margin: 5px;
   cursor: pointer;
 }
@@ -278,7 +250,8 @@ a {
 }
 
 .skill-detail__icon {
-  font-size: 50px;
+  width: 50px;
+  height: 50px;
   float: left;
 }
 
@@ -316,43 +289,220 @@ a {
 }
 
 .weapon-bars--1 {
-  background-image: url('../images/bars/1.png?1402482261');
+  background-image: url('../images/bars/1.png?1402674152');
 }
 
 .weapon-bars--2 {
-  background-image: url('../images/bars/2.png?1402482261');
+  background-image: url('../images/bars/2.png?1402674152');
 }
 
 .weapon-bars--3 {
-  background-image: url('../images/bars/3.png?1402482261');
+  background-image: url('../images/bars/3.png?1402674152');
 }
 
 .weapon-bars--4 {
-  background-image: url('../images/bars/4.png?1402482261');
+  background-image: url('../images/bars/4.png?1402674152');
 }
 
 .weapon-bars--5 {
-  background-image: url('../images/bars/5.png?1402482261');
+  background-image: url('../images/bars/5.png?1402674152');
 }
 
 .weapon-bars--6 {
-  background-image: url('../images/bars/6.png?1402482261');
+  background-image: url('../images/bars/6.png?1402674152');
 }
 
 .weapon-bars--7 {
-  background-image: url('../images/bars/7.png?1402482261');
+  background-image: url('../images/bars/7.png?1402674152');
 }
 
 .weapon-bars--8 {
-  background-image: url('../images/bars/8.png?1402482261');
+  background-image: url('../images/bars/8.png?1402674152');
 }
 
 .weapon-bars--9 {
-  background-image: url('../images/bars/9.png?1402482261');
+  background-image: url('../images/bars/9.png?1402674152');
 }
 
 .weapon-bars--10 {
-  background-image: url('../images/bars/10.png?1402482261');
+  background-image: url('../images/bars/10.png?1402674152');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  position: relative;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  background-image: url('../images/icons/icon-default.png?1402674427');
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100px;
+  margin-left: -50px;
+}
+
+.icon-skill-nothing:before {
+  background-image: url('../images/icons/icon-nothing.png');
+}
+
+.icon-skill-revolver:before {
+  background-image: url('../images/icons/icon-revolver.png');
+}
+
+.icon-skill-9mm:before {
+  background-image: url('../images/icons/icon-9mm.png');
+}
+
+.icon-skill-shorty:before {
+  background-image: url('../images/icons/icon-shorty.png');
+}
+
+.icon-skill-enforcer:before {
+  background-image: url('../images/icons/icon-enforcer.png');
+}
+
+.icon-skill-semi:before {
+  background-image: url('../images/icons/icon-semi.png');
+}
+
+.icon-skill-full:before {
+  background-image: url('../images/icons/icon-full.png?1402674480');
+}
+
+.icon-skill-burst:before {
+  background-image: url('../images/icons/icon-burst.png');
+}
+
+.icon-skill-hunting:before {
+  background-image: url('../images/icons/icon-hunting.png');
+}
+
+.icon-skill-bow:before {
+  background-image: url('../images/icons/icon-bow.png?1402674424');
+}
+
+.icon-skill-paz:before {
+  background-image: url('../images/icons/icon-paz.png');
+}
+
+.icon-skill-ee:before {
+  background-image: url('../images/icons/icon-ee.png');
+}
+
+.icon-skill-reviver:before {
+  background-image: url('../images/icons/icon-reviver.png');
+}
+
+.icon-skill-brawler:before {
+  background-image: url('../images/icons/icon-brawler.png');
+}
+
+.icon-skill-covert:before {
+  background-image: url('../images/icons/icon-covert.png');
+}
+
+.icon-skill-sharp:before {
+  background-image: url('../images/icons/icon-sharp.png');
+}
+
+.icon-skill-strategist:before {
+  background-image: url('../images/icons/icon-strategist.png');
+}
+
+.icon-skill-hawk:before {
+  background-image: url('../images/icons/icon-hawk.png');
+}
+
+.icon-skill-crafter:before {
+  background-image: url('../images/icons/icon-crafter.png');
+}
+
+.icon-skill-fat:before {
+  background-image: url('../images/icons/icon-fat.png');
+}
+
+.icon-skill-ss:before {
+  background-image: url('../images/icons/icon-ss.png');
+}
+
+.icon-skill-marathon:before {
+  background-image: url('../images/icons/icon-marathon.png');
+}
+
+.icon-skill-collector:before {
+  background-image: url('../images/icons/icon-collector.png');
+}
+
+.icon-skill-executioner:before {
+  background-image: url('../images/icons/icon-executioner.png?1402674427');
+}
+
+.icon-skill-scavenger:before {
+  background-image: url('../images/icons/icon-scavenger.png');
+}
+
+.icon-skill-damage:before {
+  background-image: url('../images/icons/icon-damage.png');
+}
+
+.icon-skill-awareness:before {
+  background-image: url('../images/icons/icon-awareness.png');
+}
+
+.icon-skill-fortitude:before {
+  background-image: url('../images/icons/icon-fortitude.png');
+}
+
+.icon-skill-gunslinger:before {
+  background-image: url('../images/icons/icon-gunslinger.png');
+}
+
+.icon-skill-bomb:before {
+  background-image: url('../images/icons/icon-bomb.png');
+}
+
+.icon-skill-agility:before {
+  background-image: url('../images/icons/icon-agility.png');
+}
+
+.icon-skill-double:before {
+  background-image: url('../images/icons/icon-double.png');
+}
+
+.icon-skill-diablo:before {
+  background-image: url('../images/icons/icon-diablo.png');
+}
+
+.icon-skill-assult:before {
+  background-image: url('../images/icons/icon-assult.png');
+}
+
+.icon-skill-shotgun:before {
+  background-image: url('../images/icons/icon-shotgun.png');
+}
+
+.icon-skill-sniper:before {
+  background-image: url('../images/icons/icon-sniper.png');
+}
+
+.icon-skill-flamethrower:before {
+  background-image: url('../images/icons/icon-flamethrower.png');
+}
+
+.icon-skill-machete:before {
+  background-image: url('../images/icons/icon-machete.png');
+}
+
+.icon-skill-spectre:before {
+  background-image: url('../images/icons/icon-spectre.png');
+}
+
+.icon-skill-launcher:before {
+  background-image: url('../images/icons/icon-launcher.png');
 }
 
 body {
