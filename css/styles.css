@@ -1,15 +1,7 @@
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
+*, *:before, *:after {
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php');
-}
-
-*, *:after, *:before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php');
 }
 
 img, video {
@@ -19,16 +11,14 @@ img, video {
 
 @font-face {
   font-family: "icomoon";
-  src: url('../fonts/icomoon.eot');
-  src: url('../fonts/icomoon.eot?#iefix') format('eot'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg') format('svg');
+  src: url('../fonts/icomoon.eot?1402482261');
+  src: url('../fonts/icomoon.eot?&1402482261#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff?1402482261') format('woff'), url('../fonts/icomoon.ttf?1402482261') format('truetype'), url('../fonts/icomoon.svg?1402482261') format('svg');
 }
-
 @font-face {
   font-family: "tlou";
-  src: url('../fonts/tlou.eot');
-  src: url('../fonts/tlou.eot?#iefix') format('eot'), url('../fonts/tlou.woff') format('woff'), url('../fonts/tlou.ttf') format('truetype'), url('../fonts/tlou.svg') format('svg');
+  src: url('../fonts/tlou.eot?1402482261');
+  src: url('../fonts/tlou.eot?&1402482261#iefix') format('embedded-opentype'), url('../fonts/tlou.woff?1402482261') format('woff'), url('../fonts/tlou.ttf?1402482261') format('truetype'), url('../fonts/tlou.svg?1402482261') format('svg');
 }
-
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -61,29 +51,18 @@ img, video {
 }
 
 body {
-  background: black url('../images/background.jpg?1402522508') no-repeat top center;
+  background: black url('../images/background.jpg?1402482261') no-repeat top center;
   color: #aca99b;
   text-align: center;
 }
 
 .loadout-calc {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   padding: 60px 20px 20px;
   width: 1200px;
   margin: 0 auto;
   text-align: left;
-}
-.loadout-calc:before, .loadout-calc:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.loadout-calc:after {
-  clear: both;
 }
 
 a {
@@ -91,19 +70,8 @@ a {
 }
 
 .loadout-calc__cols {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
-  *zoom: 1;
-}
-.loadout-calc__cols:before, .loadout-calc__cols:after {
-  content: ".";
-  display: block;
-  height: 0;
   overflow: hidden;
-}
-.loadout-calc__cols:after {
-  clear: both;
+  *zoom: 1;
 }
 
 .loadout-calc__slots-col {
@@ -114,48 +82,27 @@ a {
 }
 
 .loadout-calc__skills-col {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   float: left;
   width: 820px;
   padding-left: 20px;
 }
-.loadout-calc__skills-col:before, .loadout-calc__skills-col:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.loadout-calc__skills-col:after {
-  clear: both;
-}
 
 .loadout-calc__info-col {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   float: left;
   width: 100%;
   border-bottom: 2px solid #aca99b;
   margin-bottom: 7px;
 }
-.loadout-calc__info-col:before, .loadout-calc__info-col:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.loadout-calc__info-col:after {
-  clear: both;
-}
 
 .loadout-calc__skill-list-col {
   float: left;
   width: 300px;
   height: 440px;
+  overflow: hidden;
   overflow-y: auto;
   border-right: 2px solid #aca99b;
   position: relative;
@@ -183,10 +130,28 @@ a {
   margin-top: 7px;
 }
 
+.loadout-random,
 .loadout-reset {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
   cursor: pointer;
   margin-top: 20px;
+  margin-right: 10px;
+}
+.loadout-random .new,
+.loadout-reset .new {
+  color: crimson;
+}
+
+.loadout-share {
+  float: right;
+  margin-top: 10px;
+}
+.loadout-share input {
+  border: none;
 }
 
 .disclaimer {
@@ -276,23 +241,12 @@ a {
 }
 
 .skill-detail__level_select {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   text-align: center;
   border-bottom: 2px solid #aca99b;
   margin-bottom: 10px;
   padding-bottom: 10px;
-}
-.skill-detail__level_select:before, .skill-detail__level_select:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.skill-detail__level_select:after {
-  clear: both;
 }
 .skill-detail__level_select h2 {
   font-size: 18px;
@@ -300,11 +254,10 @@ a {
   margin: 0;
 }
 .skill-detail__level_select .loadout-slot__icon {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   float: none;
   padding: 7px;
@@ -318,21 +271,10 @@ a {
 }
 
 .skill-detail__header {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   padding-left: 20px;
   margin-bottom: 10px;
-}
-.skill-detail__header:before, .skill-detail__header:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.skill-detail__header:after {
-  clear: both;
 }
 
 .skill-detail__icon {
@@ -360,21 +302,10 @@ a {
 }
 
 .skill-detail__weapon {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   clear: both;
   margin-top: 10px;
-}
-.skill-detail__weapon:before, .skill-detail__weapon:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.skill-detail__weapon:after {
-  clear: both;
 }
 
 .weapon-bars {
@@ -385,43 +316,43 @@ a {
 }
 
 .weapon-bars--1 {
-  background-image: url('../images/bars/1.png?1402522508');
+  background-image: url('../images/bars/1.png?1402482261');
 }
 
 .weapon-bars--2 {
-  background-image: url('../images/bars/2.png?1402522508');
+  background-image: url('../images/bars/2.png?1402482261');
 }
 
 .weapon-bars--3 {
-  background-image: url('../images/bars/3.png?1402522508');
+  background-image: url('../images/bars/3.png?1402482261');
 }
 
 .weapon-bars--4 {
-  background-image: url('../images/bars/4.png?1402522508');
+  background-image: url('../images/bars/4.png?1402482261');
 }
 
 .weapon-bars--5 {
-  background-image: url('../images/bars/5.png?1402522508');
+  background-image: url('../images/bars/5.png?1402482261');
 }
 
 .weapon-bars--6 {
-  background-image: url('../images/bars/6.png?1402522508');
+  background-image: url('../images/bars/6.png?1402482261');
 }
 
 .weapon-bars--7 {
-  background-image: url('../images/bars/7.png?1402522508');
+  background-image: url('../images/bars/7.png?1402482261');
 }
 
 .weapon-bars--8 {
-  background-image: url('../images/bars/8.png?1402522508');
+  background-image: url('../images/bars/8.png?1402482261');
 }
 
 .weapon-bars--9 {
-  background-image: url('../images/bars/9.png?1402522508');
+  background-image: url('../images/bars/9.png?1402482261');
 }
 
 .weapon-bars--10 {
-  background-image: url('../images/bars/10.png?1402522508');
+  background-image: url('../images/bars/10.png?1402482261');
 }
 
 body {

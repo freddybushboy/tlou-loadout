@@ -41,6 +41,7 @@ a {
   float: left;
   width: 300px;
   height: 440px;
+  overflow: hidden;
   overflow-y: auto;
   border-right: 2px solid $white;
   position: relative;
@@ -64,10 +65,22 @@ a {
   border-top: 2px solid $white;
   margin-top: 7px;
 }
+.loadout-random,
 .loadout-reset {
-  display: block;
+  @include inline-block;
   cursor: pointer;
   margin-top: 20px;
+  margin-right: 10px;
+  .new {
+    color: crimson;
+  }
+}
+.loadout-share {
+  float: right;
+  margin-top: 10px;
+  input {
+    border: none;
+  }
 }
 .disclaimer {
   text-align: center;
