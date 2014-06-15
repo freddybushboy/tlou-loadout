@@ -183,6 +183,39 @@ a {
   vertical-align: top;
 }
 
+[class^="icon-"], [class*=" icon-"] {
+  position: relative;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  background-image: url('../images/icons/icon-default.png?1402733619');
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  margin-left: -50%;
+}
+
+.icon-skill-bow:before {
+  background-image: url('../images/icons/icon-bow.png?1402733619');
+}
+
+.icon-skill-full:before {
+  background-image: url('../images/icons/icon-full.png?1402733619');
+}
+
+.icon-skill-awareness.icon-level-2:before {
+  background-image: url('../images/icons/icon-awareness-2.png?1402733619');
+}
+
+.icon-skill-reviver.icon-level-3:before {
+  background-image: url('../images/icons/icon-reviver-3.png?1402733619');
+}
+
 .loadout-slot-wrapper--skill,
 .loadout-slot-wrapper--weapon {
   border-bottom: 2px solid #eaeadb;
@@ -223,6 +256,10 @@ a {
   width: 50px;
   height: 50px;
 }
+.loadout-slot__icon:before {
+  width: 106px;
+  margin-left: -53px;
+}
 
 .loadout-slot__name {
   float: right;
@@ -258,10 +295,14 @@ a {
   width: 32px;
   height: 32px;
 }
+.loadout-skills__slot .loadout-slot__icon:before {
+  width: 66px;
+  margin-left: -33px;
+}
 .loadout-skills__slot .loadout-slot__name {
   float: left;
   padding-right: 0;
-  padding-left: 7px;
+  padding-left: 20px;
 }
 
 .skill-detail {
@@ -303,11 +344,16 @@ a {
   float: none;
   width: 42px;
   height: 42px;
-  margin: 5px;
+  margin: 8px;
   cursor: pointer;
+}
+.skill-detail__level_select .loadout-slot__icon:before {
+  width: 80px;
+  margin-left: -40px;
 }
 .skill-detail__level_select .loadout-slot__icon:focus, .skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
   border: 2px solid #eaeadb;
+  z-index: 2;
 }
 
 .skill-detail__header {
@@ -333,10 +379,14 @@ a {
   height: 50px;
   float: left;
 }
+.skill-detail__icon:before {
+  width: 106px;
+  margin-left: -53px;
+}
 
 .skill-detail__header-text {
   float: left;
-  padding-left: 25px;
+  padding-left: 30px;
 }
 
 .skill-detail__name {
@@ -416,39 +466,6 @@ a {
 
 .weapon-bars--10 {
   background-image: url('../images/bars/10.png?1402522508');
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  position: relative;
-}
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  background-image: url('../images/icons/icon-default.png?1402733619');
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  width: 100px;
-  margin-left: -50px;
-}
-
-.icon-skill-bow:before {
-  background-image: url('../images/icons/icon-bow.png?1402733619');
-}
-
-.icon-skill-full:before {
-  background-image: url('../images/icons/icon-full.png?1402733619');
-}
-
-.icon-skill-awareness.icon-level-2:before {
-  background-image: url('../images/icons/icon-awareness-2.png?1402733619');
-}
-
-.icon-skill-reviver.icon-level-3:before {
-  background-image: url('../images/icons/icon-reviver-3.png?1402733619');
 }
 
 body {

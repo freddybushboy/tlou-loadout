@@ -1,157 +1,3 @@
-// Wrappers.
-.loadout-slot-wrapper--skill,
-.loadout-slot-wrapper--weapon {
-  border-bottom: 2px solid $white;
-  padding-bottom: 2px;
-}
-.loadout-slot-wrapper--skill,
-.loadout-slot-wrapper--purchase {
-  padding-top: 2px;
-}
-.loadout-slot-wrapper--purchase,
-.loadout-slot-wrapper--weapon {
-  .loadout-slot {
-    text-transform: uppercase;
-    &.empty {
-      text-transform: none;
-    }
-  }
-}
-
-// Slots.
-.loadout-slot {
-  display: block;
-  height: 67px;
-  line-height: 50px;
-  padding: 8px 10px;
-  cursor: pointer;
-  &:focus,
-  &.active,
-  &:hover {
-    padding: 6px 8px;
-    border: 2px solid $white;
-    @include box-shadow(inset 0 0 30px rgba($white, 0.4));
-  }
-}
-.loadout-slot__icon {
-  float: left;
-  width: 50px;
-  height: 50px;
-}
-.loadout-slot__name {
-  float: right;
-  padding-right: 7px;
-}
-.loadout-slot__cost {
-  float: right;
-  padding-left: 10px;
-  color: lightskyblue;
-  &.over {
-    color: crimson;
-  }
-}
-
-// Skills.
-.loadout-skills__slot {
-  display: block;
-  height: 44px;
-  line-height: 32px;
-  padding: 6px 8px;
-  cursor: pointer;
-  @include opacity(.5);
-  &:focus,
-  &.active,
-  &:hover {
-    @include opacity(1);
-    .loadout-slot__icon {
-      margin-left: 15px;
-    }
-  }
-  .loadout-slot__icon {
-    width: 32px;
-    height: 32px;
-  }
-  .loadout-slot__name {
-    float: left;
-    padding-right: 0;
-    padding-left: 7px;
-  }
-}
-
-// Details.
-.skill-detail {
-  padding-left: 25px;
-  padding-top: 10px;
-}
-.skill-detail__level_select {
-  @include clearfix;
-  text-align: center;
-  border-bottom: 2px solid $white;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  h2 {
-    font-size: 18px;
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .loadout-slot__icon {
-    @include inline-block;
-    float: none;
-    width: 42px;
-    height: 42px;
-    margin: 5px;
-    cursor: pointer;
-    &:focus,
-    &.active,
-    &:hover {
-      border: 2px solid $white;
-    }
-  }
-}
-.skill-detail__header {
-  @include clearfix;
-  padding-left: 20px;
-  margin-bottom: 10px;
-}
-.skill-detail__icon {
-  width: 50px;
-  height: 50px;
-  float: left;
-}
-.skill-detail__header-text {
-  float: left;
-  padding-left: 25px;
-}
-.skill-detail__name {
-  display: block;
-  font-size: 20px;
-}
-.skill-detail__cost {
-  display: block;
-  font-size: 22px;
-  color: lightskyblue;
-  &.over {
-    color: crimson;
-  }
-}
-.skill-detail__weapon {
-  @include clearfix;
-  clear: both;
-  margin-top: 10px;
-}
-.weapon-bars {
-  height: 8px;
-  width: 338px;
-  margin-bottom: 5px;
-  background-size: 100% auto;
-}
-$i: 1;
-@while $i < 11 {
-  .weapon-bars--#{$i} {
-    background-image: image-url('bars/' + $i + '.png');
-  }
-  $i: $i + 1;
-}
 
 $skills:
   'nothing',
@@ -207,8 +53,8 @@ $skills:
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: top center;
-    width: 100px;
-    margin-left: -50px;
+    width: 100%;
+    margin-left: -50%;
   }
 }
 
@@ -238,4 +84,177 @@ $skills:
 }
 .icon-skill-reviver.icon-level-3:before {
   background-image: image-url('icons/icon-reviver-3.png');
+}
+
+
+// Wrappers.
+.loadout-slot-wrapper--skill,
+.loadout-slot-wrapper--weapon {
+  border-bottom: 2px solid $white;
+  padding-bottom: 2px;
+}
+.loadout-slot-wrapper--skill,
+.loadout-slot-wrapper--purchase {
+  padding-top: 2px;
+}
+.loadout-slot-wrapper--purchase,
+.loadout-slot-wrapper--weapon {
+  .loadout-slot {
+    text-transform: uppercase;
+    &.empty {
+      text-transform: none;
+    }
+  }
+}
+
+// Slots.
+.loadout-slot {
+  display: block;
+  height: 67px;
+  line-height: 50px;
+  padding: 8px 10px;
+  cursor: pointer;
+  &:focus,
+  &.active,
+  &:hover {
+    padding: 6px 8px;
+    border: 2px solid $white;
+    @include box-shadow(inset 0 0 30px rgba($white, 0.4));
+  }
+}
+.loadout-slot__icon {
+  float: left;
+  width: 50px;
+  height: 50px;
+  &:before {
+    width: 106px;
+    margin-left: -53px;
+  }
+}
+.loadout-slot__name {
+  float: right;
+  padding-right: 7px;
+}
+.loadout-slot__cost {
+  float: right;
+  padding-left: 10px;
+  color: lightskyblue;
+  &.over {
+    color: crimson;
+  }
+}
+
+// Skills.
+.loadout-skills__slot {
+  display: block;
+  height: 44px;
+  line-height: 32px;
+  padding: 6px 8px;
+  cursor: pointer;
+  @include opacity(.5);
+  &:focus,
+  &.active,
+  &:hover {
+    @include opacity(1);
+    .loadout-slot__icon {
+      margin-left: 15px;
+    }
+  }
+  .loadout-slot__icon {
+    width: 32px;
+    height: 32px;
+    &:before {
+      width: 66px;
+      margin-left: -33px;
+    }
+  }
+  .loadout-slot__name {
+    float: left;
+    padding-right: 0;
+    padding-left: 20px;
+  }
+}
+
+// Details.
+.skill-detail {
+  padding-left: 25px;
+  padding-top: 10px;
+}
+.skill-detail__level_select {
+  @include clearfix;
+  text-align: center;
+  border-bottom: 2px solid $white;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .loadout-slot__icon {
+    @include inline-block;
+    float: none;
+    width: 42px;
+    height: 42px;
+    margin: 8px;
+    cursor: pointer;
+    &:before {
+      width: 80px;
+      margin-left: -40px;
+    }
+    &:focus,
+    &.active,
+    &:hover {
+      border: 2px solid $white;
+      z-index: 2;
+    }
+  }
+}
+.skill-detail__header {
+  @include clearfix;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.skill-detail__icon {
+  width: 50px;
+  height: 50px;
+  float: left;
+  &:before {
+    width: 106px;
+    margin-left: -53px;
+  }
+}
+.skill-detail__header-text {
+  float: left;
+  padding-left: 30px;
+}
+.skill-detail__name {
+  display: block;
+  font-size: 20px;
+}
+.skill-detail__cost {
+  display: block;
+  font-size: 22px;
+  color: lightskyblue;
+  &.over {
+    color: crimson;
+  }
+}
+.skill-detail__weapon {
+  @include clearfix;
+  clear: both;
+  margin-top: 10px;
+}
+.weapon-bars {
+  height: 8px;
+  width: 338px;
+  margin-bottom: 5px;
+  background-size: 100% auto;
+}
+$i: 1;
+@while $i < 11 {
+  .weapon-bars--#{$i} {
+    background-image: image-url('bars/' + $i + '.png');
+  }
+  $i: $i + 1;
 }
