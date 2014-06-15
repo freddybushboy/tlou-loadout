@@ -1,7 +1,8 @@
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
+*, *:after, *:before {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url('../behaviors/box-sizing/boxsizing.php');
 }
 
 img, video {
@@ -11,27 +12,40 @@ img, video {
 
 @font-face {
   font-family: "icomoon";
-  src: url('../fonts/icomoon.eot?1402674152');
-  src: url('../fonts/icomoon.eot?&1402674152#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff?1402674152') format('woff'), url('../fonts/icomoon.ttf?1402674152') format('truetype'), url('../fonts/icomoon.svg?1402674152') format('svg');
+  src: url('../fonts/icomoon.eot');
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg') format('svg');
 }
+
 @font-face {
   font-family: "tlou";
-  src: url('../fonts/tlou.eot?1402674152');
-  src: url('../fonts/tlou.eot?&1402674152#iefix') format('embedded-opentype'), url('../fonts/tlou.woff?1402674152') format('woff'), url('../fonts/tlou.ttf?1402674152') format('truetype'), url('../fonts/tlou.svg?1402674152') format('svg');
+  src: url('../fonts/tlou.eot');
+  src: url('../fonts/tlou.eot?#iefix') format('embedded-opentype'), url('../fonts/tlou.woff') format('woff'), url('../fonts/tlou.ttf') format('truetype'), url('../fonts/tlou.svg') format('svg');
 }
+
 body {
-  background: black url('../images/background.jpg?1402674152') no-repeat top center;
-  color: #aca99b;
+  background: black url('../images/background.jpg?1402522508') no-repeat top center;
+  color: #eaeadb;
   text-align: center;
 }
 
 .loadout-calc {
-  overflow: hidden;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
   *zoom: 1;
   padding: 60px 20px 20px;
   width: 1200px;
   margin: 0 auto;
   text-align: left;
+}
+.loadout-calc:before, .loadout-calc:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc:after {
+  clear: both;
 }
 
 a {
@@ -39,32 +53,65 @@ a {
 }
 
 .loadout-calc__cols {
-  overflow: hidden;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
   *zoom: 1;
+}
+.loadout-calc__cols:before, .loadout-calc__cols:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc__cols:after {
+  clear: both;
 }
 
 .loadout-calc__slots-col {
   float: left;
   width: 300px;
-  border-right: 2px solid #aca99b;
+  border-right: 2px solid #eaeadb;
   padding-right: 7px;
 }
 
 .loadout-calc__skills-col {
-  overflow: hidden;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
   *zoom: 1;
   float: left;
   width: 820px;
   padding-left: 20px;
 }
+.loadout-calc__skills-col:before, .loadout-calc__skills-col:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc__skills-col:after {
+  clear: both;
+}
 
 .loadout-calc__info-col {
-  overflow: hidden;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
   *zoom: 1;
   float: left;
   width: 100%;
-  border-bottom: 2px solid #aca99b;
+  border-bottom: 2px solid #eaeadb;
   margin-bottom: 7px;
+}
+.loadout-calc__info-col:before, .loadout-calc__info-col:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.loadout-calc__info-col:after {
+  clear: both;
 }
 
 .loadout-calc__skill-list-col {
@@ -73,7 +120,7 @@ a {
   height: 440px;
   overflow: hidden;
   overflow-y: auto;
-  border-right: 2px solid #aca99b;
+  border-right: 2px solid #eaeadb;
   position: relative;
 }
 
@@ -95,37 +142,40 @@ a {
 .loadout-calc__footer-col {
   float: left;
   width: 100%;
-  border-top: 2px solid #aca99b;
+  border-top: 2px solid #eaeadb;
   margin-top: 7px;
 }
 
+.loadout-share,
 .loadout-random,
 .loadout-reset {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
+  float: left;
   cursor: pointer;
-  margin-top: 20px;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-top: 10px;
 }
+.loadout-share .new,
 .loadout-random .new,
 .loadout-reset .new {
   color: crimson;
 }
+.loadout-share input,
+.loadout-random input,
+.loadout-reset input {
+  border: none;
+}
+
+.loadout-random {
+  margin-top: 7px;
+}
 
 .loadout-share {
-  float: right;
-  margin-top: 10px;
-}
-.loadout-share input {
-  border: none;
+  clear: both;
 }
 
 .disclaimer {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 12px;
   font-size: 12px;
 }
 
@@ -135,7 +185,7 @@ a {
 
 .loadout-slot-wrapper--skill,
 .loadout-slot-wrapper--weapon {
-  border-bottom: 2px solid #aca99b;
+  border-bottom: 2px solid #eaeadb;
   padding-bottom: 2px;
 }
 
@@ -162,7 +212,10 @@ a {
 }
 .loadout-slot:focus, .loadout-slot.active, .loadout-slot:hover {
   padding: 6px 8px;
-  border: 2px solid #aca99b;
+  border: 2px solid #eaeadb;
+  -webkit-box-shadow: inset 0 0 30px rgba(234, 234, 219, 0.4);
+  -moz-box-shadow: inset 0 0 30px rgba(234, 234, 219, 0.4);
+  box-shadow: inset 0 0 30px rgba(234, 234, 219, 0.4);
 }
 
 .loadout-slot__icon {
@@ -191,10 +244,15 @@ a {
   line-height: 32px;
   padding: 6px 8px;
   cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
 .loadout-skills__slot:focus, .loadout-skills__slot.active, .loadout-skills__slot:hover {
-  padding: 4px 6px;
-  border: 2px solid #aca99b;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.loadout-skills__slot:focus .loadout-slot__icon, .loadout-skills__slot.active .loadout-slot__icon, .loadout-skills__slot:hover .loadout-slot__icon {
+  margin-left: 15px;
 }
 .loadout-skills__slot .loadout-slot__icon {
   width: 32px;
@@ -212,12 +270,23 @@ a {
 }
 
 .skill-detail__level_select {
-  overflow: hidden;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
   *zoom: 1;
   text-align: center;
-  border-bottom: 2px solid #aca99b;
+  border-bottom: 2px solid #eaeadb;
   margin-bottom: 10px;
   padding-bottom: 10px;
+}
+.skill-detail__level_select:before, .skill-detail__level_select:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.skill-detail__level_select:after {
+  clear: both;
 }
 .skill-detail__level_select h2 {
   font-size: 18px;
@@ -225,28 +294,38 @@ a {
   margin: 0;
 }
 .skill-detail__level_select .loadout-slot__icon {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   float: none;
-  padding: 7px;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   margin: 5px;
   cursor: pointer;
 }
 .skill-detail__level_select .loadout-slot__icon:focus, .skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
-  border: 2px solid #aca99b;
-  padding: 5px;
+  border: 2px solid #eaeadb;
 }
 
 .skill-detail__header {
-  overflow: hidden;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
   *zoom: 1;
   padding-left: 20px;
   margin-bottom: 10px;
+}
+.skill-detail__header:before, .skill-detail__header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.skill-detail__header:after {
+  clear: both;
 }
 
 .skill-detail__icon {
@@ -275,10 +354,21 @@ a {
 }
 
 .skill-detail__weapon {
-  overflow: hidden;
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
   *zoom: 1;
   clear: both;
   margin-top: 10px;
+}
+.skill-detail__weapon:before, .skill-detail__weapon:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.skill-detail__weapon:after {
+  clear: both;
 }
 
 .weapon-bars {
@@ -289,50 +379,50 @@ a {
 }
 
 .weapon-bars--1 {
-  background-image: url('../images/bars/1.png?1402674152');
+  background-image: url('../images/bars/1.png?1402522508');
 }
 
 .weapon-bars--2 {
-  background-image: url('../images/bars/2.png?1402674152');
+  background-image: url('../images/bars/2.png?1402522508');
 }
 
 .weapon-bars--3 {
-  background-image: url('../images/bars/3.png?1402674152');
+  background-image: url('../images/bars/3.png?1402522508');
 }
 
 .weapon-bars--4 {
-  background-image: url('../images/bars/4.png?1402674152');
+  background-image: url('../images/bars/4.png?1402522508');
 }
 
 .weapon-bars--5 {
-  background-image: url('../images/bars/5.png?1402674152');
+  background-image: url('../images/bars/5.png?1402522508');
 }
 
 .weapon-bars--6 {
-  background-image: url('../images/bars/6.png?1402674152');
+  background-image: url('../images/bars/6.png?1402522508');
 }
 
 .weapon-bars--7 {
-  background-image: url('../images/bars/7.png?1402674152');
+  background-image: url('../images/bars/7.png?1402522508');
 }
 
 .weapon-bars--8 {
-  background-image: url('../images/bars/8.png?1402674152');
+  background-image: url('../images/bars/8.png?1402522508');
 }
 
 .weapon-bars--9 {
-  background-image: url('../images/bars/9.png?1402674152');
+  background-image: url('../images/bars/9.png?1402522508');
 }
 
 .weapon-bars--10 {
-  background-image: url('../images/bars/10.png?1402674152');
+  background-image: url('../images/bars/10.png?1402522508');
 }
 
 [class^="icon-"], [class*=" icon-"] {
   position: relative;
 }
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  background-image: url('../images/icons/icon-default.png?1402674427');
+  background-image: url('../images/icons/icon-default.png?1402733619');
   content: '';
   position: absolute;
   top: 0;
@@ -345,164 +435,20 @@ a {
   margin-left: -50px;
 }
 
-.icon-skill-nothing:before {
-  background-image: url('../images/icons/icon-nothing.png');
-}
-
-.icon-skill-revolver:before {
-  background-image: url('../images/icons/icon-revolver.png');
-}
-
-.icon-skill-9mm:before {
-  background-image: url('../images/icons/icon-9mm.png');
-}
-
-.icon-skill-shorty:before {
-  background-image: url('../images/icons/icon-shorty.png');
-}
-
-.icon-skill-enforcer:before {
-  background-image: url('../images/icons/icon-enforcer.png');
-}
-
-.icon-skill-semi:before {
-  background-image: url('../images/icons/icon-semi.png');
+.icon-skill-bow:before {
+  background-image: url('../images/icons/icon-bow.png?1402733619');
 }
 
 .icon-skill-full:before {
-  background-image: url('../images/icons/icon-full.png?1402674480');
+  background-image: url('../images/icons/icon-full.png?1402733619');
 }
 
-.icon-skill-burst:before {
-  background-image: url('../images/icons/icon-burst.png');
+.icon-skill-awareness.icon-level-2:before {
+  background-image: url('../images/icons/icon-awareness-2.png?1402733619');
 }
 
-.icon-skill-hunting:before {
-  background-image: url('../images/icons/icon-hunting.png');
-}
-
-.icon-skill-bow:before {
-  background-image: url('../images/icons/icon-bow.png?1402674424');
-}
-
-.icon-skill-paz:before {
-  background-image: url('../images/icons/icon-paz.png');
-}
-
-.icon-skill-ee:before {
-  background-image: url('../images/icons/icon-ee.png');
-}
-
-.icon-skill-reviver:before {
-  background-image: url('../images/icons/icon-reviver.png');
-}
-
-.icon-skill-brawler:before {
-  background-image: url('../images/icons/icon-brawler.png');
-}
-
-.icon-skill-covert:before {
-  background-image: url('../images/icons/icon-covert.png');
-}
-
-.icon-skill-sharp:before {
-  background-image: url('../images/icons/icon-sharp.png');
-}
-
-.icon-skill-strategist:before {
-  background-image: url('../images/icons/icon-strategist.png');
-}
-
-.icon-skill-hawk:before {
-  background-image: url('../images/icons/icon-hawk.png');
-}
-
-.icon-skill-crafter:before {
-  background-image: url('../images/icons/icon-crafter.png');
-}
-
-.icon-skill-fat:before {
-  background-image: url('../images/icons/icon-fat.png');
-}
-
-.icon-skill-ss:before {
-  background-image: url('../images/icons/icon-ss.png');
-}
-
-.icon-skill-marathon:before {
-  background-image: url('../images/icons/icon-marathon.png');
-}
-
-.icon-skill-collector:before {
-  background-image: url('../images/icons/icon-collector.png');
-}
-
-.icon-skill-executioner:before {
-  background-image: url('../images/icons/icon-executioner.png?1402674427');
-}
-
-.icon-skill-scavenger:before {
-  background-image: url('../images/icons/icon-scavenger.png');
-}
-
-.icon-skill-damage:before {
-  background-image: url('../images/icons/icon-damage.png');
-}
-
-.icon-skill-awareness:before {
-  background-image: url('../images/icons/icon-awareness.png');
-}
-
-.icon-skill-fortitude:before {
-  background-image: url('../images/icons/icon-fortitude.png');
-}
-
-.icon-skill-gunslinger:before {
-  background-image: url('../images/icons/icon-gunslinger.png');
-}
-
-.icon-skill-bomb:before {
-  background-image: url('../images/icons/icon-bomb.png');
-}
-
-.icon-skill-agility:before {
-  background-image: url('../images/icons/icon-agility.png');
-}
-
-.icon-skill-double:before {
-  background-image: url('../images/icons/icon-double.png');
-}
-
-.icon-skill-diablo:before {
-  background-image: url('../images/icons/icon-diablo.png');
-}
-
-.icon-skill-assult:before {
-  background-image: url('../images/icons/icon-assult.png');
-}
-
-.icon-skill-shotgun:before {
-  background-image: url('../images/icons/icon-shotgun.png');
-}
-
-.icon-skill-sniper:before {
-  background-image: url('../images/icons/icon-sniper.png');
-}
-
-.icon-skill-flamethrower:before {
-  background-image: url('../images/icons/icon-flamethrower.png');
-}
-
-.icon-skill-machete:before {
-  background-image: url('../images/icons/icon-machete.png');
-}
-
-.icon-skill-spectre:before {
-  background-image: url('../images/icons/icon-spectre.png');
-}
-
-.icon-skill-launcher:before {
-  background-image: url('../images/icons/icon-launcher.png');
+.icon-skill-reviver.icon-level-3:before {
+  background-image: url('../images/icons/icon-reviver-3.png?1402733619');
 }
 
 body {

@@ -30,6 +30,7 @@
   &:hover {
     padding: 6px 8px;
     border: 2px solid $white;
+    @include box-shadow(inset 0 0 30px rgba($white, 0.4));
   }
 }
 .loadout-slot__icon {
@@ -57,11 +58,14 @@
   line-height: 32px;
   padding: 6px 8px;
   cursor: pointer;
+  @include opacity(.5);
   &:focus,
   &.active,
   &:hover {
-    padding: 4px 6px;
-    border: 2px solid $white;
+    @include opacity(1);
+    .loadout-slot__icon {
+      margin-left: 15px;
+    }
   }
   .loadout-slot__icon {
     width: 32px;
@@ -93,16 +97,14 @@
   .loadout-slot__icon {
     @include inline-block;
     float: none;
-    padding: 7px;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     margin: 5px;
     cursor: pointer;
     &:focus,
     &.active,
     &:hover {
       border: 2px solid $white;
-      padding: 5px;
     }
   }
 }
@@ -148,7 +150,7 @@ $i: 1;
   .weapon-bars--#{$i} {
     background-image: image-url('bars/' + $i + '.png');
   }
-  $i: $i + 1 !global;
+  $i: $i + 1;
 }
 
 $skills:
@@ -210,18 +212,30 @@ $skills:
   }
 }
 
-@each $skill in $skills {
-  .icon-skill-#{$skill} {
-    &:before {
-      background-image: image-url('icons/icon-' + $skill + '.png');
-    }
-    &.icon-level-2:before {
-      //background-image: image-url('icons/icon-' + $skill + '-2.png');
-    }
-    &.icon-level-3:before {
-      //background-image: image-url('icons/icon-' + $skill + '-3.png');
-    }
-  }
+// @each $skill in $skills {
+//   .icon-skill-#{$skill} {
+//     &:before {
+//       background-image: image-url('icons/icon-' + $skill + '.png');
+//     }
+//     &.icon-level-2:before {
+//       background-image: image-url('icons/icon-' + $skill + '-2.png');
+//     }
+//     &.icon-level-3:before {
+//       background-image: image-url('icons/icon-' + $skill + '-3.png');
+//     }
+//   }
+// }
+//
+
+.icon-skill-bow:before {
+  background-image: image-url('icons/icon-bow.png');
 }
-
-
+.icon-skill-full:before {
+  background-image: image-url('icons/icon-full.png');
+}
+.icon-skill-awareness.icon-level-2:before {
+  background-image: image-url('icons/icon-awareness-2.png');
+}
+.icon-skill-reviver.icon-level-3:before {
+  background-image: image-url('icons/icon-reviver-3.png');
+}

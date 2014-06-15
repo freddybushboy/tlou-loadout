@@ -65,26 +65,30 @@ a {
   border-top: 2px solid $white;
   margin-top: 7px;
 }
+
+.loadout-share,
 .loadout-random,
 .loadout-reset {
-  @include inline-block;
+  float: left;
   cursor: pointer;
-  margin-top: 20px;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-top: 10px;
   .new {
     color: crimson;
   }
-}
-.loadout-share {
-  float: right;
-  margin-top: 10px;
   input {
     border: none;
   }
 }
+.loadout-random {
+  margin-top: 7px;
+}
+.loadout-share {
+  clear: both;
+}
 .disclaimer {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 12px;
   font-size: 12px;
 }
 .fb_iframe_widget {
