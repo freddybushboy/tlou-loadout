@@ -58,32 +58,36 @@ $skills:
   }
 }
 
-// @each $skill in $skills {
-//   .icon-skill-#{$skill} {
-//     &:before {
-//       background-image: image-url('icons/icon-' + $skill + '.png');
-//     }
-//     &.icon-level-2:before {
-//       background-image: image-url('icons/icon-' + $skill + '-2.png');
-//     }
-//     &.icon-level-3:before {
-//       background-image: image-url('icons/icon-' + $skill + '-3.png');
-//     }
-//   }
-// }
-//
+@each $skill in $skills {
+  .icon-skill-#{$skill} {
+    &:before {
+      background-image: image-url('icons/icon-' + $skill + '.png');
+    }
+    &.icon-level-2:before {
+      background-image: image-url('icons/icon-' + $skill + '-2.png');
+    }
+    &.icon-level-3:before {
+      background-image: image-url('icons/icon-' + $skill + '-3.png');
+    }
+  }
+}
 
-.icon-skill-bow:before {
-  background-image: image-url('icons/icon-bow.png');
-}
-.icon-skill-full:before {
-  background-image: image-url('icons/icon-full.png');
-}
-.icon-skill-awareness.icon-level-2:before {
-  background-image: image-url('icons/icon-awareness-2.png');
-}
-.icon-skill-reviver.icon-level-3:before {
-  background-image: image-url('icons/icon-reviver-3.png');
+$silenced:
+  'shorty',
+  'enforcer',
+  'burst',
+  'full',
+  'semi',
+  '9mm';
+@each $silence in $silenced {
+  .icon-skill-#{$silence}.icon-level-2 {
+    &:before {
+      background-image: image-url('icons/icon-' + $silence + '.png');
+    }
+    .skill-detail &.loadout-slot__icon:before {
+      background-image: image-url('icons/icon-silencer.png');
+    }
+  }
 }
 
 

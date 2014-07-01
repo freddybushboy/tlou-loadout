@@ -1,8 +1,7 @@
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
+*, *:before, *:after {
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php');
 }
 
 img, video {
@@ -12,40 +11,27 @@ img, video {
 
 @font-face {
   font-family: "icomoon";
-  src: url('../fonts/icomoon.eot');
-  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg') format('svg');
+  src: url('../fonts/icomoon.eot?1402674152');
+  src: url('../fonts/icomoon.eot?&1402674152#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff?1402674152') format('woff'), url('../fonts/icomoon.ttf?1402674152') format('truetype'), url('../fonts/icomoon.svg?1402674152') format('svg');
 }
-
 @font-face {
   font-family: "tlou";
-  src: url('../fonts/tlou.eot');
-  src: url('../fonts/tlou.eot?#iefix') format('embedded-opentype'), url('../fonts/tlou.woff') format('woff'), url('../fonts/tlou.ttf') format('truetype'), url('../fonts/tlou.svg') format('svg');
+  src: url('../fonts/tlou.eot?1402674152');
+  src: url('../fonts/tlou.eot?&1402674152#iefix') format('embedded-opentype'), url('../fonts/tlou.woff?1402674152') format('woff'), url('../fonts/tlou.ttf?1402674152') format('truetype'), url('../fonts/tlou.svg?1402674152') format('svg');
 }
-
 body {
-  background: black url('../images/background.jpg?1402522508') no-repeat top center;
+  background: black url('../images/background.jpg?1402674152') no-repeat top center;
   color: #eaeadb;
   text-align: center;
 }
 
 .loadout-calc {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   padding: 60px 20px 20px;
   width: 1200px;
   margin: 0 auto;
   text-align: left;
-}
-.loadout-calc:before, .loadout-calc:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.loadout-calc:after {
-  clear: both;
 }
 
 a {
@@ -53,19 +39,8 @@ a {
 }
 
 .loadout-calc__cols {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
-  *zoom: 1;
-}
-.loadout-calc__cols:before, .loadout-calc__cols:after {
-  content: ".";
-  display: block;
-  height: 0;
   overflow: hidden;
-}
-.loadout-calc__cols:after {
-  clear: both;
+  *zoom: 1;
 }
 
 .loadout-calc__slots-col {
@@ -76,42 +51,20 @@ a {
 }
 
 .loadout-calc__skills-col {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   float: left;
   width: 820px;
   padding-left: 20px;
 }
-.loadout-calc__skills-col:before, .loadout-calc__skills-col:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.loadout-calc__skills-col:after {
-  clear: both;
-}
 
 .loadout-calc__info-col {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   float: left;
   width: 100%;
   border-bottom: 2px solid #eaeadb;
   margin-bottom: 7px;
-}
-.loadout-calc__info-col:before, .loadout-calc__info-col:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.loadout-calc__info-col:after {
-  clear: both;
 }
 
 .loadout-calc__skill-list-col {
@@ -187,7 +140,7 @@ a {
   position: relative;
 }
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  background-image: url('../images/icons/icon-default.png?1402733619');
+  background-image: url('../images/icons/icon-default.png?1402674427');
   content: '';
   position: absolute;
   top: 0;
@@ -200,20 +153,446 @@ a {
   margin-left: -50%;
 }
 
-.icon-skill-bow:before {
-  background-image: url('../images/icons/icon-bow.png?1402733619');
+.icon-skill-nothing:before {
+  background-image: url('../images/icons/icon-nothing.png?1404225306');
+}
+.icon-skill-nothing.icon-level-2:before {
+  background-image: url('../images/icons/icon-nothing-2.png');
+}
+.icon-skill-nothing.icon-level-3:before {
+  background-image: url('../images/icons/icon-nothing-3.png');
+}
+
+.icon-skill-revolver:before {
+  background-image: url('../images/icons/icon-revolver.png?1403879604');
+}
+.icon-skill-revolver.icon-level-2:before {
+  background-image: url('../images/icons/icon-revolver-2.png');
+}
+.icon-skill-revolver.icon-level-3:before {
+  background-image: url('../images/icons/icon-revolver-3.png');
+}
+
+.icon-skill-9mm:before {
+  background-image: url('../images/icons/icon-9mm.png?1403884200');
+}
+.icon-skill-9mm.icon-level-2:before {
+  background-image: url('../images/icons/icon-9mm-2.png');
+}
+.icon-skill-9mm.icon-level-3:before {
+  background-image: url('../images/icons/icon-9mm-3.png');
+}
+
+.icon-skill-shorty:before {
+  background-image: url('../images/icons/icon-shorty.png?1403880718');
+}
+.icon-skill-shorty.icon-level-2:before {
+  background-image: url('../images/icons/icon-shorty-2.png');
+}
+.icon-skill-shorty.icon-level-3:before {
+  background-image: url('../images/icons/icon-shorty-3.png');
+}
+
+.icon-skill-enforcer:before {
+  background-image: url('../images/icons/icon-enforcer.png?1403881834');
+}
+.icon-skill-enforcer.icon-level-2:before {
+  background-image: url('../images/icons/icon-enforcer-2.png');
+}
+.icon-skill-enforcer.icon-level-3:before {
+  background-image: url('../images/icons/icon-enforcer-3.png');
+}
+
+.icon-skill-semi:before {
+  background-image: url('../images/icons/icon-semi.png?1403882926');
+}
+.icon-skill-semi.icon-level-2:before {
+  background-image: url('../images/icons/icon-semi-2.png');
+}
+.icon-skill-semi.icon-level-3:before {
+  background-image: url('../images/icons/icon-semi-3.png');
 }
 
 .icon-skill-full:before {
-  background-image: url('../images/icons/icon-full.png?1402733619');
+  background-image: url('../images/icons/icon-full.png?1402670762');
+}
+.icon-skill-full.icon-level-2:before {
+  background-image: url('../images/icons/icon-full-2.png');
+}
+.icon-skill-full.icon-level-3:before {
+  background-image: url('../images/icons/icon-full-3.png');
 }
 
-.icon-skill-awareness.icon-level-2:before {
-  background-image: url('../images/icons/icon-awareness-2.png?1402733619');
+.icon-skill-burst:before {
+  background-image: url('../images/icons/icon-burst.png?1403880298');
+}
+.icon-skill-burst.icon-level-2:before {
+  background-image: url('../images/icons/icon-burst-2.png');
+}
+.icon-skill-burst.icon-level-3:before {
+  background-image: url('../images/icons/icon-burst-3.png');
 }
 
+.icon-skill-hunting:before {
+  background-image: url('../images/icons/icon-hunting.png?1403884030');
+}
+.icon-skill-hunting.icon-level-2:before {
+  background-image: url('../images/icons/icon-hunting-2.png');
+}
+.icon-skill-hunting.icon-level-3:before {
+  background-image: url('../images/icons/icon-hunting-3.png');
+}
+
+.icon-skill-bow:before {
+  background-image: url('../images/icons/icon-bow.png?1402671424');
+}
+.icon-skill-bow.icon-level-2:before {
+  background-image: url('../images/icons/icon-bow-2.png');
+}
+.icon-skill-bow.icon-level-3:before {
+  background-image: url('../images/icons/icon-bow-3.png');
+}
+
+.icon-skill-paz:before {
+  background-image: url('../images/icons/icon-paz.png?1404230136');
+}
+.icon-skill-paz.icon-level-2:before {
+  background-image: url('../images/icons/icon-paz-2.png?1404049396');
+}
+.icon-skill-paz.icon-level-3:before {
+  background-image: url('../images/icons/icon-paz-3.png');
+}
+
+.icon-skill-ee:before {
+  background-image: url('../images/icons/icon-ee.png?1404049494');
+}
+.icon-skill-ee.icon-level-2:before {
+  background-image: url('../images/icons/icon-ee-2.png?1404143776');
+}
+.icon-skill-ee.icon-level-3:before {
+  background-image: url('../images/icons/icon-ee-3.png');
+}
+
+.icon-skill-reviver:before {
+  background-image: url('../images/icons/icon-reviver.png?1404050146');
+}
+.icon-skill-reviver.icon-level-2:before {
+  background-image: url('../images/icons/icon-reviver-2.png?1404050248');
+}
 .icon-skill-reviver.icon-level-3:before {
-  background-image: url('../images/icons/icon-reviver-3.png?1402733619');
+  background-image: url('../images/icons/icon-reviver-3.png?1402671616');
+}
+
+.icon-skill-brawler:before {
+  background-image: url('../images/icons/icon-brawler.png?1404050352');
+}
+.icon-skill-brawler.icon-level-2:before {
+  background-image: url('../images/icons/icon-brawler-2.png?1404050452');
+}
+.icon-skill-brawler.icon-level-3:before {
+  background-image: url('../images/icons/icon-brawler-3.png');
+}
+
+.icon-skill-covert:before {
+  background-image: url('../images/icons/icon-covert.png?1404050552');
+}
+.icon-skill-covert.icon-level-2:before {
+  background-image: url('../images/icons/icon-covert-2.png?1404050634');
+}
+.icon-skill-covert.icon-level-3:before {
+  background-image: url('../images/icons/icon-covert-3.png?1404052022');
+}
+
+.icon-skill-sharp:before {
+  background-image: url('../images/icons/icon-sharp.png?1404052150');
+}
+.icon-skill-sharp.icon-level-2:before {
+  background-image: url('../images/icons/icon-sharp-2.png?1404052296');
+}
+.icon-skill-sharp.icon-level-3:before {
+  background-image: url('../images/icons/icon-sharp-3.png?1404052504');
+}
+
+.icon-skill-strategist:before {
+  background-image: url('../images/icons/icon-strategist.png?1404052666');
+}
+.icon-skill-strategist.icon-level-2:before {
+  background-image: url('../images/icons/icon-strategist-2.png?1404052764');
+}
+.icon-skill-strategist.icon-level-3:before {
+  background-image: url('../images/icons/icon-strategist-3.png?1404053360');
+}
+
+.icon-skill-hawk:before {
+  background-image: url('../images/icons/icon-hawk.png?1404053442');
+}
+.icon-skill-hawk.icon-level-2:before {
+  background-image: url('../images/icons/icon-hawk-2.png?1404053612');
+}
+.icon-skill-hawk.icon-level-3:before {
+  background-image: url('../images/icons/icon-hawk-3.png?1404053832');
+}
+
+.icon-skill-crafter:before {
+  background-image: url('../images/icons/icon-crafter.png?1404053934');
+}
+.icon-skill-crafter.icon-level-2:before {
+  background-image: url('../images/icons/icon-crafter-2.png?1404054034');
+}
+.icon-skill-crafter.icon-level-3:before {
+  background-image: url('../images/icons/icon-crafter-3.png?1404054262');
+}
+
+.icon-skill-fat:before {
+  background-image: url('../images/icons/icon-fat.png?1404054404');
+}
+.icon-skill-fat.icon-level-2:before {
+  background-image: url('../images/icons/icon-fat-2.png?1404054560');
+}
+.icon-skill-fat.icon-level-3:before {
+  background-image: url('../images/icons/icon-fat-3.png?1404054870');
+}
+
+.icon-skill-ss:before {
+  background-image: url('../images/icons/icon-ss.png?1404138606');
+}
+.icon-skill-ss.icon-level-2:before {
+  background-image: url('../images/icons/icon-ss-2.png?1404138686');
+}
+.icon-skill-ss.icon-level-3:before {
+  background-image: url('../images/icons/icon-ss-3.png?1404139012');
+}
+
+.icon-skill-marathon:before {
+  background-image: url('../images/icons/icon-marathon.png?1404139128');
+}
+.icon-skill-marathon.icon-level-2:before {
+  background-image: url('../images/icons/icon-marathon-2.png?1404139204');
+}
+.icon-skill-marathon.icon-level-3:before {
+  background-image: url('../images/icons/icon-marathon-3.png');
+}
+
+.icon-skill-collector:before {
+  background-image: url('../images/icons/icon-collector.png?1404139290');
+}
+.icon-skill-collector.icon-level-2:before {
+  background-image: url('../images/icons/icon-collector-2.png?1404139378');
+}
+.icon-skill-collector.icon-level-3:before {
+  background-image: url('../images/icons/icon-collector-3.png');
+}
+
+.icon-skill-executioner:before {
+  background-image: url('../images/icons/icon-executioner.png?1402670588');
+}
+.icon-skill-executioner.icon-level-2:before {
+  background-image: url('../images/icons/icon-executioner-2.png?1404139546');
+}
+.icon-skill-executioner.icon-level-3:before {
+  background-image: url('../images/icons/icon-executioner-3.png?1404139684');
+}
+
+.icon-skill-scavenger:before {
+  background-image: url('../images/icons/icon-scavenger.png?1404139758');
+}
+.icon-skill-scavenger.icon-level-2:before {
+  background-image: url('../images/icons/icon-scavenger-2.png?1404139904');
+}
+.icon-skill-scavenger.icon-level-3:before {
+  background-image: url('../images/icons/icon-scavenger-3.png?1404140040');
+}
+
+.icon-skill-damage:before {
+  background-image: url('../images/icons/icon-damage.png?1404230258');
+}
+.icon-skill-damage.icon-level-2:before {
+  background-image: url('../images/icons/icon-damage-2.png?1404140204');
+}
+.icon-skill-damage.icon-level-3:before {
+  background-image: url('../images/icons/icon-damage-3.png');
+}
+
+.icon-skill-awareness:before {
+  background-image: url('../images/icons/icon-awareness.png?1404141404');
+}
+.icon-skill-awareness.icon-level-2:before {
+  background-image: url('../images/icons/icon-awareness-2.png?1402670260');
+}
+.icon-skill-awareness.icon-level-3:before {
+  background-image: url('../images/icons/icon-awareness-3.png');
+}
+
+.icon-skill-fortitude:before {
+  background-image: url('../images/icons/icon-fortitude.png?1404142104');
+}
+.icon-skill-fortitude.icon-level-2:before {
+  background-image: url('../images/icons/icon-fortitude-2.png?1404142202');
+}
+.icon-skill-fortitude.icon-level-3:before {
+  background-image: url('../images/icons/icon-fortitude-3.png?1404142306');
+}
+
+.icon-skill-gunslinger:before {
+  background-image: url('../images/icons/icon-gunslinger.png?1404142386');
+}
+.icon-skill-gunslinger.icon-level-2:before {
+  background-image: url('../images/icons/icon-gunslinger-2.png?1404142452');
+}
+.icon-skill-gunslinger.icon-level-3:before {
+  background-image: url('../images/icons/icon-gunslinger-3.png?1404142738');
+}
+
+.icon-skill-bomb:before {
+  background-image: url('../images/icons/icon-bomb.png?1404142824');
+}
+.icon-skill-bomb.icon-level-2:before {
+  background-image: url('../images/icons/icon-bomb-2.png?1404142898');
+}
+.icon-skill-bomb.icon-level-3:before {
+  background-image: url('../images/icons/icon-bomb-3.png?1404143004');
+}
+
+.icon-skill-agility:before {
+  background-image: url('../images/icons/icon-agility.png?1404143158');
+}
+.icon-skill-agility.icon-level-2:before {
+  background-image: url('../images/icons/icon-agility-2.png?1404143228');
+}
+.icon-skill-agility.icon-level-3:before {
+  background-image: url('../images/icons/icon-agility-3.png?1404143480');
+}
+
+.icon-skill-double:before {
+  background-image: url('../images/icons/icon-double.png?1404226316');
+}
+.icon-skill-double.icon-level-2:before {
+  background-image: url('../images/icons/icon-double-2.png');
+}
+.icon-skill-double.icon-level-3:before {
+  background-image: url('../images/icons/icon-double-3.png');
+}
+
+.icon-skill-diablo:before {
+  background-image: url('../images/icons/icon-diablo.png?1404226594');
+}
+.icon-skill-diablo.icon-level-2:before {
+  background-image: url('../images/icons/icon-diablo-2.png');
+}
+.icon-skill-diablo.icon-level-3:before {
+  background-image: url('../images/icons/icon-diablo-3.png');
+}
+
+.icon-skill-assult:before {
+  background-image: url('../images/icons/icon-assult.png?1404226734');
+}
+.icon-skill-assult.icon-level-2:before {
+  background-image: url('../images/icons/icon-assult-2.png');
+}
+.icon-skill-assult.icon-level-3:before {
+  background-image: url('../images/icons/icon-assult-3.png');
+}
+
+.icon-skill-shotgun:before {
+  background-image: url('../images/icons/icon-shotgun.png?1404226992');
+}
+.icon-skill-shotgun.icon-level-2:before {
+  background-image: url('../images/icons/icon-shotgun-2.png');
+}
+.icon-skill-shotgun.icon-level-3:before {
+  background-image: url('../images/icons/icon-shotgun-3.png');
+}
+
+.icon-skill-sniper:before {
+  background-image: url('../images/icons/icon-sniper.png?1404227494');
+}
+.icon-skill-sniper.icon-level-2:before {
+  background-image: url('../images/icons/icon-sniper-2.png');
+}
+.icon-skill-sniper.icon-level-3:before {
+  background-image: url('../images/icons/icon-sniper-3.png');
+}
+
+.icon-skill-flamethrower:before {
+  background-image: url('../images/icons/icon-flamethrower.png?1404227734');
+}
+.icon-skill-flamethrower.icon-level-2:before {
+  background-image: url('../images/icons/icon-flamethrower-2.png');
+}
+.icon-skill-flamethrower.icon-level-3:before {
+  background-image: url('../images/icons/icon-flamethrower-3.png');
+}
+
+.icon-skill-machete:before {
+  background-image: url('../images/icons/icon-machete.png?1404227800');
+}
+.icon-skill-machete.icon-level-2:before {
+  background-image: url('../images/icons/icon-machete-2.png');
+}
+.icon-skill-machete.icon-level-3:before {
+  background-image: url('../images/icons/icon-machete-3.png');
+}
+
+.icon-skill-spectre:before {
+  background-image: url('../images/icons/icon-spectre.png?1404227898');
+}
+.icon-skill-spectre.icon-level-2:before {
+  background-image: url('../images/icons/icon-spectre-2.png');
+}
+.icon-skill-spectre.icon-level-3:before {
+  background-image: url('../images/icons/icon-spectre-3.png');
+}
+
+.icon-skill-launcher:before {
+  background-image: url('../images/icons/icon-launcher.png?1404228104');
+}
+.icon-skill-launcher.icon-level-2:before {
+  background-image: url('../images/icons/icon-launcher-2.png');
+}
+.icon-skill-launcher.icon-level-3:before {
+  background-image: url('../images/icons/icon-launcher-3.png');
+}
+
+.icon-skill-shorty.icon-level-2:before {
+  background-image: url('../images/icons/icon-shorty.png?1403880718');
+}
+.skill-detail .icon-skill-shorty.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404033144');
+}
+
+.icon-skill-enforcer.icon-level-2:before {
+  background-image: url('../images/icons/icon-enforcer.png?1403881834');
+}
+.skill-detail .icon-skill-enforcer.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404033144');
+}
+
+.icon-skill-burst.icon-level-2:before {
+  background-image: url('../images/icons/icon-burst.png?1403880298');
+}
+.skill-detail .icon-skill-burst.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404033144');
+}
+
+.icon-skill-full.icon-level-2:before {
+  background-image: url('../images/icons/icon-full.png?1402670762');
+}
+.skill-detail .icon-skill-full.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404033144');
+}
+
+.icon-skill-semi.icon-level-2:before {
+  background-image: url('../images/icons/icon-semi.png?1403882926');
+}
+.skill-detail .icon-skill-semi.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404033144');
+}
+
+.icon-skill-9mm.icon-level-2:before {
+  background-image: url('../images/icons/icon-9mm.png?1403884200');
+}
+.skill-detail .icon-skill-9mm.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404033144');
 }
 
 .loadout-slot-wrapper--skill,
@@ -246,8 +625,8 @@ a {
 .loadout-slot:focus, .loadout-slot.active, .loadout-slot:hover {
   padding: 6px 8px;
   border: 2px solid #eaeadb;
-  -webkit-box-shadow: inset 0 0 30px rgba(234, 234, 219, 0.4);
   -moz-box-shadow: inset 0 0 30px rgba(234, 234, 219, 0.4);
+  -webkit-box-shadow: inset 0 0 30px rgba(234, 234, 219, 0.4);
   box-shadow: inset 0 0 30px rgba(234, 234, 219, 0.4);
 }
 
@@ -285,7 +664,7 @@ a {
   opacity: 0.5;
 }
 .loadout-skills__slot:focus, .loadout-skills__slot.active, .loadout-skills__slot:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .loadout-skills__slot:focus .loadout-slot__icon, .loadout-skills__slot.active .loadout-slot__icon, .loadout-skills__slot:hover .loadout-slot__icon {
@@ -311,23 +690,12 @@ a {
 }
 
 .skill-detail__level_select {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   text-align: center;
   border-bottom: 2px solid #eaeadb;
   margin-bottom: 10px;
   padding-bottom: 10px;
-}
-.skill-detail__level_select:before, .skill-detail__level_select:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.skill-detail__level_select:after {
-  clear: both;
 }
 .skill-detail__level_select h2 {
   font-size: 18px;
@@ -335,11 +703,10 @@ a {
   margin: 0;
 }
 .skill-detail__level_select .loadout-slot__icon {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   float: none;
   width: 42px;
@@ -357,21 +724,10 @@ a {
 }
 
 .skill-detail__header {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   padding-left: 20px;
   margin-bottom: 10px;
-}
-.skill-detail__header:before, .skill-detail__header:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.skill-detail__header:after {
-  clear: both;
 }
 
 .skill-detail__icon {
@@ -404,21 +760,10 @@ a {
 }
 
 .skill-detail__weapon {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
+  overflow: hidden;
   *zoom: 1;
   clear: both;
   margin-top: 10px;
-}
-.skill-detail__weapon:before, .skill-detail__weapon:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.skill-detail__weapon:after {
-  clear: both;
 }
 
 .weapon-bars {
@@ -429,43 +774,43 @@ a {
 }
 
 .weapon-bars--1 {
-  background-image: url('../images/bars/1.png?1402522508');
+  background-image: url('../images/bars/1.png?1402674152');
 }
 
 .weapon-bars--2 {
-  background-image: url('../images/bars/2.png?1402522508');
+  background-image: url('../images/bars/2.png?1402674152');
 }
 
 .weapon-bars--3 {
-  background-image: url('../images/bars/3.png?1402522508');
+  background-image: url('../images/bars/3.png?1402674152');
 }
 
 .weapon-bars--4 {
-  background-image: url('../images/bars/4.png?1402522508');
+  background-image: url('../images/bars/4.png?1402674152');
 }
 
 .weapon-bars--5 {
-  background-image: url('../images/bars/5.png?1402522508');
+  background-image: url('../images/bars/5.png?1402674152');
 }
 
 .weapon-bars--6 {
-  background-image: url('../images/bars/6.png?1402522508');
+  background-image: url('../images/bars/6.png?1402674152');
 }
 
 .weapon-bars--7 {
-  background-image: url('../images/bars/7.png?1402522508');
+  background-image: url('../images/bars/7.png?1402674152');
 }
 
 .weapon-bars--8 {
-  background-image: url('../images/bars/8.png?1402522508');
+  background-image: url('../images/bars/8.png?1402674152');
 }
 
 .weapon-bars--9 {
-  background-image: url('../images/bars/9.png?1402522508');
+  background-image: url('../images/bars/9.png?1402674152');
 }
 
 .weapon-bars--10 {
-  background-image: url('../images/bars/10.png?1402522508');
+  background-image: url('../images/bars/10.png?1402674152');
 }
 
 body {
