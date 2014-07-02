@@ -89,7 +89,13 @@ $silenced:
     }
   }
 }
-
+.loadout-slot--7 .loadout-slot__icon {
+  background: transparent image-url('icons/icon-gear.png') no-repeat center center;
+  background-size: 100% auto;
+  &.icon-skill-nothing {
+    background-image: none;
+  }
+}
 
 // Wrappers.
 .loadout-slot-wrapper--skill,

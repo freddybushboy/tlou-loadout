@@ -16,7 +16,7 @@ a {
 
 // Cols.
 .loadout-calc__cols {
-  @include clearfix;
+  @include pie-clearfix;
 }
 .loadout-calc__slots-col {
   float: left;

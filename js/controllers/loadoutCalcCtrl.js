@@ -27,6 +27,7 @@ angular.module('loadoutApp')
             'level': preset.substr(preset.length - 1),
           });
         });
+        $scope.updatePoints();
       }
       else if ($scope.q !== undefined && $scope.q.length == 14) {
         $scope.qs = $scope.q.match(/.{1,2}/g);
@@ -38,6 +39,7 @@ angular.module('loadoutApp')
             'level': slotDetails.level,
           });
         });
+        $scope.updatePoints();
       }
       else {
         $scope.slots = [
@@ -288,14 +290,23 @@ angular.module('loadoutApp')
       $scope.remainingPoints = '13';
     }
 
+    $scope.getRandomSkill = function(skills) {
+      var skill = skills[Math.floor(Math.random() * skills.length)];
+      $scope.slots.forEach(function(slot, key) {
+        if (slot.id == skill.id && skill.id != 'nothing' && key != 0 && key != 6) {
+          skill = $scope.getRandomSkill(skills);
+        }
+      });
+      return skill;
+    }
     $scope.randomLoadout = function() {
       $scope.resetLoadout();
-      $scope.slots.forEach(function(slot, key) {
-        var type = $scope.getSlotType(key);
+      var arr = [0,1,2,3,6,4,5]
+      arr.forEach(function(slot) {
+        var type = $scope.getSlotType(slot);
         var skills = $scope.skills[type];
-        var skill = skills[Math.floor(Math.random() * skills.length)];
+        var skill = $scope.getRandomSkill(skills);
         var levels = [];
-        var clash = false;
         skill.levels.forEach(function(data, key) {
           if (data.cost <= $scope.remainingPoints) {
             levels.push(key);
@@ -304,23 +315,10 @@ angular.module('loadoutApp')
 
         if (levels.length > 0) {
           var level = levels[Math.floor(Math.random() * levels.length)] + 1;
-          $scope.slots.forEach(function(slot) {
-            if (slot.id == skill.id) {
-              clash = true;
-            }
-          });
-          if (clash) {
-            $scope.slots[key] = {
-              'id': skill.id,
-              'level': level,
-            };
-          }
-          else {
-            $scope.slots[key] = {
-              'id': skill.id,
-              'level': level,
-            };
-          }
+          $scope.slots[slot] = {
+            'id': skill.id,
+            'level': level,
+          };
         }
 
         $scope.updatePoints();
@@ -335,9 +333,9 @@ angular.module('loadoutApp')
               var levels = [];
               while (levels.length == 0) {
                 levels = [];
-                var skill = skills[Math.floor(Math.random() * skills.length)];
+                var skill = $scope.getRandomSkill(skills);
                 if (skill.id == 'nothing') {
-                  skill = skills[Math.floor(Math.random() * skills.length)];
+                  skill = $scope.getRandomSkill(skills);
                 }
                 skill.levels.forEach(function(data, key) {
                   if (data.cost <= $scope.remainingPoints) {
