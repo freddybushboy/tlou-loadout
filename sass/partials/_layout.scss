@@ -5,7 +5,7 @@ body {
 }
 .loadout-calc {
   @include clearfix;
-  padding: 60px 20px 20px;
+  padding: 40px 20px 20px;
   width: 1200px; // 1120 content area.
   margin: 0 auto;
   text-align: left;
@@ -79,9 +79,6 @@ a {
   input {
     border: none;
   }
-}
-.loadout-random {
-  margin-top: 7px;
 }
 .loadout-share {
   clear: both;

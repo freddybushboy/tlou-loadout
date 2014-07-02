@@ -33,7 +33,7 @@ body {
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
   /* non-JS fallback */
   *zoom: 1;
-  padding: 60px 20px 20px;
+  padding: 40px 20px 20px;
   width: 1200px;
   margin: 0 auto;
   text-align: left;
@@ -156,10 +156,6 @@ a {
 .loadout-random input,
 .loadout-reset input {
   border: none;
-}
-
-.loadout-random {
-  margin-top: 7px;
 }
 
 .loadout-share {
