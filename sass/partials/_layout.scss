@@ -86,6 +86,11 @@ a {
 .loadout-share {
   clear: both;
 }
+.shares {
+  @include clearfix;
+  float: left;
+  margin-top: -40px;
+}
 .disclaimer {
   text-align: center;
   margin-top: 12px;

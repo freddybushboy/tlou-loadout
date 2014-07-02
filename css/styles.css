@@ -173,6 +173,24 @@ a {
   clear: both;
 }
 
+.shares {
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
+  *zoom: 1;
+  float: left;
+  margin-top: -40px;
+}
+.shares:before, .shares:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.shares:after {
+  clear: both;
+}
+
 .disclaimer {
   text-align: center;
   margin-top: 12px;
@@ -348,12 +366,18 @@ a {
   cursor: pointer;
 }
 .skill-detail__level_select .loadout-slot__icon:before {
+  margin-top: 2px;
+  height: calc(100% - 4px);
   width: 80px;
   margin-left: -40px;
 }
 .skill-detail__level_select .loadout-slot__icon:focus, .skill-detail__level_select .loadout-slot__icon.active, .skill-detail__level_select .loadout-slot__icon:hover {
   border: 2px solid #eaeadb;
   z-index: 2;
+}
+.skill-detail__level_select .loadout-slot__icon:focus:before, .skill-detail__level_select .loadout-slot__icon.active:before, .skill-detail__level_select .loadout-slot__icon:hover:before {
+  margin-top: 0;
+  height: 100%;
 }
 
 .skill-detail__header {

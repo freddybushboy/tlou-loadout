@@ -272,12 +272,12 @@ angular.module('loadoutApp')
               'code': '27'
             },
             {
-              'description': 'You won\'t show up on the enemy\'s minimap when crouch walking and start with a shiv on each spawn.',
+              'description': 'You won\'t show up on the enemy\'s listen mode when crouch walking and start with a shiv on each spawn.',
               'cost': 4,
               'code': '28'
             },
             {
-              'description': 'You can\'t be marked, won\'t show up on the enemy\'s minimap when crouch walking and start with a shiv on each spawn.',
+              'description': 'You can\'t be marked, won\'t show up on the enemy\'s listen mode when crouch walking and start with a shiv on each spawn.',
               'cost': 5,
               'code': '29'
             }
@@ -644,7 +644,7 @@ angular.module('loadoutApp')
         },
         {
           'id': 'assult',
-          'name': 'Assult Rifle',
+          'name': 'Assault Rifle',
           'levels': [
             {
               'description': 'A military grade rifle with a high rate of fire.',

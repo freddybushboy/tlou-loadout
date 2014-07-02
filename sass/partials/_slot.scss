@@ -199,6 +199,8 @@ $skills:
     margin: 8px;
     cursor: pointer;
     &:before {
+      margin-top: 2px;
+      height: calc(100% - 4px);
       width: 80px;
       margin-left: -40px;
     }
@@ -207,6 +209,10 @@ $skills:
     &:hover {
       border: 2px solid $white;
       z-index: 2;
+      &:before {
+        margin-top: 0;
+        height: 100%;
+      }
     }
   }
 }
