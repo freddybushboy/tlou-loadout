@@ -91,9 +91,12 @@ $silenced:
 }
 .loadout-slot--7 .loadout-slot__icon {
   background: transparent image-url('icons/icon-gear.png') no-repeat center center;
-  background-size: 100% auto;
+  background-size: auto 100%;
   &.icon-skill-nothing {
     background-image: none;
+    &:before {
+      background-image: image-url('icons/icon-gear.png');
+    }
   }
 }
 
