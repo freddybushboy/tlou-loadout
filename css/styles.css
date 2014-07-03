@@ -581,6 +581,13 @@ a {
   background-image: url('../images/icons/icon-silencer.png?1404033144');
 }
 
+.icon-skill-hunting.icon-level-2:before {
+  background-image: url('../images/icons/icon-hunting.png?1403884030');
+}
+.skill-detail .icon-skill-hunting.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404033144');
+}
+
 .icon-skill-full.icon-level-2:before {
   background-image: url('../images/icons/icon-full.png?1402670762');
 }
