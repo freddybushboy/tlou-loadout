@@ -1,7 +1,8 @@
 body {
-  background: black image-url('background.jpg') no-repeat top center;
+  background: #1d1d1b image-url('background.jpg') no-repeat top center;
   color: $white;
   text-align: center;
+  background-size: cover;
 }
 .loadout-calc {
   @include clearfix;
