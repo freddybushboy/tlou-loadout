@@ -144,6 +144,20 @@ $silenced:
     width: 106px;
     margin-left: -53px;
   }
+  .shares & {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+.icon-reset:before {
+  background-image: image-url('reset.png');
+}
+.icon-random:before {
+  background-image: image-url('random.png');
+}
+.icon-share:before {
+  background-image: image-url('share.png');
 }
 .loadout-slot__name {
   float: right;

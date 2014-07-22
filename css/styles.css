@@ -23,7 +23,7 @@ img, video {
 }
 
 body {
-  background: #1d1d1b url('../images/background.jpg?1404340470') no-repeat top center;
+  background: #1d1d1b url('../images/background.jpg?1404415102') no-repeat top center;
   color: #eaeadb;
   text-align: center;
   background-size: cover;
@@ -711,6 +711,23 @@ a {
 .loadout-slot__icon:before {
   width: 106px;
   margin-left: -53px;
+}
+.shares .loadout-slot__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.icon-reset:before {
+  background-image: url('../images/reset.png?1405713046');
+}
+
+.icon-random:before {
+  background-image: url('../images/random.png?1405713039');
+}
+
+.icon-share:before {
+  background-image: url('../images/share.png?1405713051');
 }
 
 .loadout-slot__name {

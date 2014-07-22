@@ -31,7 +31,6 @@ angular.module('loadoutApp')
       }
       else if ($scope.q !== undefined && $scope.q.length == 14) {
         $scope.qs = $scope.q.match(/.{1,2}/g);
-
         $scope.qs.forEach(function(code, key) {
           var slotDetails = $scope.getSlotDetailsFromCode(code, key);
           $scope.slots.push({
@@ -90,6 +89,19 @@ angular.module('loadoutApp')
             ret = {
               id: skill.id,
               level: level + 1,
+            };
+          }
+          // If we didnt find a skill.
+          else if (type == 'small') {
+            ret = {
+              id: 'revolver',
+              level: 1,
+            };
+          }
+          else {
+            ret = {
+              id: 'nothing',
+              level: 1,
             };
           }
         });

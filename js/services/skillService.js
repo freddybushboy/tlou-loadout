@@ -468,7 +468,7 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Enemies drop 50% more ammo',
-              'cost': 3,
+              'cost': 2,
               'code': '56'
             },
             {
@@ -489,7 +489,7 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Any damage dealt marks the target who receives the damage.',
-              'cost': 3,
+              'cost': 2,
               'code': '59'
             },
             {
@@ -520,19 +520,14 @@ angular.module('loadoutApp')
           'name': 'Fortitude',
           'levels': [
             {
-              'description': 'Bleed out time is increased by 25% and slightly increase downed crawling speed.',
+              'description': 'Bleed out time is increased by 25%, slightly increased downed crawling speed and earn 25 parts after healing more than half health.',
               'cost': 1,
               'code': '63'
             },
             {
-              'description': 'Earn 25 parts after healing more than half health and carry an extra health pack. Downed health is increased and bleed out time is increased by 35% along with even faster downed crawling speed.',
-              'cost': 2,
-              'code': '64'
-            },
-            {
               'description': 'Start with an extra health pack, earn 50 parts for healing more than half health and carry an extra health pack. Bleed out time is increased by 50% and downed health is increased along with much faster downed crawling speed.',
               'cost': 3,
-              'code': '65'
+              'code': '64'
             }
           ],
         },
@@ -541,19 +536,14 @@ angular.module('loadoutApp')
           'name': 'Gunslinger',
           'levels': [
             {
-              'description': 'Pistol ammo is increased by 30% at spawn (this does not stack with weapon upgrades).',
+              'description': 'Pistol ammo is increased by 50% at spawn (this does not stack with weapon upgrades).',
               'cost': 2,
               'code': '66'
             },
             {
-              'description': 'Pistol ammo is increased by 70% at spawn (this does not stack with weapon upgrades).',
-              'cost': 3,
-              'code': '67'
-            },
-            {
               'description': 'Pistol ammo is doubled at spawn (this does not stack with weapon upgrades).',
               'cost': 4,
-              'code': '68'
+              'code': '67'
             }
           ],
         },
@@ -562,7 +552,7 @@ angular.module('loadoutApp')
           'name': 'Bomb Expert',
           'levels': [
             {
-              'description': 'Smoke bombs and bombs have a slightly shorter fuse when thrown.',
+              'description': 'Smoke bombs have a very short fuse.',
               'cost': 2,
               'code': '69'
             },
@@ -583,19 +573,14 @@ angular.module('loadoutApp')
           'name': 'Agility',
           'levels': [
             {
-              'description': 'Crouch walk and climb slighty faster.',
+              'description': 'Crouch walk very quickly.',
               'cost': 2,
               'code': '72'
             },
             {
-              'description': 'Walk, climb and crouch walk even faster.',
-              'cost': 3,
-              'code': '73'
-            },
-            {
               'description': 'You are nearly impossible to hear when moving. Walk, climb and crouch walk very quickly.',
               'cost': 4,
-              'code': '74'
+              'code': '73'
             }
           ],
         }

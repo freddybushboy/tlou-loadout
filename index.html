@@ -126,9 +126,9 @@
         </div>
       </div>
       <div class="shares">
-        <span class="loadout-reset" ng-click="resetLoadout()">Reset Loadout</span>
-        <span class="loadout-random" ng-click="randomLoadout()">Random Loadout</span>
-        <span class="loadout-share" ng-click="shareOn = true" onClick="setTimeout(function(){document.getElementById('shareinput').select();}, 200);">Share/Bookmark Loadout <input id="shareinput" ng-show="shareOn" type="text" size="48" onClick="this.select();" value="{{share()}}"></span>
+        <span class="loadout-reset" ng-click="resetLoadout()"><span class="loadout-slot__icon icon-reset"></span> Reset Loadout</span>
+        <span class="loadout-random" ng-click="randomLoadout()"><span class="loadout-slot__icon icon-random"></span> Random Loadout</span>
+        <span class="loadout-share" ng-click="shareOn = true" onClick="setTimeout(function(){document.getElementById('shareinput').select();}, 200);"><span class="loadout-slot__icon icon-share"></span> Share Loadout <input id="shareinput" ng-show="shareOn" type="text" size="48" onClick="this.select();" value="{{share()}}"></span>
       </div>
     <script src="js/app.js"></script>
     <script src="js/controllers/loadoutCalcCtrl.js"></script>
