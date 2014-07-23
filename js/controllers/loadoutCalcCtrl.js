@@ -18,7 +18,6 @@ angular.module('loadoutApp')
       $location.search()['s6'],
       $location.search()['s7']
     ];
-
     $scope.setupSlots = function() {
       if ($scope.presets[0] !== undefined) {
         $scope.presets.forEach(function(preset) {
@@ -30,6 +29,8 @@ angular.module('loadoutApp')
         $scope.updatePoints();
       }
       else if ($scope.q !== undefined && $scope.q.length == 14) {
+
+    console.log($scope.q)
         $scope.qs = $scope.q.match(/.{1,2}/g);
         $scope.qs.forEach(function(code, key) {
           var slotDetails = $scope.getSlotDetailsFromCode(code, key);
@@ -91,21 +92,24 @@ angular.module('loadoutApp')
               level: level + 1,
             };
           }
-          // If we didnt find a skill.
-          else if (type == 'small') {
-            ret = {
-              id: 'revolver',
-              level: 1,
-            };
-          }
-          else {
-            ret = {
-              id: 'nothing',
-              level: 1,
-            };
-          }
         });
       });
+
+      // If we didnt find a skill.
+      if (ret.id == undefined) {
+        if (type == 'small') {
+          ret = {
+            id: 'revolver',
+            level: 1,
+          };
+        }
+        else {
+          ret = {
+            id: 'nothing',
+            level: 1,
+          };
+        }
+      }
 
       return ret;
     }
