@@ -27,7 +27,7 @@ angular.module('loadoutApp')
               'code': '02'
             },
             {
-              'description': 'Don\'t show up on the enemy minimap when firing..',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 2,
               'code': '03'
             }
@@ -47,7 +47,7 @@ angular.module('loadoutApp')
               'code': '04'
             },
             {
-              'description': 'Don\'t show up on the enemy minimap when firing..',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 3,
               'code': '05'
             }
@@ -67,7 +67,7 @@ angular.module('loadoutApp')
               'code': '06'
             },
             {
-              'description': 'Don\'t show up on the enemy minimap when firing..',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 3,
               'code': '07'
             }
@@ -100,7 +100,7 @@ angular.module('loadoutApp')
               'code': '09'
             },
             {
-              'description': 'Don\'t show up on the enemy minimap when firing..',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 4,
               'code': '10'
             }
@@ -135,7 +135,7 @@ angular.module('loadoutApp')
               'code': '12'
             },
             {
-              'description': 'Don\'t show up on the enemy minimap when firing..',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 4,
               'code': '13'
             }
@@ -155,7 +155,7 @@ angular.module('loadoutApp')
               'code': '14'
             },
             {
-              'description': 'Don\'t show up on the enemy minimap when firing..',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 4,
               'code': '15'
             }
@@ -179,6 +179,81 @@ angular.module('loadoutApp')
           'reload': 4,
           'damage': 6,
           'accuracy': 7
+        },
+        {
+          'id': 'scoped-semi',
+          'name': 'Scoped Semi-Auto',
+          'levels': [
+            {
+              'description': 'Scoped version of the Semi-Auto Rifle.',
+              'cost': 2,
+              'code': '85'
+            },
+            {
+              'description': 'Scoped version of the Semi-Auto Rifle.',
+              'cost': 4,
+              'code': '86'
+            }
+          ],
+          'rate': 5,
+          'reload': 4,
+          'damage': 5,
+          'accuracy': 8
+        },
+        {
+          'id': 'scoped-full',
+          'name': 'Scoped Full-Auto',
+          'levels': [
+            {
+              'description': 'Scoped version of the Full-Auto Rifle.',
+              'cost': 2,
+              'code': '87'
+            }
+          ],
+          'rate': 4,
+          'reload': 4,
+          'damage': 2,
+          'accuracy': 6
+        },
+        {
+          'id': 'scoped-burst',
+          'name': 'Scoped Burst Rifle',
+          'levels': [
+            {
+              'description': 'Scoped version of the Burst Rifle.',
+              'cost': 2,
+              'code': '88'
+            },
+            {
+              'description': 'Scoped version of the Burst Rifle.',
+              'cost': 4,
+              'code': '89'
+            }
+          ],
+          'rate': 6,
+          'reload': 4,
+          'damage': 3,
+          'accuracy': 5
+        },
+        {
+          'id': 'variable',
+          'name': 'Variable Rifle',
+          'levels': [
+            {
+              'description': 'Fast and accurate rifle that downs in four shots. Press X while aiming to use the variable scope zoom!',
+              'cost': 2,
+              'code': '90'
+            },
+            {
+              'description': 'Don\'t show up on the enemy minimap when firing.',
+              'cost': 4,
+              'code': '91'
+            }
+          ],
+          'rate': 6,
+          'reload': 4,
+          'damage': 4,
+          'accuracy': 8
         }
       ],
       'skill' : [

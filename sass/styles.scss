@@ -2,6 +2,9 @@
 @import "compass";
 @import "toolkit";
 
+*, *:after, *:before  {
+  @include box-sizing(border-box);
+}
 // Import variables, abstractions, base styles and components using globbing.
 //
 // Globbing will always import files alphabetically. Optimally, all your

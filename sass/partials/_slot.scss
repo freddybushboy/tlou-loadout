@@ -10,6 +10,10 @@ $skills:
   'burst',
   'hunting',
   'bow',
+  'variable',
+  'scoped-semi',
+  'scoped-burst',
+  'scoped-full',
   'paz',
   'ee',
   'reviver',
@@ -77,6 +81,9 @@ $silenced:
   'enforcer',
   'burst',
   'hunting',
+  'scoped-semi',
+  'scoped-burst',
+  'variable',
   'full',
   'semi',
   '9mm';
@@ -165,7 +172,6 @@ $silenced:
 }
 .loadout-slot__cost {
   float: right;
-  padding-left: 10px;
   color: lightskyblue;
   &.over {
     color: crimson;
