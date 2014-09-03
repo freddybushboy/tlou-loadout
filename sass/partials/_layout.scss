@@ -99,7 +99,15 @@ a {
   vertical-align: top;
 }
 
+.back-button {
+  display: none;
+}
 @include breakpoint(max-width 700px) {
+  .back-button {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
   .loadout-calc {
     width: 100%;
   }
@@ -110,16 +118,78 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 56px;
   }
   .loadout-calc__slots-col {
     z-index: 10;
     border-right: none;
     padding-right: 0;
   }
-  .loadout-calc__skill-list-col.active {
-    z-index: 11;
+  .loadout-calc__info-col {
+    background: #1d1d1b image-url('background.jpg') no-repeat top center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    z-index: 14;
+    text-align: center;
+    .loadout-points {
+      float: none;
+      margin: 0 auto;
+      font-size: 17px;
+    }
   }
-  .loadout-calc__details-col.active {
-    z-index: 12;
+  .loadout-random,
+  .loadout-reset {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 15;
+    text-align: center;
+    margin: 0;
+    @include hide-text;
+    span {
+      text-indent: 0;
+      margin: 15px;
+    }
+  }
+  .loadout-random {
+    left: auto;
+    right: 0;
+  }
+  .loadout-calc__skill-list-col {
+    &.active {
+      z-index: 11;
+    }
+    .loadout-skills {
+      position: static;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+    .loadout-skills__slot {
+      padding: 7px 20px;
+    }
+  }
+  .loadout-calc__details-col {
+    &.active {
+      z-index: 12;
+    }
+    &.hide {
+      display: none;
+    }
+    .skill-detail {
+      padding: 10px;
+    }
+    .weapon-bars {
+      max-width: 100%;
+    }
   }
 }

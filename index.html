@@ -61,6 +61,7 @@
             <span class="loadout-points">{{remainingPoints}}/13 Loadout Points</h2>
           </div>
           <div class="loadout-calc__col loadout-calc__skill-list-col" ng-class="{active: skillSet != ''}">
+            <span class="back-button" ng-click="hideSkillList()">< Back</span>
             <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('small')">
               <li class="loadout-skills__slot" ng-class="activeSkillClass(skill.id)" ng-repeat="skill in skills.small" ng-click="setSkillDetail(skill.id)">
                 <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
@@ -95,6 +96,7 @@
               <div class="skill-detail" ng-repeat="skill in category" ng-show="getSkillDetail(skill.id)">
                 <div class="skill-detail__level_select">
                   <h2>Select level</h2>
+                  <span class="back-button" ng-click="hideDetails()">< Back</span>
                   <span class="loadout-slot__icon icon-level-{{key + 1}}  icon-skill-{{skill.id}}"  ng-class="{active: skillLevel == key}" ng-repeat="(key, level) in skill.levels" ng-mouseover="setSkillLevel(key)" ng-click="setSkill(skill)"></span>
                 </div>
                 <div class="skill-detail__content" ng-repeat="(key, level) in skill.levels" ng-show="getSkillLevel(key)">

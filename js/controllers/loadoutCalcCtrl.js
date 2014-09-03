@@ -30,7 +30,6 @@ angular.module('loadoutApp')
       }
       else if ($scope.q !== undefined && $scope.q.length == 14) {
 
-    console.log($scope.q)
         $scope.qs = $scope.q.match(/.{1,2}/g);
         $scope.qs.forEach(function(code, key) {
           var slotDetails = $scope.getSlotDetailsFromCode(code, key);
@@ -149,6 +148,16 @@ angular.module('loadoutApp')
     }
     $scope.getSkillSet = function(value) {
       return $scope.skillSet == value;
+    }
+    $scope.hideSkillList = function(value) {
+      $scope.skillSlot = '';
+      $scope.skillSet = '';
+      $scope.skillDetail = '';
+      $scope.skillLevel = 0;
+    }
+    $scope.hideDetails = function(value) {
+      $scope.skillDetail = '';
+      $scope.skillLevel = 0;
     }
     $scope.activeSkillClass = function(value) {
       if (value == 'nothing') {
