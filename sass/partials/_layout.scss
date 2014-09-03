@@ -190,6 +190,7 @@ a {
     right: 0;
   }
   .loadout-calc__skill-list-col {
+    border-right: none;
     &.active {
       z-index: 11;
     }
