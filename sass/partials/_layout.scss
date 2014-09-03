@@ -3,6 +3,7 @@ body {
   color: $white;
   text-align: center;
   background-size: cover;
+  margin: 0;
 }
 .loadout-calc {
   @include clearfix;
@@ -96,4 +97,29 @@ a {
 }
 .fb_iframe_widget {
   vertical-align: top;
+}
+
+@include breakpoint(max-width 700px) {
+  .loadout-calc {
+    width: 100%;
+  }
+  .loadout-calc__col  {
+    background: #1d1d1b image-url('background.jpg') no-repeat top center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .loadout-calc__slots-col {
+    z-index: 10;
+    border-right: none;
+    padding-right: 0;
+  }
+  .loadout-calc__skill-list-col.active {
+    z-index: 11;
+  }
+  .loadout-calc__details-col.active {
+    z-index: 12;
+  }
 }

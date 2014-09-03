@@ -27,7 +27,7 @@
     <div ng-controller="LoadoutCalcCtrl" class="loadout-calc">
       <h1 title="The Last of Us Loadout Calculator"><img src="images/logo.png" /></h1>
       <div class="loadout-calc__cols">
-        <div class="loadout-calc__slots-col">
+        <div class="loadout-calc__col loadout-calc__slots-col">
           <div class="loadout-slot-wrapper loadout-slot-wrapper--weapon">
             <div class="loadout-slot loadout-slot--1" ng-class="{active: skillSlot == 1}" ng-click="setSkillSet('small', 1)">
               <span class="loadout-slot__icon icon-level-{{slots.0.level}} icon-skill-{{slots.0.id}}"></span>
@@ -60,7 +60,7 @@
             <h2 class="slot-name">{{slotName}}</h2>
             <span class="loadout-points">{{remainingPoints}}/13 Loadout Points</h2>
           </div>
-          <div class="loadout-calc__skill-list-col">
+          <div class="loadout-calc__col loadout-calc__skill-list-col" ng-class="{active: skillSet != ''}">
             <ul class="loadout-skills loadout-skills--weapon" ng-show="getSkillSet('small')">
               <li class="loadout-skills__slot" ng-class="activeSkillClass(skill.id)" ng-repeat="skill in skills.small" ng-click="setSkillDetail(skill.id)">
                 <span class="loadout-slot__icon icon-level-1 icon-skill-{{skill.id}}"></span>
@@ -90,7 +90,7 @@
               </li>
             </ul>
           </div>
-          <div class="loadout-calc__details-col">
+          <div class="loadout-calc__col loadout-calc__details-col" ng-class="{active: skillDetail != ''}">
             <div class="skill-detail-wrapper" ng-repeat="(cat, category) in skills">
               <div class="skill-detail" ng-repeat="skill in category" ng-show="getSkillDetail(skill.id)">
                 <div class="skill-detail__level_select">
