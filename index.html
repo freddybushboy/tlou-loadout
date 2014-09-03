@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The Last of Us Loadout Calculator</title>
     <meta name="description" content="Create your own Loadouts with The Last of Us Factions Loadout Calculator">
-    <meta name="viewport" content="width=1200, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="/favicon.png">
     <meta property="og:image" content="http://www.tlou-loadout.com/apple-touch-icon-precomposed.png"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -53,6 +53,9 @@
               <span class="loadout-slot__cost" ng-class="{over: remainingPoints < 0}">{{getSlotCost(6)}}</span>
               <span class="loadout-slot__name">{{getSlotName(6)}}</span>
             </div>
+          </div>
+          <div class="mobile-share-wrapper">
+            <a class="mobile-share" href="{{share()}}"><span class="loadout-slot__icon icon-share"></span> Share link</a>
           </div>
         </div>
         <div class="loadout-calc__skills-col">
