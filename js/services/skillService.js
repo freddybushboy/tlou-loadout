@@ -330,7 +330,7 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': '360%'
+              'value': '60%'
             },
             {
               'label': 'Head Damage',
