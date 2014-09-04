@@ -15,7 +15,25 @@ angular.module('loadoutApp')
           'rate': 4,
           'reload': 3,
           'damage': 5,
-          'accuracy': 6
+          'accuracy': 6,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '35%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '70%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '2 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '2 shots'
+            }
+          ]
         },
         {
           'id': '9mm',
@@ -35,7 +53,25 @@ angular.module('loadoutApp')
           'rate': 7,
           'reload': 6,
           'damage': 2,
-          'accuracy': 4
+          'accuracy': 4,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '20%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '3 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '3 shots'
+            }
+          ]
         },
         {
           'id': 'shorty',
@@ -55,7 +91,29 @@ angular.module('loadoutApp')
           'rate': 4,
           'reload': 3,
           'damage': 6,
-          'accuracy': 5
+          'accuracy': 5,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '80%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shot'
+            },
+            {
+              'label': '',
+              'value': '* The Shorty, Shotgun, and Launcher are subject to "effective distance" and have damage estimates.'
+            }
+          ]
         },
         {
           'id': 'enforcer',
@@ -75,7 +133,25 @@ angular.module('loadoutApp')
           'rate': 6,
           'reload': 6,
           'damage': 4,
-          'accuracy': 7
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '25%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '55%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '2 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '2 shots'
+            }
+          ]
         }
       ],
       'large': [
@@ -108,7 +184,25 @@ angular.module('loadoutApp')
           'rate': 5,
           'reload': 4,
           'damage': 5,
-          'accuracy': 7
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '34%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '75%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '2 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '2 shots'
+            }
+          ]
         },
         {
           'id': 'full',
@@ -123,7 +217,25 @@ angular.module('loadoutApp')
           'rate': 4,
           'reload': 4,
           'damage': 2,
-          'accuracy': 5
+          'accuracy': 5,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '20%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '50%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '3 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '3 shots'
+            }
+          ]
         },
         {
           'id': 'burst',
@@ -143,7 +255,25 @@ angular.module('loadoutApp')
           'rate': 6,
           'reload': 4,
           'damage': 3,
-          'accuracy': 4
+          'accuracy': 4,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '22%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '80%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '3 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '3 shots'
+            }
+          ]
         },
         {
           'id': 'hunting',
@@ -163,7 +293,25 @@ angular.module('loadoutApp')
           'rate': 2,
           'reload': 2,
           'damage': 8,
-          'accuracy': 9
+          'accuracy': 9,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '100%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shot'
+            }
+          ]
         },
         {
           'id': 'bow',
@@ -178,7 +326,25 @@ angular.module('loadoutApp')
           'rate': 3,
           'reload': 4,
           'damage': 6,
-          'accuracy': 7
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '360%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '100%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shot'
+            }
+          ]
         },
         {
           'id': 'scoped-semi',
@@ -198,7 +364,25 @@ angular.module('loadoutApp')
           'rate': 5,
           'reload': 4,
           'damage': 5,
-          'accuracy': 8
+          'accuracy': 8,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '34%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '75%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '2 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '2 shots'
+            }
+          ]
         },
         {
           'id': 'scoped-full',
@@ -213,7 +397,25 @@ angular.module('loadoutApp')
           'rate': 4,
           'reload': 4,
           'damage': 2,
-          'accuracy': 6
+          'accuracy': 6,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '20%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '50%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '3 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '3 shots'
+            }
+          ]
         },
         {
           'id': 'scoped-burst',
@@ -233,7 +435,25 @@ angular.module('loadoutApp')
           'rate': 6,
           'reload': 4,
           'damage': 3,
-          'accuracy': 5
+          'accuracy': 5,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '22%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '80%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '3 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '3 shots'
+            }
+          ]
         },
         {
           'id': 'variable',
@@ -253,7 +473,25 @@ angular.module('loadoutApp')
           'rate': 6,
           'reload': 4,
           'damage': 4,
-          'accuracy': 8
+          'accuracy': 8,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '31%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '2 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '2 shots'
+            }
+          ]
         }
       ],
       'skill' : [
@@ -685,7 +923,25 @@ angular.module('loadoutApp')
           'rate': 4,
           'reload': 4,
           'damage': 6,
-          'accuracy': 5
+          'accuracy': 5,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shot'
+            }
+          ]
         },
         {
           'id': 'diablo',
@@ -700,7 +956,25 @@ angular.module('loadoutApp')
           'rate': 4,
           'reload': 3,
           'damage': 6,
-          'accuracy': 8
+          'accuracy': 8,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '100%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shot'
+            }
+          ]
         },
         {
           'id': 'assult',
@@ -715,7 +989,25 @@ angular.module('loadoutApp')
           'rate': 8,
           'reload': 4,
           'damage': 3,
-          'accuracy': 5
+          'accuracy': 5,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '20%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '60%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '3 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '3 shots'
+            }
+          ]
         },
         {
           'id': 'shotgun',
@@ -730,7 +1022,29 @@ angular.module('loadoutApp')
           'rate': 5,
           'reload': 3,
           'damage': 8,
-          'accuracy': 5
+          'accuracy': 5,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '100%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '100%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shot'
+            },
+            {
+              'label': '',
+              'value': '* The Shorty, Shotgun, and Launcher are subject to "effective distance" and have damage estimates.'
+            }
+          ]
         },
         {
           'id': 'sniper',
@@ -745,7 +1059,25 @@ angular.module('loadoutApp')
           'rate': 6,
           'reload': 3,
           'damage': 10,
-          'accuracy': 9
+          'accuracy': 9,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '70%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '100%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shot'
+            }
+          ]
         },
         {
           'id': 'flamethrower',
@@ -771,6 +1103,16 @@ angular.module('loadoutApp')
               'cost': 3,
               'code': '82'
             }
+          ],
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '34%'
+            },
+            {
+              'label': 'Execution',
+              'value': '2 shots'
+            }
           ]
         },
         {
@@ -786,7 +1128,25 @@ angular.module('loadoutApp')
           'rate': 10,
           'reload': 6,
           'damage': 1,
-          'accuracy': 4
+          'accuracy': 4,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '18%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '68%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '3 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '3 shots'
+            }
+          ]
         },
         {
           'id': 'launcher',
@@ -801,7 +1161,29 @@ angular.module('loadoutApp')
           'rate': 1,
           'reload': 1,
           'damage': 5,
-          'accuracy': 7
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '358%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '58%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shots'
+            },
+            {
+              'label': 'Execution',
+              'value': '1 shots'
+            },
+            {
+              'label': '',
+              'value': '* The Shorty, Shotgun, and Launcher are subject to "effective distance" and have damage estimates.'
+            }
+          ]
         }
       ]
     }

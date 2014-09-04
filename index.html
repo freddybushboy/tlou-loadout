@@ -122,6 +122,11 @@
                     <label>Accuracy</label>
                     <div class="weapon-bars weapon-bars--{{skill.accuracy}}"></div>
                   </div>
+                  <div class="skill-detail__more" ng-if="skill.more">
+                    <div ng-repeat="item in skill.more">
+                      <div class="list-item"><span ng-if="item.label">{{item.label}}: </span>{{item.value}}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

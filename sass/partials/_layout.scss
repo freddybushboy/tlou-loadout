@@ -58,8 +58,17 @@ a {
   height: 100%;
 }
 .loadout-calc__details-col {
+  padding-bottom: 20px;
   float: left;
   width: 500px;
+}
+.skill-detail__more {
+  border-top: 2px solid $white;
+  margin-top: 20px;
+  padding-top: 20px;
+  .list-item {
+    margin: 0 0 7px;
+  }
 }
 .loadout-calc__footer-col {
   float: left;
@@ -139,6 +148,7 @@ a {
     display: block;
     text-align: center;
     margin: 10px 0;
+    cursor: pointer;
   }
   .loadout-calc {
     width: 100%;
