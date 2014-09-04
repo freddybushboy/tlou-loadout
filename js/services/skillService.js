@@ -452,12 +452,12 @@ angular.module('loadoutApp')
               'code': '42'
             },
             {
-              'description': 'Use health kits 75% faster and can heal injured teammates. WHen looking at an injured teammate you can hold X to slowly heal them, 10 health every 2 seconds.',
+              'description': 'Use health kits 75% faster and can heal injured teammates. When looking at an injured teammate you can hold X to slowly heal them, 10 health every 2 seconds.',
               'cost': 4,
               'code': '43'
             },
             {
-              'description': 'Use health kits 75% faster and can heal injured teammates. WHen looking at an injured teammate you can hold X to slowly heal them, 20 health every 2 seconds.',
+              'description': 'Use health kits 75% faster and can heal injured teammates. When looking at an injured teammate you can hold X to slowly heal them, 20 health every 2 seconds.',
               'cost': 6,
               'code': '44'
             }
