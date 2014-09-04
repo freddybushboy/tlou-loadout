@@ -18,6 +18,28 @@ angular.module('loadoutApp')
       $location.search()['s6'],
       $location.search()['s7']
     ];
+    $scope.dlc = [
+      'enforcer',
+      'spectre',
+      'double',
+      'launcher',
+      'full',
+      'scoped-semi',
+      'scoped-full',
+      'scoped-burst',
+      'variable',
+      'executioner',
+      'scavenger',
+      'damage',
+      'awareness',
+      'fortitude',
+      'gunslinger',
+      'bomb',
+      'agility'
+    ];
+
+    $scope.hideDlc = false;
+
     $scope.setupSlots = function() {
       if ($scope.presets[0] !== undefined) {
         $scope.presets.forEach(function(preset) {
@@ -319,6 +341,9 @@ angular.module('loadoutApp')
       var skill = skills[Math.floor(Math.random() * skills.length)];
       $scope.slots.forEach(function(slot, key) {
         if (slot.id == skill.id && skill.id != 'nothing' && key != 0 && key != 6) {
+          skill = $scope.getRandomSkill(skills);
+        }
+        else if ($scope.hideDlc && $scope.dlc.indexOf(skill.id) != -1) {
           skill = $scope.getRandomSkill(skills);
         }
       });

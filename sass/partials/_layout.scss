@@ -68,6 +68,7 @@ a {
   margin-top: 7px;
 }
 
+.loadout-dlc,
 .loadout-share,
 .loadout-random,
 .loadout-reset {
@@ -111,6 +112,7 @@ a {
     padding: 0;
   }
   h1,
+  .shares .loadout-dlc,
   .loadout-share,
   .loadout-calc__footer-col {
     display: none;
@@ -119,6 +121,11 @@ a {
     text-align: center;
     display: block;
     margin: 10px auto;
+    .loadout-dlc {
+      margin: 10px auto;
+      display: block;
+      float: none;
+    }
   }
   .mobile-share {
     @include inline-block;
