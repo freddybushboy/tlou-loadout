@@ -93,6 +93,9 @@ angular.module('loadoutApp')
             'level': 1,
           }];
       }
+      // Clear this once we are finished.
+      $location.url('');
+      $location.url($location.path());
     }
 
 
