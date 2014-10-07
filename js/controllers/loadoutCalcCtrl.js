@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('loadoutApp')
-  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location) {
+  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource) {
 
     $scope.skillSlot = '';
     $scope.skillSet = '';
@@ -417,4 +417,16 @@ angular.module('loadoutApp')
 
     $scope.updatePoints();
     $scope.setupSlots();
+
+
+    $scope.findUserSkills = function() {
+
+      var userId = 2;
+      var User = $resource('/api/users/:id', { id: userId });
+
+      console.log(User.get());
+      //$scope.user = User.get();
+
+    }
+    $scope.findUserSkills();
   });
