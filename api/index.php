@@ -4,12 +4,8 @@ require 'Slim/Slim.php';
 
 $app = new Slim();
 
-$app->get('/users', 'getUsers');
+$app->get('/loadouts/:uid', 'getLoadouts');
 $app->get('/reddit-login', 'redditLogin');
-$app->post('/users', 'addUser');
-
-$app->get('/users/:id', 'getUser');
-$app->get('/users/search/:query', 'findByName');
 
 $app->run();
 
@@ -55,15 +51,6 @@ function redditLogin() {
   }
 }
 
-
-
-
-
-
-
-
-
-
 function getConnection() {
   $dbhost="127.0.0.1";
   $dbuser="root";
@@ -74,55 +61,21 @@ function getConnection() {
   return $dbh;
 }
 
-function getUsers() {
-  $sql = "select * FROM users ORDER BY id";
+function getLoadouts($uid) {
+  $sql = "select * FROM loadouts WHERE uid=:uid ORDER BY id";
   try {
     $db = getConnection();
-    $stmt = $db->query($sql);
-    $users = $stmt->fetchAll(PDO::FETCH_OBJ);
+    $stmt = $db->prepare($sql);
++   $stmt->bindParam("uid", $uid);
++   $stmt->execute();
+    $loadouts = $stmt->fetchAll(PDO::FETCH_OBJ);
     $db = null;
-    echo json_encode($users);
+    echo json_encode($loadouts);
   } catch(PDOException $e) {
     echo '{"error":{"text":'. $e->getMessage() .'}}';
   }
 }
 
-function getUser($id) {
-  $sql = "SELECT * FROM users WHERE id=:id";
-  try {
-    $db = getConnection();
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam("id", $id);
-    $stmt->execute();
-    $user = $stmt->fetchObject();
-    $db = null;
-    echo json_encode($user);
-  } catch(PDOException $e) {
-    echo '{"error":{"text":'. $e->getMessage() .'}}';
-  }
-}
-
-function addUser() {
-  error_log('addUser\n', 3, '/var/tmp/php.log');
-  $request = Slim::getInstance()->request();
-  $user = json_decode($request->getBody());
-  $sql = "INSERT INTO users (firstname, lastname, email, company) VALUES (:firstname, :lastname, :email, :company)";
-  try {
-    $db = getConnection();
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam("firstname", $user->firstname);
-    $stmt->bindParam("lastname", $user->lastname);
-    $stmt->bindParam("email", $user->email);
-    $stmt->bindParam("company", $user->company);
-    $stmt->execute();
-    $user->id = $db->lastInsertId();
-    $db = null;
-    echo json_encode($user);
-  } catch(PDOException $e) {
-    error_log($e->getMessage(), 3, '/var/tmp/php.log');
-    echo '{"error":{"text":'. $e->getMessage() .'}}';
-  }
-}
 
 
 ?>

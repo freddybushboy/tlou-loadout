@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('loadoutApp')
-  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource, $http) {
+  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource, AuthService) {
 
     $scope.skillSlot = '';
     $scope.skillSet = '';
@@ -40,14 +40,21 @@ angular.module('loadoutApp')
 
     $scope.hideDlc = false;
 
-
+    // Declare user object.
+    $scope.user = AuthService.getCurrent();
 
     $scope.login = function() {
-      var User = $resource('/api/reddit-login');
-
-      console.log(User.get());
+      AuthService.login();
+      $scope.user = AuthService.getCurrent();
+      $scope.getUserSkills();
+      console.log($scope.user);
     }
-
+    $scope.logout = function() {
+      AuthService.logout();
+      $scope.user = AuthService.getCurrent();
+      $scope.getUserSkills();
+      console.log($scope.user);
+    }
 
     $scope.setupSlots = function() {
       if ($scope.presets[0] !== undefined) {
@@ -428,16 +435,18 @@ angular.module('loadoutApp')
     $scope.setupSlots();
 
 
-    $scope.findUserSkills = function() {
-
-
-
-      var userId = 2;
-      var User = $resource('/api/users/:id', { id: userId });
-
-      //console.log(User.get());
-      //$scope.user = User.get();
-
+    $scope.getUserSkills = function() {
+      if ($scope.user.id) {
+        var userId = $scope.user.id;
+        var loadouts = $resource('/api/loadouts/:uid',{ uid: userId });
+        loadouts.query(function(data) {
+          $scope.loadouts = data;
+        });
+      }
+      else {
+        // Unset loadouts.
+        $scope.loadouts = [];
+      }
     }
-    $scope.findUserSkills();
+    $scope.getUserSkills();
   });
