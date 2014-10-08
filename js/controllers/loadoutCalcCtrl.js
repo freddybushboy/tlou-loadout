@@ -46,13 +46,13 @@ angular.module('loadoutApp')
     $scope.login = function() {
       AuthService.login();
       $scope.user = AuthService.getCurrent();
-      $scope.getUserSkills();
+      $scope.getUserLoadouts();
       console.log($scope.user);
     }
     $scope.logout = function() {
       AuthService.logout();
       $scope.user = AuthService.getCurrent();
-      $scope.getUserSkills();
+      $scope.getUserLoadouts();
       console.log($scope.user);
     }
 
@@ -435,7 +435,7 @@ angular.module('loadoutApp')
     $scope.setupSlots();
 
 
-    $scope.getUserSkills = function() {
+    $scope.getUserLoadouts = function() {
       if ($scope.user.id) {
         var userId = $scope.user.id;
         var loadouts = $resource('/api/loadouts/:uid',{ uid: userId });
@@ -448,5 +448,17 @@ angular.module('loadoutApp')
         $scope.loadouts = [];
       }
     }
-    $scope.getUserSkills();
+    $scope.addLoadout = function() {
+      if ($scope.user.id) {
+        var loadoutData = {
+          uid: $scope.user.id,
+          key: "fdfdfdfd",
+          name: "manuallyoadout"
+        };
+        var loadout = $resource('/api/loadout/add');
+        loadout.save(loadoutData);
+      }
+    }
+    $scope.getUserLoadouts();
+    //$scope.addLoadout();
   });
