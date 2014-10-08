@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('loadoutApp')
-  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource, $http, Base64) {
+  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource, $http) {
 
     $scope.skillSlot = '';
     $scope.skillSet = '';
@@ -38,36 +38,16 @@ angular.module('loadoutApp')
       'agility'
     ];
 
-    console.log($location.search()['state'], 'state')
+    $scope.hideDlc = false;
 
-    if ($location.search()['state'] && !$location.search()['error']) {
 
-      var send = {
-        grant_type: 'authorization_code',
-        code: $location.search()['code'],
-        redirect_uri: 'http://tlou-loadout.local'
-      };
 
-      $http({
-        method: 'POST',
-        url: 'https://ssl.reddit.com/api/v1/access_token',
-        data: send,
-        headers: {
-          'Authorization': 'Basic ' + Base64.encode('PPeT3OOg04h1Jg:tAPVju4bKK3uqFtZfFXGhJ1kXoE'),
-          'Content-Type': 'multipart/form-data'
-        }
-      }).success(function(data) {
-        console.log('success');
-        console.log(data);
-        console.log(status);
-      }).error(function(data) {
-        console.log('error');
-        console.log(data);
-        console.log(status);
-      });
+    $scope.login = function() {
+      var User = $resource('/api/reddit-login');
+
+      console.log(User.get());
     }
 
-    $scope.hideDlc = false;
 
     $scope.setupSlots = function() {
       if ($scope.presets[0] !== undefined) {

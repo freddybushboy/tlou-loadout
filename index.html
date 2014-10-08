@@ -26,7 +26,8 @@
 
 
     <div ng-controller="LoadoutCalcCtrl" class="loadout-calc">
-    <a href="https://ssl.reddit.com/api/v1/authorize?client_id=PPeT3OOg04h1Jg&response_type=code&state=tloucalc&redirect_uri=http://tlou-loadout.local&duration=temporary&scope=identity">Login with Reddit</a>
+    <!--<a href="https://ssl.reddit.com/api/v1/authorize?client_id=PPeT3OOg04h1Jg&response_type=code&state=tloucalc&redirect_uri=http://tlou-loadout.local&duration=temporary&scope=identity">Login with Reddit</a>-->
+      <button ng-click="login()">Login</button>
       <h1 title="The Last of Us Loadout Calculator"><img src="images/logo.png" /></h1>
       <div class="loadout-calc__cols">
         <div class="loadout-calc__col loadout-calc__slots-col" ng-class="{active: skillSet == '' && skillDetail == ''}">
