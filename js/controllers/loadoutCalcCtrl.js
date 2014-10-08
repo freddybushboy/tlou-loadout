@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('loadoutApp')
-  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource) {
+  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource, $http, Base64) {
 
     $scope.skillSlot = '';
     $scope.skillSet = '';
@@ -37,6 +37,35 @@ angular.module('loadoutApp')
       'bomb',
       'agility'
     ];
+
+    console.log($location.search()['state'], 'state')
+
+    if ($location.search()['state'] && !$location.search()['error']) {
+
+      var send = {
+        grant_type: 'authorization_code',
+        code: $location.search()['code'],
+        redirect_uri: 'http://tlou-loadout.local'
+      };
+
+      $http({
+        method: 'POST',
+        url: 'https://ssl.reddit.com/api/v1/access_token',
+        data: send,
+        headers: {
+          'Authorization': 'Basic ' + Base64.encode('PPeT3OOg04h1Jg:tAPVju4bKK3uqFtZfFXGhJ1kXoE'),
+          'Content-Type': 'multipart/form-data'
+        }
+      }).success(function(data) {
+        console.log('success');
+        console.log(data);
+        console.log(status);
+      }).error(function(data) {
+        console.log('error');
+        console.log(data);
+        console.log(status);
+      });
+    }
 
     $scope.hideDlc = false;
 
@@ -94,8 +123,8 @@ angular.module('loadoutApp')
           }];
       }
       // Clear this once we are finished.
-      $location.url('');
-      $location.url($location.path());
+      //$location.url('');
+      //$location.url($location.path());
     }
 
 
@@ -421,10 +450,12 @@ angular.module('loadoutApp')
 
     $scope.findUserSkills = function() {
 
+
+
       var userId = 2;
       var User = $resource('/api/users/:id', { id: userId });
 
-      console.log(User.get());
+      //console.log(User.get());
       //$scope.user = User.get();
 
     }
