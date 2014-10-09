@@ -34,7 +34,7 @@
       <span ng-if="user.id" ng-click="logout()" class="user-logout">Log out</span>
       <form class="loadoutForm" ng-if="user.id">
         <h2>Add Loadout</h2>
-        <p>Enter a name name to save the current loadout.</p>
+        <p>Enter a name to save the current loadout.</p>
         <input type="text" ng-model="name" placeholder='Loadout name' required/><span class="loadout-save" ng-click="addLoadout(name)">Save</span>
       </form>
       <div ng-if="user.id">
