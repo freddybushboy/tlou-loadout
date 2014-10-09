@@ -250,6 +250,23 @@ a {
   padding: 20px;
   background: #111;
 }
+.user-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #111;
+  span {
+    height: 3em;
+    line-height: 3em;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+}
+.user-logout {
+  font-size: 12px;
+  cursor: pointer;
+}
 .loadoutForm {
   padding: 20px 0;
   input {

@@ -28,15 +28,16 @@
 
     <div class="loadout-calc">
       <div class="user-area">
-        <span ng-if="user.id" ng-click="toggleSide()">Loadouts</span>
+        <span ng-if="user.id" ng-click="toggleSide()">User</span>
         <span ng-if="!user.id" ng-click="login()">Login</span>
       </div>
       <div class="loadout-sidebar" ng-if="user.id">
-        <p>{{user.name}}</p>
-        <span ng-if="user.id"ng-click="logout()">Logout</span>
+        <p>Logged in as {{user.name}}</p>
+        <span ng-if="user.id" ng-click="logout()" class="user-logout">Log out</span>
         <form class="loadoutForm">
-          <h2>Add Loadout:</h2>
-          <input type="text" ng-model="name" required/><span ng-click="addLoadout(name)">Save</span>
+          <h2>Add Loadout</h2>
+          <p>Enter a name name to save the current loadout.</p>
+          <input type="text" ng-model="name" placeholder='Loadout name' required/><span ng-click="addLoadout(name)">Save</span>
         </form>
         <div>
           <div class="loadout-row" ng-repeat="loadout in loadouts">
