@@ -25,10 +25,8 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="user-area">
-      <span ng-click="toggleSide()">My Loadouts</span>
-    </div>
     <div class="loadout-sidebar">
+      <span ng-click="toggleSide()" class="sidebar-close">✖</span>
       <img ng-if="!user.id" src="images/snoo.png" />
       <p ng-if="!user.id">Log in with your reddit account to save your custom loadouts!</p>
       <a ng-if="!user.id" class="user-login" target="_self" href="/api/reddit-login">Reddit login</a>
@@ -164,6 +162,9 @@
         <span class="loadout-share" ng-click="shareOn = true" onClick="setTimeout(function(){document.getElementById('shareinput').select();}, 200);"><span class="loadout-slot__icon icon-share"></span> Share Loadout <input id="shareinput" ng-show="shareOn" type="text" size="48" onClick="this.select();" value="{{share()}}"></span>
         <label class="loadout-dlc">Exclude DLC in random loadouts: <input type="checkbox" ng-model="hideDlc"></label>
       </div>
+        <div class="user-area">
+          <span ng-click="toggleSide()">My Loadouts</span>
+        </div>
     <script src="js/app.js"></script>
     <script src="js/controllers/loadoutCalcCtrl.js"></script>
     <script src="js/services/skillService.js"></script>

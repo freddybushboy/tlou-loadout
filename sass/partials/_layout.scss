@@ -257,19 +257,38 @@ a {
   }
 }
 .user-area {
+  clear: both;
+  text-align: center;
+  @include breakpoint(700px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #111;
+    * {
+      height: 3em;
+      line-height: 3em;
+      padding: 0 20px;
+      cursor: pointer;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  .open & {
+    display: none;
+  }
+}
+.sidebar-close {
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: 100;
+  right: 0;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 20px;
+  cursor: pointer;
+  color: $white;
+  text-decoration: none;
   background: #111;
-  * {
-    height: 3em;
-    line-height: 3em;
-    padding: 0 20px;
-    cursor: pointer;
-    color: $white;
-    text-decoration: none;
-  }
 }
 .user-login {
   border-style: solid;

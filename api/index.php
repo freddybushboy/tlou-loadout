@@ -58,6 +58,10 @@ function getConnection() {
   $dbuser="root";
   $dbpass="root";
   $dbname="tlou_loadout";
+  // $dbhost="localhost";
+  // $dbuser="fredpark_loadout";
+  // $dbpass="ghfj789";
+  // $dbname="fredpark_loadout";
   $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   return $dbh;
