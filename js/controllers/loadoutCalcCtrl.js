@@ -482,6 +482,7 @@ angular.module('loadoutApp')
     $scope.showLoadout = function($code) {
       $scope.q = $code;
       $scope.setupSlots();
+      $scope.isOpen = false;
     }
     $scope.getUserLoadouts();
   });
