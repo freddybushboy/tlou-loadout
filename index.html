@@ -28,19 +28,21 @@
 
     <div class="loadout-calc">
       <div class="user-area">
-        <button ng-if="user.id" ng-click="toggleSide()">Loadouts</button>
-        <button ng-if="!user.id" ng-click="login()">Login</button>
+        <span ng-if="user.id" ng-click="toggleSide()">Loadouts</span>
+        <span ng-if="!user.id" ng-click="login()">Login</span>
       </div>
       <div class="loadout-sidebar" ng-if="user.id">
         <p>{{user.name}}</p>
-        <button ng-if="user.id"ng-click="logout()">Logout</button>
+        <span ng-if="user.id"ng-click="logout()">Logout</span>
         <form class="loadoutForm">
-          Name: <input type="text" ng-model="name" required/><button ng-click="addLoadout(name)">Save loadout</button>
+          <h2>Add Loadout:</h2>
+          <input type="text" ng-model="name" required/><span ng-click="addLoadout(name)">Save</span>
         </form>
-        Loadouts: <br/>
-        <div ng-repeat="loadout in loadouts">
-          <button ng-click="showLoadout(loadout.key)">{{loadout.name}}</button>
-          <button ng-click="deleteLoadout(loadout.id)">Delete</button>
+        <div>
+          <div class="loadout-row" ng-repeat="loadout in loadouts">
+            <span ng-click="showLoadout(loadout.key)" title="Show Loadout" class="loadout-view">{{loadout.name}}</span>
+            <span ng-click="deleteLoadout(loadout.id)" title="Delete Loadout" class="loadout-delete">✖</span>
+          </div>
         </div>
       </div>
       <h1 title="The Last of Us Loadout Calculator"><img src="images/logo.png" /></h1>

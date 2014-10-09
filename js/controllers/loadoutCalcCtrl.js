@@ -478,10 +478,8 @@ angular.module('loadoutApp')
       Loadout.delete(
         function(data) {
           $scope.getUserLoadouts();
-          console.log(data);
         },
         function(error) {
-          // error
           console.log(error);
         }
       );
