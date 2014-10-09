@@ -19,7 +19,7 @@ html {
 }
 .loadout-calc {
   @include clearfix;
-  padding: 40px 20px 20px;
+  padding: 60px 20px 20px;
   width: 1200px; // 1120 content area.
   margin: 0 auto;
   text-align: left;
@@ -263,17 +263,35 @@ a {
   @include breakpoint(700px) {
     position: absolute;
     padding-bottom: 0;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
     z-index: 100;
-    background: #111;
     * {
-      height: 3em;
-      line-height: 3em;
-      padding: 0 20px;
-      cursor: pointer;
+      border-style: solid;
+      border-width: 0px 0px 3px;
+      box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
       color: $white;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      font-style: normal;
+      overflow: hidden;
+      text-align: center;
       text-decoration: none;
+      text-overflow: ellipsis;
+      @include transition(all 200ms);
+      white-space: nowrap;
+      font-weight: normal;
+      padding: 8px 10px 7px;
+      font-size: 15px;
+      background-color: #3D3A3A;
+      border-color: #666B6F;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      &:hover {
+        background-color: #444444;
+      }
     }
   }
   .open & {
