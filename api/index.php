@@ -14,9 +14,8 @@ $app->run();
 function redditLogin() {
 
   if (isset($_GET["error"])) {
-    echo("<pre>OAuth Error: " . $_GET["error"]."\n");
-    echo('<a href="index.php">Retry</a></pre>');
-    die;
+    header("Location: http://tlou-loadout.com");
+    die("Redirect");
   }
 
   $authorizeUrl = 'https://ssl.reddit.com/api/v1/authorize';
@@ -49,7 +48,6 @@ function redditLogin() {
 
     $response = $client->fetch("https://oauth.reddit.com/api/v1/me.json");
 
-    print_r($response['result']);
     header("Location: http://tlou-loadout.local?name={$response['result']['name']}&id={$response['result']['id']}");
     die("Redirect");
   }
