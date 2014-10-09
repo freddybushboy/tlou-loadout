@@ -7,9 +7,10 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  @include transition(transform .5s);
+  @include transition(margin .5s);
   &.open {
-    @include translateX(320px);
+    margin-left: 320px;
+    overflow: hidden;
   }
 }
 html {
@@ -241,7 +242,7 @@ a {
 }
 
 .loadout-sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -320px;
   z-index: 100;
@@ -249,6 +250,11 @@ a {
   height: 100%;
   padding: 20px;
   background: #111;
+  overflow: scroll;
+  @include transition(left .5s);
+  .open & {
+    left: 0;
+  }
 }
 .user-area {
   position: absolute;
@@ -256,11 +262,40 @@ a {
   left: 0;
   z-index: 100;
   background: #111;
-  span {
+  * {
     height: 3em;
     line-height: 3em;
     padding: 0 20px;
     cursor: pointer;
+    color: $white;
+    text-decoration: none;
+  }
+}
+.user-login {
+  border-style: solid;
+  border-width: 0px 0px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  color: $white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  @include transition(all 200ms);
+  white-space: nowrap;
+  font-weight: normal;
+  padding: 8px 10px 7px;
+  font-size: 15px;
+  background-color: #3D3A3A;
+  border-color: #666B6F;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  &:hover {
+    background-color: #444444;
   }
 }
 .user-logout {
@@ -272,6 +307,9 @@ a {
   input {
     margin-right: 10px;
   }
+}
+.loadout-save {
+  cursor: pointer;
 }
 .loadout-row {
   width: 100%;
@@ -287,6 +325,7 @@ a {
 .loadout-view {
   display: block;
   cursor: pointer;
+  text-align: left;
 }
 .loadout-delete {
   color: crimson;

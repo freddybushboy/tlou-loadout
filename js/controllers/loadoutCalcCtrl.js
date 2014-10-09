@@ -44,11 +44,6 @@ angular.module('loadoutApp')
     // Declare user object.
     $scope.user = AuthService.getCurrent();
 
-    $scope.login = function() {
-      AuthService.login();
-      $scope.user = AuthService.getCurrent();
-      $scope.getUserLoadouts();
-    }
     $scope.logout = function() {
       AuthService.logout();
       $scope.user = AuthService.getCurrent();
@@ -110,8 +105,8 @@ angular.module('loadoutApp')
           }];
       }
       // Clear this once we are finished.
-      // $location.url('');
-      // $location.url($location.path());
+      $location.url('');
+      $location.url($location.path());
     }
 
 

@@ -1,22 +1,18 @@
 angular.module('loadoutApp')
-  .factory('AuthService', function ($resource, $cookies, $cookieStore) {
+  .factory('AuthService', function ($location, $resource, $cookies, $cookieStore) {
 
     return {
       getCurrent: function() {
+        var userId = $location.search()['id'];
+        var userName = $location.search()['name'];
+        if (userId !== undefined && userId !== undefined) {
+          $cookies.userId = userId;
+          $cookies.userName = userName;
+        }
         return {
           id: $cookies.userId,
           name: $cookies.userName
         };
-      },
-      login: function() {
-        // var login = $resource('/api/reddit-login');
-        // login.get().$promise.then(function(data) {
-        //   console.log(data)
-        // }, function(error) {
-        //   console.log('error', error);
-        // });
-        $cookies.userId = 'hi7g5';
-        $cookies.userName = 'FreddyBushBoy';
       },
       logout: function() {
         // remove the cookies.

@@ -25,27 +25,28 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-    <div class="loadout-calc">
-      <div class="user-area">
-        <span ng-if="user.id" ng-click="toggleSide()">User</span>
-        <span ng-if="!user.id" ng-click="login()">Login</span>
-      </div>
-      <div class="loadout-sidebar" ng-if="user.id">
-        <p>Logged in as {{user.name}}</p>
-        <span ng-if="user.id" ng-click="logout()" class="user-logout">Log out</span>
-        <form class="loadoutForm">
-          <h2>Add Loadout</h2>
-          <p>Enter a name name to save the current loadout.</p>
-          <input type="text" ng-model="name" placeholder='Loadout name' required/><span ng-click="addLoadout(name)">Save</span>
-        </form>
-        <div>
-          <div class="loadout-row" ng-repeat="loadout in loadouts">
-            <span ng-click="showLoadout(loadout.key)" title="Show Loadout" class="loadout-view">{{loadout.name}}</span>
-            <span ng-click="deleteLoadout(loadout.id)" title="Delete Loadout" class="loadout-delete">✖</span>
-          </div>
+    <div class="user-area">
+      <span ng-click="toggleSide()">My Loadouts</span>
+    </div>
+    <div class="loadout-sidebar">
+      <img ng-if="!user.id" src="images/snoo.png" />
+      <p ng-if="!user.id">Log in with your reddit account to save your custom loadouts!</p>
+      <a ng-if="!user.id" class="user-login" target="_self" href="/api/reddit-login">Reddit login</a>
+      <p ng-if="user.id">Logged in as {{user.name}}</p>
+      <span ng-if="user.id" ng-click="logout()" class="user-logout">Log out</span>
+      <form class="loadoutForm" ng-if="user.id">
+        <h2>Add Loadout</h2>
+        <p>Enter a name name to save the current loadout.</p>
+        <input type="text" ng-model="name" placeholder='Loadout name' required/><span class="loadout-save" ng-click="addLoadout(name)">Save</span>
+      </form>
+      <div ng-if="user.id">
+        <div class="loadout-row" ng-repeat="loadout in loadouts">
+          <span ng-click="showLoadout(loadout.key)" title="Show Loadout" class="loadout-view">{{loadout.name}}</span>
+          <span ng-click="deleteLoadout(loadout.id)" title="Delete Loadout" class="loadout-delete">✖</span>
         </div>
       </div>
+    </div>
+    <div class="loadout-calc">
       <h1 title="The Last of Us Loadout Calculator"><img src="images/logo.png" /></h1>
       <div class="loadout-calc__cols">
         <div class="loadout-calc__col loadout-calc__slots-col" ng-class="{active: skillSet == '' && skillDetail == ''}">
