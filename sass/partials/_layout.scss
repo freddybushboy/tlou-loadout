@@ -347,6 +347,9 @@ a {
   display: block;
   cursor: pointer;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .loadout-delete {
   color: crimson;
