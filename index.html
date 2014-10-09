@@ -14,17 +14,37 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.2.16/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-resource.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-cookies.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
-  <body ng-cloak>
+  <body ng-controller="LoadoutCalcCtrl" ng-cloak ng-class="{'open': isOpen}">
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-    <div ng-controller="LoadoutCalcCtrl" class="loadout-calc">
+    <div class="loadout-sidebar">
+      <span ng-click="toggleSide()" class="sidebar-close">✖</span>
+      <img ng-if="!user.id" src="images/snoo.png" />
+      <p ng-if="!user.id">Log in with your reddit account to save your custom loadouts!</p>
+      <a ng-if="!user.id" class="user-login" target="_self" href="/api/reddit-login">Reddit login</a>
+      <p ng-if="user.id">Logged in as {{user.name}}</p>
+      <span ng-if="user.id" ng-click="logout()" class="user-logout">Log out</span>
+      <form class="loadoutForm" ng-if="user.id">
+        <h2>Add Loadout</h2>
+        <p>Enter a name name to save the current loadout.</p>
+        <input type="text" ng-model="name" placeholder='Loadout name' required/><span class="loadout-save" ng-click="addLoadout(name)">Save</span>
+      </form>
+      <div ng-if="user.id">
+        <div class="loadout-row" ng-repeat="loadout in loadouts">
+          <span ng-click="showLoadout(loadout.key)" title="Show Loadout" class="loadout-view">{{loadout.name}}</span>
+          <span ng-click="deleteLoadout(loadout.id)" title="Delete Loadout" class="loadout-delete">✖</span>
+        </div>
+      </div>
+    </div>
+    <div class="loadout-calc">
       <h1 title="The Last of Us Loadout Calculator"><img src="images/logo.png" /></h1>
       <div class="loadout-calc__cols">
         <div class="loadout-calc__col loadout-calc__slots-col" ng-class="{active: skillSet == '' && skillDetail == ''}">
@@ -142,9 +162,13 @@
         <span class="loadout-share" ng-click="shareOn = true" onClick="setTimeout(function(){document.getElementById('shareinput').select();}, 200);"><span class="loadout-slot__icon icon-share"></span> Share Loadout <input id="shareinput" ng-show="shareOn" type="text" size="48" onClick="this.select();" value="{{share()}}"></span>
         <label class="loadout-dlc">Exclude DLC in random loadouts: <input type="checkbox" ng-model="hideDlc"></label>
       </div>
+        <div class="user-area">
+          <span ng-click="toggleSide()">My Loadouts</span>
+        </div>
     <script src="js/app.js"></script>
     <script src="js/controllers/loadoutCalcCtrl.js"></script>
     <script src="js/services/skillService.js"></script>
+    <script src="js/services/authService.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

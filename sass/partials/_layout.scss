@@ -4,10 +4,22 @@ body {
   text-align: center;
   background-size: cover;
   margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include transition(margin .5s);
+  &.open {
+    margin-left: 320px;
+    overflow: hidden;
+  }
+}
+html {
+  width: 100%;
+  height: 100%;
 }
 .loadout-calc {
   @include clearfix;
-  padding: 40px 20px 20px;
+  padding: 60px 20px 20px;
   width: 1200px; // 1120 content area.
   margin: 0 auto;
   text-align: left;
@@ -227,4 +239,140 @@ a {
       max-width: 100%;
     }
   }
+}
+
+.loadout-sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  z-index: 100;
+  width: 320px;
+  height: 100%;
+  padding: 20px;
+  background: #111;
+  overflow: scroll;
+  @include transition(left .5s);
+  .open & {
+    left: 0;
+  }
+}
+.user-area {
+  clear: both;
+  text-align: center;
+  padding-bottom: 20px;
+  @include breakpoint(700px) {
+    position: absolute;
+    padding-bottom: 0;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    * {
+      border-style: solid;
+      border-width: 0px 0px 3px;
+      box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+      color: $white;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      font-style: normal;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      @include transition(all 200ms);
+      white-space: nowrap;
+      font-weight: normal;
+      padding: 8px 10px 7px;
+      font-size: 15px;
+      background-color: #3D3A3A;
+      border-color: #666B6F;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      &:hover {
+        background-color: #444444;
+      }
+    }
+  }
+  .open & {
+    display: none;
+  }
+}
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 20px;
+  cursor: pointer;
+  color: $white;
+  text-decoration: none;
+  background: #111;
+}
+.user-login {
+  border-style: solid;
+  border-width: 0px 0px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  color: $white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  @include transition(all 200ms);
+  white-space: nowrap;
+  font-weight: normal;
+  padding: 8px 10px 7px;
+  font-size: 15px;
+  background-color: #3D3A3A;
+  border-color: #666B6F;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  &:hover {
+    background-color: #444444;
+  }
+}
+.user-logout {
+  font-size: 12px;
+  cursor: pointer;
+}
+.loadoutForm {
+  padding: 20px 0;
+  input {
+    margin-right: 10px;
+  }
+}
+.loadout-save {
+  cursor: pointer;
+}
+.loadout-row {
+  width: 100%;
+  height: 3em;
+  line-height: 3em;
+  border-bottom: 1px solid #222;
+  position: relative;
+  padding: 0 1em 0 0;
+  &:first-child {
+    border-top: 1px solid #222;
+  }
+}
+.loadout-view {
+  display: block;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.loadout-delete {
+  color: crimson;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
