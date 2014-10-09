@@ -5,6 +5,7 @@ require 'Slim/Slim.php';
 $app = new Slim();
 
 $app->get('/loadouts/:uid', 'getLoadouts');
+$app->delete('/loadout/delete/:id', 'deleteLoadout');
 $app->post('/loadout/add', 'addLoadout');
 $app->get('/reddit-login', 'redditLogin');
 
@@ -48,7 +49,9 @@ function redditLogin() {
 
     $response = $client->fetch("https://oauth.reddit.com/api/v1/me.json");
 
-    echo json_encode($response['result']);
+    print_r($response['result']);
+    header("Location: http://tlou-loadout.local?name={$response['result']['name']}&id={$response['result']['id']}");
+    die("Redirect");
   }
 }
 
@@ -80,7 +83,7 @@ function getLoadouts($uid) {
 function addLoadout() {
   $request = Slim::getInstance()->request();
   $loadout = json_decode($request->getBody());
-  $sql = "INSERT INTO loadouts (`id`, `uid`, `key`, `name`) VALUES (NULL, :uid, :key, :name)";
+  $sql = "INSERT INTO loadouts (`uid`, `key`, `name`) VALUES (:uid, :key, :name)";
   try {
     $db = getConnection();
     $stmt = $db->prepare($sql);
@@ -90,6 +93,19 @@ function addLoadout() {
     $stmt->execute();
     $db = null;
     echo json_encode($loadout);
+  } catch(PDOException $e) {
+    echo '{"error":{"text":'. $e->getMessage() .'}}';
+  }
+}
+
+function deleteLoadout($id) {
+  $sql = "DELETE FROM loadouts WHERE id=:id";
+  try {
+    $db = getConnection();
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam("id", $id);
+    $stmt->execute();
+    $db = null;
   } catch(PDOException $e) {
     echo '{"error":{"text":'. $e->getMessage() .'}}';
   }

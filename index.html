@@ -20,18 +20,29 @@
     <script src="https://code.angularjs.org/1.2.16/angular-cookies.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
-  <body ng-cloak>
+  <body ng-controller="LoadoutCalcCtrl" ng-cloak ng-class="{'open': isOpen}">
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
 
-    <div ng-controller="LoadoutCalcCtrl" class="loadout-calc">
-      <button ng-if="!user.id" ng-click="login()">Login</button>
-      <button ng-if="user.id"ng-click="logout()">Logout</button>
-      <p>{{user.name}}</p>
-      <a ng-repeat="loadout in loadouts" ng-href="{{loadout.id}}">{{loadout.name}}</a>
-
+    <div class="loadout-calc">
+      <div class="user-area">
+        <button ng-if="user.id" ng-click="toggleSide()">Loadouts</button>
+        <button ng-if="!user.id" ng-click="login()">Login</button>
+      </div>
+      <div class="loadout-sidebar" ng-if="user.id">
+        <p>{{user.name}}</p>
+        <button ng-if="user.id"ng-click="logout()">Logout</button>
+        <form class="loadoutForm">
+          Name: <input type="text" ng-model="name" required/><button ng-click="addLoadout(name)">Save loadout</button>
+        </form>
+        Loadouts: <br/>
+        <div ng-repeat="loadout in loadouts">
+          <button ng-click="showLoadout(loadout.key)">{{loadout.name}}</button>
+          <button ng-click="deleteLoadout(loadout.id)">Delete</button>
+        </div>
+      </div>
       <h1 title="The Last of Us Loadout Calculator"><img src="images/logo.png" /></h1>
       <div class="loadout-calc__cols">
         <div class="loadout-calc__col loadout-calc__slots-col" ng-class="{active: skillSet == '' && skillDetail == ''}">

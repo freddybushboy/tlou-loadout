@@ -20,6 +20,24 @@ body {
   text-align: center;
   background-size: cover;
   margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+body.open {
+  -moz-transform: translateX(320px);
+  -ms-transform: translateX(320px);
+  -webkit-transform: translateX(320px);
+  transform: translateX(320px);
+}
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
 .loadout-calc {
@@ -305,6 +323,17 @@ a {
     max-width: 100%;
   }
 }
+.loadout-sidebar {
+  position: absolute;
+  top: 0;
+  left: -320px;
+  z-index: 100;
+  width: 320px;
+  height: 100%;
+  padding: 20px;
+  background: #111;
+}
+
 [class^="icon-"], [class*=" icon-"] {
   position: relative;
 }

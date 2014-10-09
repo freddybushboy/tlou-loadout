@@ -1,5 +1,5 @@
 angular.module('loadoutApp')
-  .factory('AuthService', function ($cookies, $cookieStore) {
+  .factory('AuthService', function ($resource, $cookies, $cookieStore) {
 
     return {
       getCurrent: function() {
@@ -9,6 +9,12 @@ angular.module('loadoutApp')
         };
       },
       login: function() {
+        // var login = $resource('/api/reddit-login');
+        // login.get().$promise.then(function(data) {
+        //   console.log(data)
+        // }, function(error) {
+        //   console.log('error', error);
+        // });
         $cookies.userId = 'hi7g5';
         $cookies.userName = 'FreddyBushBoy';
       },

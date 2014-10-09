@@ -7,8 +7,9 @@ angular.module('loadoutApp')
     $scope.skillSet = '';
     $scope.skillDetail = '';
     $scope.skillLevel = 0;
-    $scope.q = $location.search()['q'];
+    $scope.isOpen = false;
     $scope.slots = [];
+    $scope.q = $location.search()['q'];
     $scope.presets = [
       $location.search()['s1'],
       $location.search()['s2'],
@@ -47,16 +48,16 @@ angular.module('loadoutApp')
       AuthService.login();
       $scope.user = AuthService.getCurrent();
       $scope.getUserLoadouts();
-      console.log($scope.user);
     }
     $scope.logout = function() {
       AuthService.logout();
       $scope.user = AuthService.getCurrent();
       $scope.getUserLoadouts();
-      console.log($scope.user);
+      $scope.isOpen = false;
     }
 
     $scope.setupSlots = function() {
+      $scope.slots = [];
       if ($scope.presets[0] !== undefined) {
         $scope.presets.forEach(function(preset) {
           $scope.slots.push({
@@ -67,7 +68,6 @@ angular.module('loadoutApp')
         $scope.updatePoints();
       }
       else if ($scope.q !== undefined && $scope.q.length == 14) {
-
         $scope.qs = $scope.q.match(/.{1,2}/g);
         $scope.qs.forEach(function(code, key) {
           var slotDetails = $scope.getSlotDetailsFromCode(code, key);
@@ -110,8 +110,8 @@ angular.module('loadoutApp')
           }];
       }
       // Clear this once we are finished.
-      //$location.url('');
-      //$location.url($location.path());
+      // $location.url('');
+      // $location.url($location.path());
     }
 
 
@@ -435,6 +435,10 @@ angular.module('loadoutApp')
     $scope.setupSlots();
 
 
+    $scope.toggleSide = function() {
+      $scope.isOpen = !$scope.isOpen;
+    }
+
     $scope.getUserLoadouts = function() {
       if ($scope.user.id) {
         var userId = $scope.user.id;
@@ -448,17 +452,43 @@ angular.module('loadoutApp')
         $scope.loadouts = [];
       }
     }
-    $scope.addLoadout = function() {
+    $scope.addLoadout = function(name) {
       if ($scope.user.id) {
+        var code = '';
+        $scope.slots.forEach(function(slot, key) {
+          var type = $scope.getSlotType(key);
+          var skill = $scope.getSkillFromId(slot.id, type);
+          code += skill.levels[slot.level - 1].code;
+        });
         var loadoutData = {
           uid: $scope.user.id,
-          key: "fdfdfdfd",
-          name: "manuallyoadout"
+          key: code,
+          name: name
         };
         var loadout = $resource('/api/loadout/add');
-        loadout.save(loadoutData);
+        loadout.save(loadoutData).$promise.then(function(data) {
+          $scope.getUserLoadouts();
+        }, function(error) {
+          console.log('error', error);
+        });
       }
     }
+    $scope.deleteLoadout = function(id) {
+      var Loadout = $resource('/api/loadout/delete/:id', { id: id });
+      Loadout.delete(
+        function(data) {
+          $scope.getUserLoadouts();
+          console.log(data);
+        },
+        function(error) {
+          // error
+          console.log(error);
+        }
+      );
+    }
+    $scope.showLoadout = function($code) {
+      $scope.q = $code;
+      $scope.setupSlots();
+    }
     $scope.getUserLoadouts();
-    //$scope.addLoadout();
   });
