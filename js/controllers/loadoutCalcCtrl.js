@@ -458,7 +458,8 @@ angular.module('loadoutApp')
         var loadoutData = {
           uid: $scope.user.id,
           key: code,
-          name: name
+          name: name,
+          uname: $scope.user.name
         };
         var loadout = $resource('/api/loadout/add');
         loadout.save(loadoutData).$promise.then(function(data) {

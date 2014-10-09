@@ -24,7 +24,7 @@ function redditLogin() {
   $clientSecret = 'tAPVju4bKK3uqFtZfFXGhJ1kXoE';
   $userAgent = 'ChangeMeClient/0.1 by FreddyBushBoy';
 
-  $redirectUrl = "http://tlou-loadout.local/api/reddit-login";
+  $redirectUrl = "http://tlou-loadout.com/api/reddit-login";
 
   require("OAuth2/Client.php");
   require("OAuth2/GrantType/IGrantType.php");
@@ -48,20 +48,20 @@ function redditLogin() {
 
     $response = $client->fetch("https://oauth.reddit.com/api/v1/me.json");
 
-    header("Location: http://tlou-loadout.local?name={$response['result']['name']}&id={$response['result']['id']}");
+    header("Location: http://tlou-loadout.com?name={$response['result']['name']}&id={$response['result']['id']}");
     die("Redirect");
   }
 }
 
 function getConnection() {
-  $dbhost="127.0.0.1";
-  $dbuser="root";
-  $dbpass="root";
-  $dbname="tlou_loadout";
-  // $dbhost="localhost";
-  // $dbuser="fredpark_loadout";
-  // $dbpass="ghfj789";
-  // $dbname="fredpark_loadout";
+  // $dbhost="127.0.0.1";
+  // $dbuser="root";
+  // $dbpass="root";
+  // $dbname="tlou_loadout";
+  $dbhost="localhost";
+  $dbuser="fredpark_loadout";
+  $dbpass="ghfj789";
+  $dbname="fredpark_loadout";
   $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   return $dbh;
@@ -85,13 +85,14 @@ function getLoadouts($uid) {
 function addLoadout() {
   $request = Slim::getInstance()->request();
   $loadout = json_decode($request->getBody());
-  $sql = "INSERT INTO loadouts (`uid`, `key`, `name`) VALUES (:uid, :key, :name)";
+  $sql = "INSERT INTO loadouts (`uid`, `key`, `name`, `uname`) VALUES (:uid, :key, :name, :uname)";
   try {
     $db = getConnection();
     $stmt = $db->prepare($sql);
     $stmt->bindParam("uid", $loadout->uid);
     $stmt->bindParam("key", $loadout->key);
     $stmt->bindParam("name", $loadout->name);
+    $stmt->bindParam("uname", $loadout->uname);
     $stmt->execute();
     $db = null;
     echo json_encode($loadout);
