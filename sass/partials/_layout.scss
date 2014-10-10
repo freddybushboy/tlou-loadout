@@ -10,7 +10,9 @@ body {
   @include transition(margin .5s);
   &.open {
     margin-left: 320px;
-    overflow: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
   }
 }
 html {
@@ -251,6 +253,9 @@ a {
   padding: 20px;
   background: #111;
   overflow: scroll;
+  &::-webkit-scrollbar {
+      display: none;
+  }
   @include transition(left .5s);
   .open & {
     left: 0;
@@ -260,6 +265,9 @@ a {
   clear: both;
   text-align: center;
   padding-bottom: 20px;
+  * {
+    cursor: pointer;
+  }
   @include breakpoint(700px) {
     position: absolute;
     padding-bottom: 0;

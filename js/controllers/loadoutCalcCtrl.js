@@ -483,7 +483,9 @@ angular.module('loadoutApp')
     $scope.showLoadout = function($code) {
       $scope.q = $code;
       $scope.setupSlots();
-      $scope.isOpen = false;
+      if (document.documentElement.clientWidth < 700) {
+        $scope.isOpen = false;
+      }
     }
     $scope.getUserLoadouts();
   });
