@@ -297,7 +297,7 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': '60%'
+              'value': '70%'
             },
             {
               'label': 'Head Damage',
@@ -330,7 +330,7 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': '60%'
+              'value': '55%'
             },
             {
               'label': 'Head Damage',
@@ -443,7 +443,7 @@ angular.module('loadoutApp')
             },
             {
               'label': 'Head Damage',
-              'value': '80%'
+              'value': '60%'
             },
             {
               'label': 'Destroy Armour',
@@ -1165,7 +1165,7 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': '358%'
+              'value': '58%'
             },
             {
               'label': 'Head Damage',
@@ -1173,11 +1173,11 @@ angular.module('loadoutApp')
             },
             {
               'label': 'Destroy Armour',
-              'value': '1 shots'
+              'value': '1 shot'
             },
             {
               'label': 'Execution',
-              'value': '1 shots'
+              'value': '1 shot'
             },
             {
               'label': '',
