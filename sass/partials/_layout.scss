@@ -265,16 +265,16 @@ a {
   clear: both;
   text-align: center;
   padding-bottom: 20px;
-  * {
+  span, a {
     cursor: pointer;
-  }
-  @include breakpoint(700px) {
-    position: absolute;
-    padding-bottom: 0;
-    top: 10px;
-    left: 10px;
-    z-index: 100;
-    * {
+    display: block;
+    margin-bottom: 10px;
+    @include breakpoint(700px) {
+      position: absolute;
+      padding-bottom: 0;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
       border-style: solid;
       border-width: 0px 0px 3px;
       box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
@@ -296,10 +296,15 @@ a {
       border-color: #666B6F;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      width: 100%;
       &:hover {
         background-color: #444444;
       }
+    }
+  }
+  a {
+    @include breakpoint(700px) {
+      right: 10px;
+      left: auto;
     }
   }
   .open & {
