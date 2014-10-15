@@ -38,7 +38,7 @@
         <input type="text" ng-model="name" placeholder='Loadout name' required/><span class="loadout-save" ng-click="addLoadout(name)">Save</span>
       </form>
       <div ng-if="user.id">
-        <div class="loadout-row" ng-repeat="loadout in loadouts">
+        <div class="loadout-row" ng-repeat="loadout in loadouts | orderBy:'name'">
           <span ng-click="showLoadout(loadout.key)" title="Show Loadout" class="loadout-view">{{loadout.name}}</span>
           <span ng-click="deleteLoadout(loadout.id)" title="Delete Loadout" class="loadout-delete">✖</span>
         </div>
