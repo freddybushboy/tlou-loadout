@@ -43,7 +43,16 @@ $skills:
   'flamethrower',
   'machete',
   'spectre',
-  'launcher';
+  'launcher',
+  'burstp',
+  'frontier',
+  'tactical';
+  // 'lone',
+  // 'chance',
+  // 'jack',
+  // 'lucky',
+  // 'lethal',
+  // 'crossbow';
 
 [class^="icon-"], [class*=" icon-"] {
   position: relative;
@@ -83,9 +92,15 @@ $silenced:
   'hunting',
   'scoped-semi',
   'scoped-burst',
+  'fronteir',
+  'tactical',
+  'burstp',
   'variable',
   'full',
   'semi',
+  'burstp',
+  'frontier',
+  'tactical',
   '9mm';
 @each $silence in $silenced {
   .icon-skill-#{$silence}.icon-level-2 {

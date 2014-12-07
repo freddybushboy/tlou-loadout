@@ -534,7 +534,7 @@ a {
   position: relative;
 }
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  background-image: url('../images/icons/icon-default.png?1402733619');
+  background-image: url('../images/icons/icon-default.png?1417961105');
   content: '';
   position: absolute;
   top: 0;
@@ -987,6 +987,36 @@ a {
   background-image: url('../images/icons/icon-launcher-3.png');
 }
 
+.icon-skill-burstp:before {
+  background-image: url('../images/icons/icon-burstp.png?1417961105');
+}
+.icon-skill-burstp.icon-level-2:before {
+  background-image: url('../images/icons/icon-burstp-2.png');
+}
+.icon-skill-burstp.icon-level-3:before {
+  background-image: url('../images/icons/icon-burstp-3.png');
+}
+
+.icon-skill-frontier:before {
+  background-image: url('../images/icons/icon-frontier.png?1417961105');
+}
+.icon-skill-frontier.icon-level-2:before {
+  background-image: url('../images/icons/icon-frontier-2.png');
+}
+.icon-skill-frontier.icon-level-3:before {
+  background-image: url('../images/icons/icon-frontier-3.png');
+}
+
+.icon-skill-tactical:before {
+  background-image: url('../images/icons/icon-tactical.png?1417961105');
+}
+.icon-skill-tactical.icon-level-2:before {
+  background-image: url('../images/icons/icon-tactical-2.png');
+}
+.icon-skill-tactical.icon-level-3:before {
+  background-image: url('../images/icons/icon-tactical-3.png');
+}
+
 .icon-skill-shorty.icon-level-2:before {
   background-image: url('../images/icons/icon-shorty.png?1404282691');
 }
@@ -1029,6 +1059,27 @@ a {
   background-image: url('../images/icons/icon-silencer.png?1404282691');
 }
 
+.icon-skill-fronteir.icon-level-2:before {
+  background-image: url('../images/icons/icon-fronteir.png');
+}
+.skill-detail .icon-skill-fronteir.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404282691');
+}
+
+.icon-skill-tactical.icon-level-2:before {
+  background-image: url('../images/icons/icon-tactical.png?1417961105');
+}
+.skill-detail .icon-skill-tactical.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404282691');
+}
+
+.icon-skill-burstp.icon-level-2:before {
+  background-image: url('../images/icons/icon-burstp.png?1417961105');
+}
+.skill-detail .icon-skill-burstp.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404282691');
+}
+
 .icon-skill-variable.icon-level-2:before {
   background-image: url('../images/icons/icon-variable.png?1409692926');
 }
@@ -1047,6 +1098,27 @@ a {
   background-image: url('../images/icons/icon-semi.png?1404282691');
 }
 .skill-detail .icon-skill-semi.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404282691');
+}
+
+.icon-skill-burstp.icon-level-2:before {
+  background-image: url('../images/icons/icon-burstp.png?1417961105');
+}
+.skill-detail .icon-skill-burstp.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404282691');
+}
+
+.icon-skill-frontier.icon-level-2:before {
+  background-image: url('../images/icons/icon-frontier.png?1417961105');
+}
+.skill-detail .icon-skill-frontier.icon-level-2.loadout-slot__icon:before {
+  background-image: url('../images/icons/icon-silencer.png?1404282691');
+}
+
+.icon-skill-tactical.icon-level-2:before {
+  background-image: url('../images/icons/icon-tactical.png?1417961105');
+}
+.skill-detail .icon-skill-tactical.icon-level-2.loadout-slot__icon:before {
   background-image: url('../images/icons/icon-silencer.png?1404282691');
 }
 

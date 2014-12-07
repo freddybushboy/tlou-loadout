@@ -18,6 +18,7 @@
     <script src="https://code.angularjs.org/1.2.16/angular-route.js"></script>
     <script src="https://code.angularjs.org/1.2.16/angular-resource.js"></script>
     <script src="https://code.angularjs.org/1.2.16/angular-cookies.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-sanitize.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
   <body ng-controller="LoadoutCalcCtrl" ng-cloak ng-class="{'open': isOpen}">
@@ -131,7 +132,7 @@
                       <span class="skill-detail__cost" ng-class="{over: level.cost > remainingPoints}">{{level.cost}} Points</span>
                     </div>
                   </div>
-                  <span class="skill-detail__description">{{level.description}}</span>
+                  <span class="skill-detail__description" ng-bind-html="level.description"></span>
                   <div class="skill-detail__weapon" ng-if="skill.rate">
                     <label>Fire rate</label>
                     <div class="weapon-bars weapon-bars--{{skill.rate}}"></div>

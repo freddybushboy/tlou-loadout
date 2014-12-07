@@ -152,6 +152,44 @@ angular.module('loadoutApp')
               'value': '2 shots'
             }
           ]
+        },
+        {
+          'id': 'burstp',
+          'name': 'Burst Pistol',
+          'levels': [
+            {
+              'description': 'Three round burst pistol that downs enemies in five shots.',
+              'cost': 1,
+              'code': '97'
+            },
+            {
+              'description': 'Don\'t show up on the enemy minimap when firing.',
+              'cost': 3,
+              'code': '98'
+            }
+          ],
+          'rate': 7,
+          'reload': 6,
+          'damage': 3,
+          'accuracy': 3,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Head Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Execution',
+              'value': 'unknown'
+            }
+          ]
         }
       ],
       'large': [
@@ -490,6 +528,82 @@ angular.module('loadoutApp')
             {
               'label': 'Execution',
               'value': '2 shots'
+            }
+          ]
+        },
+        {
+          'id': 'tactical',
+          'name': 'Tactical Shotgun',
+          'levels': [
+            {
+              'description': 'Two shot down mid range shotgun with a narrow spread.',
+              'cost': 3,
+              'code': '93'
+            },
+            {
+              'description': 'Don\'t show up on the enemy minimap when firing.',
+              'cost': 5,
+              'code': '94'
+            }
+          ],
+          'rate': 5,
+          'reload': 3,
+          'damage': 6,
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Head Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Execution',
+              'value': 'unknown'
+            }
+          ]
+        },
+        {
+          'id': 'frontier',
+          'name': 'Frontier Rifle',
+          'levels': [
+            {
+              'description': 'Lever action rifle that downs enemies in two shots.',
+              'cost': 2,
+              'code': '95'
+            },
+            {
+              'description': 'Scoped version of the Burst Rifle.',
+              'cost': 4,
+              'code': '96'
+            }
+          ],
+          'rate': 3,
+          'reload': 2,
+          'damage': 7,
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Head Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Execution',
+              'value': 'unknown'
             }
           ]
         }
@@ -896,6 +1010,96 @@ angular.module('loadoutApp')
               'code': '73'
             }
           ],
+        },
+        {
+          'id': 'lone',
+          'name': 'Lone Wolf',
+          'levels': [
+            {
+              'description': 'Lone wolf activates when you are far from your teammates (or they are downed). When Lone Wolf is active you get:<br/><br/>Agility 2<br/>Sharpshooter 2<br/>50 bonus parts whenever you down or execute an enemy',
+              'cost': 2,
+              'code': '99'
+            },
+            {
+              'description': 'Lone wolf activates when you are far from your teammates (or they are downed). When Lone Wolf is active you get:<br/><br/>Agility 2<br/>Sharpshooter 2<br/>Sharp Ears 3<br/>100 bonus parts whenever you down or execute an enemy',
+              'cost': 3,
+              'code': '0a'
+            }
+          ],
+        },
+        {
+          'id': 'chance',
+          'name': 'Second Chance',
+          'levels': [
+            {
+              'description': 'Get a free health kit when you have none and have taken more than half damage from an enemy.<br/><br/>Get 25% additional starting ammo after two or more consecutive deaths without getting a down or execution up to a maximum of 50%.',
+              'cost': 2,
+              'code': '0b'
+            },
+            {
+              'description': 'Get a free health kit when you have none and have taken more than half damage from an enemy.<br/><br/>Get 50% additional starting ammo and 25% cheaper armor after two or more consecutive deaths without getting a down or execution, up to a maximum of 100% additional ammo and 50% cheaper armor.',
+              'cost': 4,
+              'code': '0c'
+            },
+            {
+              'description': 'Unknown',
+              'cost': 5,
+              'code': '0d'
+            }
+          ],
+        },
+        {
+          'id': 'jack',
+          'name': 'Jack of All Trades',
+          'levels': [
+            {
+              'description': '8 points of skills in one. Contains:<br/><br/>Brawler 1<br/>Covert Training 1<br>Sharp Ears 1<br/>Strategist 1<br/>Crafter 1',
+              'cost': 5,
+              'code': '0e'
+            },
+            {
+              'description': '8 points of skills in one. Contains:<br/><br/>Explosion Expert 1<br/>Reviver 1<br/>Brawler 1<br/>Covert Training 1<br>Sharp Ears 1<br/>First Aid Training 1<br/>Strategist 1<br/>Crafter 1<br/>Second Chance 1',
+              'cost': 10,
+              'code': '0f'
+            }
+          ],
+        },
+        {
+          'id': 'lucky',
+          'name': 'Lucky Break',
+          'levels': [
+            {
+              'description': 'When you open a supply box you get:<br/><br/>50% more pistol ammo',
+              'cost': 2,
+              'code': '0g'
+            },
+            {
+              'description': 'When you open a supply box you get:<br/><br/>50% more pistol ammo<br/>25% More large firearm ammo<br/>Minimum of at least two crafting ingredients',
+              'cost': 4,
+              'code': '0h'
+            },
+            {
+              'description': 'When you open a supply box you get:<br/><br/>50% more pistol ammo<br/>25% More large firearm ammo<br/>Minimum of at least three crafting ingredients',
+              'cost': 5,
+              'code': '0i'
+            }
+          ],
+        },
+        {
+          'id': 'lethal',
+          'name': 'Lethal Efficiency',
+          'levels': [
+            {
+              'description': 'Do a faster low-to-the-ground neck-snap whenperforming a Special Execution.',
+              'cost': 2,
+              'code': '0j'
+            },
+            {
+              'description': 'Do an even faster low-to-the-ground neck-snap whenperforming a Special Execution.',
+              'cost': 3,
+              'code': '0k'
+            }
+          ],
         }
       ],
       'purchase': [
@@ -1182,6 +1386,39 @@ angular.module('loadoutApp')
             {
               'label': '',
               'value': '* The Shorty, Shotgun, and Launcher are subject to "effective distance" and have damage estimates.'
+            }
+          ]
+        },
+        {
+          'id': 'crossbow',
+          'name': 'Crossbow',
+          'levels': [
+            {
+              'description': 'Two shots to down. Press X to zoom while aiming to use the scope. Anyone shot by a crossbow sill begin taking bleeding damage and go down unless they use a health kit or be healed by other means.',
+              'cost': 3,
+              'code': '92'
+            }
+          ],
+          'rate': 2,
+          'reload': 2,
+          'damage': 6,
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Head Damage',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': 'unknown'
+            },
+            {
+              'label': 'Execution',
+              'value': 'unknown'
             }
           ]
         }

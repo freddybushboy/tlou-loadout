@@ -4,6 +4,7 @@ var app = angular.module('loadoutApp', [
   'ng',
   'ngResource',
   'ngRoute',
+  'ngSanitize',
   'ngCookies'
 ])
 .config(function($locationProvider) {
