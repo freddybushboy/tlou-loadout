@@ -36,7 +36,15 @@ angular.module('loadoutApp')
       'fortitude',
       'gunslinger',
       'bomb',
-      'agility'
+      'burstp',
+      'frontier',
+      'tactical',
+      'lone',
+      'chance',
+      'jack',
+      'lucky',
+      'lethal',
+      'crossbow'
     ];
 
     $scope.hideDlc = false;
