@@ -394,7 +394,7 @@ angular.module('loadoutApp')
               'code': '85'
             },
             {
-              'description': 'Scoped version of the Semi-Auto Rifle.',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 4,
               'code': '86'
             }
@@ -465,7 +465,7 @@ angular.module('loadoutApp')
               'code': '88'
             },
             {
-              'description': 'Scoped version of the Burst Rifle.',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 4,
               'code': '89'
             }
@@ -579,7 +579,7 @@ angular.module('loadoutApp')
               'code': '95'
             },
             {
-              'description': 'Scoped version of the Burst Rifle.',
+              'description': 'Don\'t show up on the enemy minimap when firing.',
               'cost': 4,
               'code': '96'
             }
