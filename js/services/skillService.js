@@ -175,15 +175,15 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': 'unknown'
+              'value': '22%'
             },
             {
               'label': 'Head Damage',
-              'value': 'unknown'
+              'value': '44%'
             },
             {
               'label': 'Destroy Armour',
-              'value': 'unknown'
+              'value': '3 shots'
             },
             {
               'label': 'Execution',
@@ -553,19 +553,18 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': 'unknown'
+              'value': '55%'
             },
             {
               'label': 'Head Damage',
-              'value': 'unknown'
+              'value': '55%'
             },
             {
               'label': 'Destroy Armour',
-              'value': 'unknown'
+              'value': '1 shot'
             },
             {
-              'label': 'Execution',
-              'value': 'unknown'
+              'label': '1 shot'
             }
           ]
         },
@@ -591,19 +590,19 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': 'unknown'
+              'value': '66%'
             },
             {
               'label': 'Head Damage',
-              'value': 'unknown'
+              'value': '92%'
             },
             {
               'label': 'Destroy Armour',
-              'value': 'unknown'
+              'value': '1 shot'
             },
             {
               'label': 'Execution',
-              'value': 'unknown'
+              'value': 'Unknown'
             }
           ]
         }
@@ -1401,15 +1400,15 @@ angular.module('loadoutApp')
           'more': [
             {
               'label': 'Body Damage',
-              'value': 'unknown'
+              'value': '55%'
             },
             {
               'label': 'Head Damage',
-              'value': 'unknown'
+              'value': '110%'
             },
             {
               'label': 'Destroy Armour',
-              'value': 'unknown'
+              'value': '1 shot'
             },
             {
               'label': 'Execution',
