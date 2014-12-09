@@ -205,6 +205,81 @@ angular.module('loadoutApp')
           ]
         },
         {
+          'id': 'tactical',
+          'name': 'Tactical Shotgun',
+          'levels': [
+            {
+              'description': 'Two shot down mid range shotgun with a narrow spread.',
+              'cost': 3,
+              'code': '93'
+            },
+            {
+              'description': 'Don\'t show up on the enemy minimap when firing.',
+              'cost': 5,
+              'code': '94'
+            }
+          ],
+          'rate': 5,
+          'reload': 3,
+          'damage': 6,
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '55%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '55%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': '1 shot'
+            }
+          ]
+        },
+        {
+          'id': 'frontier',
+          'name': 'Frontier Rifle',
+          'levels': [
+            {
+              'description': 'Lever action rifle that downs enemies in two shots.',
+              'cost': 2,
+              'code': '95'
+            },
+            {
+              'description': 'Don\'t show up on the enemy minimap when firing.',
+              'cost': 4,
+              'code': '96'
+            }
+          ],
+          'rate': 3,
+          'reload': 2,
+          'damage': 7,
+          'accuracy': 7,
+          'more': [
+            {
+              'label': 'Body Damage',
+              'value': '66%'
+            },
+            {
+              'label': 'Head Damage',
+              'value': '92%'
+            },
+            {
+              'label': 'Destroy Armour',
+              'value': '1 shot'
+            },
+            {
+              'label': 'Execution',
+              'value': 'Unknown'
+            }
+          ]
+        },
+        {
           'id': 'semi',
           'name': 'Semi-Auto Rifle',
           'levels': [
@@ -538,81 +613,6 @@ angular.module('loadoutApp')
             {
               'label': 'Execution',
               'value': '2 shots'
-            }
-          ]
-        },
-        {
-          'id': 'tactical',
-          'name': 'Tactical Shotgun',
-          'levels': [
-            {
-              'description': 'Two shot down mid range shotgun with a narrow spread.',
-              'cost': 3,
-              'code': '93'
-            },
-            {
-              'description': 'Don\'t show up on the enemy minimap when firing.',
-              'cost': 5,
-              'code': '94'
-            }
-          ],
-          'rate': 5,
-          'reload': 3,
-          'damage': 6,
-          'accuracy': 7,
-          'more': [
-            {
-              'label': 'Body Damage',
-              'value': '55%'
-            },
-            {
-              'label': 'Head Damage',
-              'value': '55%'
-            },
-            {
-              'label': 'Destroy Armour',
-              'value': '1 shot'
-            },
-            {
-              'label': '1 shot'
-            }
-          ]
-        },
-        {
-          'id': 'frontier',
-          'name': 'Frontier Rifle',
-          'levels': [
-            {
-              'description': 'Lever action rifle that downs enemies in two shots.',
-              'cost': 2,
-              'code': '95'
-            },
-            {
-              'description': 'Don\'t show up on the enemy minimap when firing.',
-              'cost': 4,
-              'code': '96'
-            }
-          ],
-          'rate': 3,
-          'reload': 2,
-          'damage': 7,
-          'accuracy': 7,
-          'more': [
-            {
-              'label': 'Body Damage',
-              'value': '66%'
-            },
-            {
-              'label': 'Head Damage',
-              'value': '92%'
-            },
-            {
-              'label': 'Destroy Armour',
-              'value': '1 shot'
-            },
-            {
-              'label': 'Execution',
-              'value': 'Unknown'
             }
           ]
         }
