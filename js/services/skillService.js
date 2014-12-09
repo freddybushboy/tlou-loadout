@@ -46,7 +46,7 @@ angular.module('loadoutApp')
             },
             {
               'description': 'Don\'t show up on the enemy minimap when firing.',
-              'cost': 2,
+              'cost': 1,
               'code': '03'
             }
           ],
