@@ -250,6 +250,11 @@ angular.module('loadoutApp')
               'description': 'A fully automatic all purpose rifle.',
               'cost': 2,
               'code': '11'
+            },
+            {
+              'description': 'Don\'t show up on the enemy minimap when firing.',
+              'cost': 4,
+              'code': '0l'
             }
           ],
           'rate': 4,
@@ -430,6 +435,11 @@ angular.module('loadoutApp')
               'description': 'Scoped version of the Full-Auto Rifle.',
               'cost': 2,
               'code': '87'
+            },
+            {
+              'description': 'Don\'t show up on the enemy minimap when firing.',
+              'cost': 4,
+              'code': '0m'
             }
           ],
           'rate': 4,
@@ -1298,7 +1308,7 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A fast and dangerous melee weapon.',
-              'cost': 3,
+              'cost': 2,
               'code': '82'
             }
           ],
