@@ -634,12 +634,12 @@ angular.module('loadoutApp')
           'name': 'Pistol Auto-zoom',
           'levels': [
             {
-              'description': 'Zoom in while aiming a 9mm, Revolver or Enforcer.',
+              'description': 'Zoom in while aiming a 9mm, Revolver, Enforcer or Burst Pistol.',
               'cost': 1,
               'code': '18'
             },
             {
-              'description': 'Zoom in further while aiming a 9mm, Revolver or Enforcer.',
+              'description': 'Zoom in further while aiming a 9mm, Revolver, Enforcer or Burst Pistol.',
               'cost': 2,
               'code': '19'
             }
