@@ -1048,7 +1048,7 @@ angular.module('loadoutApp')
             },
             {
               'description': 'Get a free health kit when you have none and have taken more than half damage from an enemy.<br/><br/>Get 50% additional starting ammo and 25% cheaper armor after two or more consecutive deaths without getting a down or execution, up to a maximum of 100% additional ammo and 50% cheaper armor.',
-              'cost': 4,
+              'cost': 3,
               'code': '0c'
             }
           ],
