@@ -187,7 +187,7 @@ angular.module('loadoutApp')
             },
             {
               'label': 'Execution',
-              'value': 'unknown'
+              'value': '3 shots'
             }
           ]
         }
@@ -237,7 +237,8 @@ angular.module('loadoutApp')
               'value': '1 shot'
             },
             {
-              'label': '1 shot'
+              'label': 'Execution',
+              'value': '1 shot'
             }
           ]
         },
@@ -275,7 +276,7 @@ angular.module('loadoutApp')
             },
             {
               'label': 'Execution',
-              'value': 'Unknown'
+              'value': '1 shot'
             }
           ]
         },
@@ -1422,7 +1423,7 @@ angular.module('loadoutApp')
             },
             {
               'label': 'Execution',
-              'value': 'unknown'
+              'value': '1 shot'
             }
           ]
         }

@@ -988,7 +988,7 @@ a {
 }
 
 .icon-skill-burstp:before {
-  background-image: url('../images/icons/icon-burstp.png?1418152287');
+  background-image: url('../images/icons/icon-burstp.png?1418329068');
 }
 .icon-skill-burstp.icon-level-2:before {
   background-image: url('../images/icons/icon-burstp-2.png');
@@ -998,7 +998,7 @@ a {
 }
 
 .icon-skill-frontier:before {
-  background-image: url('../images/icons/icon-frontier.png?1418152287');
+  background-image: url('../images/icons/icon-frontier.png?1418329504');
 }
 .icon-skill-frontier.icon-level-2:before {
   background-image: url('../images/icons/icon-frontier-2.png');
@@ -1008,13 +1008,73 @@ a {
 }
 
 .icon-skill-tactical:before {
-  background-image: url('../images/icons/icon-tactical.png?1418152287');
+  background-image: url('../images/icons/icon-tactical.png?1418329287');
 }
 .icon-skill-tactical.icon-level-2:before {
   background-image: url('../images/icons/icon-tactical-2.png');
 }
 .icon-skill-tactical.icon-level-3:before {
   background-image: url('../images/icons/icon-tactical-3.png');
+}
+
+.icon-skill-lone:before {
+  background-image: url('../images/icons/icon-lone.png?1418330006');
+}
+.icon-skill-lone.icon-level-2:before {
+  background-image: url('../images/icons/icon-lone-2.png?1418330022');
+}
+.icon-skill-lone.icon-level-3:before {
+  background-image: url('../images/icons/icon-lone-3.png');
+}
+
+.icon-skill-chance:before {
+  background-image: url('../images/icons/icon-chance.png?1418330249');
+}
+.icon-skill-chance.icon-level-2:before {
+  background-image: url('../images/icons/icon-chance-2.png?1418330218');
+}
+.icon-skill-chance.icon-level-3:before {
+  background-image: url('../images/icons/icon-chance-3.png');
+}
+
+.icon-skill-jack:before {
+  background-image: url('../images/icons/icon-jack.png?1418330396');
+}
+.icon-skill-jack.icon-level-2:before {
+  background-image: url('../images/icons/icon-jack-2.png?1418330415');
+}
+.icon-skill-jack.icon-level-3:before {
+  background-image: url('../images/icons/icon-jack-3.png');
+}
+
+.icon-skill-lucky:before {
+  background-image: url('../images/icons/icon-lucky.png?1418330516');
+}
+.icon-skill-lucky.icon-level-2:before {
+  background-image: url('../images/icons/icon-lucky-2.png?1418330498');
+}
+.icon-skill-lucky.icon-level-3:before {
+  background-image: url('../images/icons/icon-lucky-3.png?1418330630');
+}
+
+.icon-skill-lethal:before {
+  background-image: url('../images/icons/icon-lethal.png?1418330800');
+}
+.icon-skill-lethal.icon-level-2:before {
+  background-image: url('../images/icons/icon-lethal-2.png?1418330822');
+}
+.icon-skill-lethal.icon-level-3:before {
+  background-image: url('../images/icons/icon-lethal-3.png');
+}
+
+.icon-skill-crossbow:before {
+  background-image: url('../images/icons/icon-crossbow.png?1418329787');
+}
+.icon-skill-crossbow.icon-level-2:before {
+  background-image: url('../images/icons/icon-crossbow-2.png');
+}
+.icon-skill-crossbow.icon-level-3:before {
+  background-image: url('../images/icons/icon-crossbow-3.png');
 }
 
 .icon-skill-shorty.icon-level-2:before {
@@ -1074,14 +1134,14 @@ a {
 }
 
 .icon-skill-tactical.icon-level-2:before {
-  background-image: url('../images/icons/icon-tactical.png?1418152287');
+  background-image: url('../images/icons/icon-tactical.png?1418329287');
 }
 .skill-detail .icon-skill-tactical.icon-level-2.loadout-slot__icon:before {
   background-image: url('../images/icons/icon-silencer.png?1418152287');
 }
 
 .icon-skill-burstp.icon-level-2:before {
-  background-image: url('../images/icons/icon-burstp.png?1418152287');
+  background-image: url('../images/icons/icon-burstp.png?1418329068');
 }
 .skill-detail .icon-skill-burstp.icon-level-2.loadout-slot__icon:before {
   background-image: url('../images/icons/icon-silencer.png?1418152287');
@@ -1109,21 +1169,21 @@ a {
 }
 
 .icon-skill-burstp.icon-level-2:before {
-  background-image: url('../images/icons/icon-burstp.png?1418152287');
+  background-image: url('../images/icons/icon-burstp.png?1418329068');
 }
 .skill-detail .icon-skill-burstp.icon-level-2.loadout-slot__icon:before {
   background-image: url('../images/icons/icon-silencer.png?1418152287');
 }
 
 .icon-skill-frontier.icon-level-2:before {
-  background-image: url('../images/icons/icon-frontier.png?1418152287');
+  background-image: url('../images/icons/icon-frontier.png?1418329504');
 }
 .skill-detail .icon-skill-frontier.icon-level-2.loadout-slot__icon:before {
   background-image: url('../images/icons/icon-silencer.png?1418152287');
 }
 
 .icon-skill-tactical.icon-level-2:before {
-  background-image: url('../images/icons/icon-tactical.png?1418152287');
+  background-image: url('../images/icons/icon-tactical.png?1418329287');
 }
 .skill-detail .icon-skill-tactical.icon-level-2.loadout-slot__icon:before {
   background-image: url('../images/icons/icon-silencer.png?1418152287');
