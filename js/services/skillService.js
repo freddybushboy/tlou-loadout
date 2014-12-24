@@ -1026,12 +1026,12 @@ angular.module('loadoutApp')
           'name': 'Lone Wolf',
           'levels': [
             {
-              'description': 'Lone wolf activates when you are far from your teammates (or they are downed). When Lone Wolf is active you get:<br/><br/>Agility 2<br/>Sharpshooter 2<br/>50 bonus parts whenever you down or execute an enemy',
+              'description': 'Lone wolf activates when you are far from your teammates (or they are downed). When Lone Wolf is active you get:<br/><br/>Agility 2<br/>Sharpshooter 2<br/>30 bonus parts whenever you down or execute an enemy',
               'cost': 2,
               'code': '99'
             },
             {
-              'description': 'Lone wolf activates when you are far from your teammates (or they are downed). When Lone Wolf is active you get:<br/><br/>Agility 2<br/>Sharpshooter 2<br/>Sharp Ears 3<br/>100 bonus parts whenever you down or execute an enemy',
+              'description': 'Lone wolf activates when you are far from your teammates (or they are downed). When Lone Wolf is active you get:<br/><br/>Agility 2<br/>Sharpshooter 2<br/>Sharp Ears 3<br/>60 bonus parts whenever you down or execute an enemy',
               'cost': 3,
               'code': '0a'
             }
