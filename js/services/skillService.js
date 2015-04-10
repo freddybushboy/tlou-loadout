@@ -1043,12 +1043,12 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Get a free health kit when you have none and have taken more than half damage from an enemy.<br/><br/>Get 25% additional starting ammo after two or more consecutive deaths without getting a down or execution up to a maximum of 50%.',
-              'cost': 2,
+              'cost': 1,
               'code': '0b'
             },
             {
               'description': 'Get a free health kit when you have none and have taken more than half damage from an enemy.<br/><br/>Get 50% additional starting ammo and 25% cheaper armor after two or more consecutive deaths without getting a down or execution, up to a maximum of 100% additional ammo and 50% cheaper armor.',
-              'cost': 3,
+              'cost': 2,
               'code': '0c'
             }
           ],
@@ -1063,7 +1063,7 @@ angular.module('loadoutApp')
               'code': '0e'
             },
             {
-              'description': '16 points of skills in one. Contains:<br/><br/>Explosion Expert 1<br/>Reviver 1<br/>Brawler 1<br/>Covert Training 1<br>Sharp Ears 1<br/>First Aid Training 1<br/>Strategist 1<br/>Crafter 1<br/>Second Chance 1',
+              'description': '16 points of skills in one. Contains:<br/><br/>Explosion Expert 1<br/>Reviver 1<br/>Brawler 2<br/>Covert Training 1<br>Sharp Ears 1<br/>First Aid Training 1<br/>Strategist 1<br/>Crafter 1<br/>Second Chance 1',
               'cost': 10,
               'code': '0f'
             }
@@ -1080,12 +1080,12 @@ angular.module('loadoutApp')
             },
             {
               'description': 'When you open a supply box you get:<br/><br/>50% more pistol ammo<br/>25% More large firearm ammo<br/>Minimum of at least two crafting ingredients',
-              'cost': 4,
+              'cost': 3,
               'code': '0h'
             },
             {
               'description': 'When you open a supply box you get:<br/><br/>50% more pistol ammo<br/>25% More large firearm ammo<br/>Minimum of at least three crafting ingredients',
-              'cost': 5,
+              'cost': 4,
               'code': '0i'
             }
           ],
@@ -1224,7 +1224,7 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'A close range bruiser.',
-              'cost': 3,
+              'cost': 4,
               'code': '79'
             }
           ],
@@ -1363,7 +1363,7 @@ angular.module('loadoutApp')
           'levels': [
             {
               'description': 'Area of effect weapon that downs an enemy in 2 shots.',
-              'cost': 4,
+              'cost': 3,
               'code': '84'
             }
           ],
