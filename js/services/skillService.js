@@ -1063,7 +1063,7 @@ angular.module('loadoutApp')
               'code': '0e'
             },
             {
-              'description': '16 points of skills in one. Contains:<br/><br/>Explosion Expert 1<br/>Reviver 1<br/>Brawler 2<br/>Covert Training 1<br>Sharp Ears 1<br/>First Aid Training 1<br/>Strategist 1<br/>Crafter 1<br/>Second Chance 1',
+              'description': '16 points of skills in one. Contains:<br/><br/>Explosion Expert 1<br/>Reviver 1<br/>Brawler 2<br/>Covert Training 1<br>Sharp Ears 1<br/>First Aid Training 1<br/>Scavenger 1<br/>Strategist 1<br/>Crafter 1<br/>Second Chance 1',
               'cost': 10,
               'code': '0f'
             }
