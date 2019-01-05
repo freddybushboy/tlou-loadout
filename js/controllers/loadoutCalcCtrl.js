@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('loadoutApp')
-  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource, AuthService) {
+  .controller('LoadoutCalcCtrl', function ($scope, $controller, SkillService, $location, $resource) {
     $scope.skillSlot = '';
     $scope.skillSet = '';
     $scope.skillDetail = '';
@@ -48,15 +48,6 @@ angular.module('loadoutApp')
 
     $scope.hideDlc = false;
 
-    // Declare user object.
-    $scope.user = AuthService.getCurrent();
-
-    $scope.logout = function() {
-      AuthService.logout();
-      $scope.user = AuthService.getCurrent();
-      $scope.getUserLoadouts();
-      $scope.isOpen = false;
-    }
 
     $scope.setupSlots = function() {
       $scope.slots = [];
