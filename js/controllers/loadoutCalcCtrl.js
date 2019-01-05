@@ -428,66 +428,6 @@ angular.module('loadoutApp')
     $scope.setupSlots();
 
 
-    $scope.toggleSide = function() {
-      $scope.isOpen = !$scope.isOpen;
-    }
-
-    $scope.getUserLoadouts = function() {
-      if ($scope.user.id) {
-        var userId = $scope.user.id;
-        var loadouts = $resource('/api/loadouts/:uid',{ uid: userId });
-        loadouts.query(function(data) {
-          $scope.loadouts = data;
-        });
-      }
-      else {
-        // Unset loadouts.
-        $scope.loadouts = [];
-      }
-    }
-    $scope.addLoadout = function(name) {
-      if ($scope.user.id) {
-        var code = '';
-        $scope.slots.forEach(function(slot, key) {
-          var type = $scope.getSlotType(key);
-          var skill = $scope.getSkillFromId(slot.id, type);
-          code += skill.levels[slot.level - 1].code;
-        });
-        var loadoutData = {
-          uid: $scope.user.id,
-          key: code,
-          name: name,
-          uname: $scope.user.name
-        };
-        var loadout = $resource('/api/loadout/add');
-        loadout.save(loadoutData).$promise.then(function(data) {
-          $scope.getUserLoadouts();
-        }, function(error) {
-          console.log('error', error);
-        });
-      }
-    }
-    $scope.deleteLoadout = function(id) {
-      var Loadout = $resource('/api/loadout/delete/:id', { id: id });
-      Loadout.delete(
-        function(data) {
-          $scope.getUserLoadouts();
-        },
-        function(error) {
-          console.log(error);
-        }
-      );
-    }
-    $scope.showLoadout = function($code) {
-      $scope.q = $code;
-      $scope.setupSlots();
-      if (document.documentElement.clientWidth < 700) {
-        $scope.isOpen = false;
-      }
-    }
-    $scope.getUserLoadouts();
-
-
 $scope.foo = ["02","08","29","73","53","17","83",
 "01","16","28","73","31","17","75",
 "01","14","35","24","42","17","75",
