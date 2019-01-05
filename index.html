@@ -24,30 +24,10 @@
     <script src="https://code.angularjs.org/1.2.16/angular-sanitize.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
-  <body ng-controller="LoadoutCalcCtrl" ng-cloak ng-class="{'open': isOpen}">
+  <body ng-controller="LoadoutCalcCtrl" ng-cloak>
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div class="loadout-sidebar">
-      <span ng-click="toggleSide()" class="sidebar-close">✖</span>
-      <img ng-if="!user.id" src="images/snoo.png" />
-      <p ng-if="!user.id">Log in with your reddit account to save your custom loadouts!</p>
-      <a ng-if="!user.id" class="user-login" target="_self" href="/api/reddit-login">Reddit login</a>
-      <p ng-if="user.id">Logged in as {{user.name}}</p>
-      <span ng-if="user.id" ng-click="logout()" class="user-logout">Log out</span>
-      <form class="loadoutForm" ng-if="user.id">
-        <h2>Add Loadout</h2>
-        <p>Enter a name to save the current loadout.</p>
-        <input type="text" ng-model="name" placeholder='Loadout name' required/><span class="loadout-save" ng-click="addLoadout(name)">Save</span>
-      </form>
-      <div ng-if="user.id">
-        <div class="loadout-row" ng-repeat="loadout in loadouts | orderBy:'name'">
-          <span ng-click="showLoadout(loadout.key)" title="Show Loadout" class="loadout-view">{{loadout.name}}</span>
-          <span ng-click="deleteLoadout(loadout.id)" title="Delete Loadout" class="loadout-delete">✖</span>
-        </div>
-      </div>
-    </div>
     <div class="loadout-calc">
       <h1 title="The Last of Us Loadout Calculator"><img src="images/logo.png" /></h1>
       <div class="loadout-calc__cols">
@@ -156,7 +136,7 @@
             </div>
           </div>
           <div class="loadout-calc__footer-col">
-            <p class="disclaimer">Built by <a href="http://www.fredparke.com" target="_blank">FreddyBushBoy</a>. Icons kindly provided by <a href="http://www.reddit.com/u/machete_Badger" target="_blank">/u/machete_Badger</a>.<br /> The Last of Us is copyright of “Naughty Dog” - © “Naughty Dog” 2014. All rights reserved.</p>
+            <p class="disclaimer">Built by <a href="http://twitter.com/freddybushboy" target="_blank">FreddyBushBoy</a>. Icons kindly provided by <a href="http://www.reddit.com/u/machete_Badger" target="_blank">/u/machete_Badger</a>.<br /> The Last of Us is copyright of “Naughty Dog” - © “Naughty Dog” 2014. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -166,10 +146,6 @@
         <span class="loadout-share" ng-click="shareOn = true" onClick="setTimeout(function(){document.getElementById('shareinput').select();}, 200);"><span class="loadout-slot__icon icon-share"></span> Share Loadout <input id="shareinput" ng-show="shareOn" type="text" size="48" onClick="this.select();" value="{{share()}}"></span>
         <label class="loadout-dlc">Exclude DLC in random loadouts: <input type="checkbox" ng-model="hideDlc"></label>
       </div>
-        <div class="user-area">
-          <span ng-click="toggleSide()">My Loadouts</span>
-          <a href="http://emblem.tlou-loadout.com" target="_blank">Emblem Creator</a>
-        </div>
     <script src="js/app.js?v=j"></script>
     <script src="js/controllers/loadoutCalcCtrl.js?v=k"></script>
     <script src="js/services/skillService.js?v=n"></script>
